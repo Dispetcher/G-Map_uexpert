@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Карта строящихся и проектируемых станций Санкт-Петербургского метрополитена</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://undergroundexpert.info/wp-content/themes/shablon/css/interactive_map.css" />
+    <script type="text/javascript" src="http://undergroundexpert.info/wp-content/themes/shablon/js/interactive_map.js"></script>
+  </head>
+  <body onload="dropAll()">
+	<div id="buttonsBlock">
+    <span><input value="Строящиеся" onclick="dropMarkers(construction, 'constr')" type="button" /></span>
+    <span><input value="Проектируемые" onclick="dropMarkers(project, 'proj')" type="button" /></span>
+    <span><input value="Строящиеся и Проектируемые" onclick="dropAll()" type="button" id="all" /></span>
+  </div>
+  
+  <div id="map"></div>
+  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeSUjSi3a4_JC1boTy4O0UHRGsOGmRP9Y&callback=initMap"
+      async defer></script>
+  </body>
+</html>

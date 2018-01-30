@@ -1,0 +1,30 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#map {
+  height: 770px;
+}
+#buttonsBlock {
+  /*border: 1px solid;*/
+  width: 650px;
+  position: absolute;
+  top: 10px;
+  left: 150px;
+  z-index: 5;
+}
+#buttonsBlock span {
+  display: inline-block;
+  padding: 10px;
+  background: rgba(255, 255, 255, .6);
+  border: 1px solid #fff;
+  margin-right: 6px;
+
+}
+input[type='button'] {
+  padding: 6px;
+  font-size: 12pt;
+  font-weight: bold;
+  opacity: 1;
+}
