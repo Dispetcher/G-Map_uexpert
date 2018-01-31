@@ -61,6 +61,13 @@ var pGreenIcon;
 var pOrangeIcon;
 var pVioletIcon;
 
+var cont = '<div> First station</div>';
+var cont2 = '<div> Second station</div>';
+
+
+
+
+
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
     zoom: 11,
@@ -68,7 +75,14 @@ function initMap() {
     });
 
     dropAll();
+
+var infowindow = null;
+
+infowindow = new google.maps.InfoWindow({
+  content:cont
+});
 }
+
 /*window.onload= function(){
   window.setTimeout(function(){
     markerListener(); 
@@ -113,7 +127,6 @@ function dropAll(){
   dropl6st();*/
 }
 
-
 /*Опускаем станции и рисуем линии в стройке*/
 function dropConStation() {
     for (var i = 0; i < constrs.length; i++) {
@@ -122,12 +135,12 @@ function dropConStation() {
       var constrN = constrs[i+1];
       var linepatharr = [constr[1],constrN[1]]; 
 
-      addMarkerWithTimeout(constr[0], constr[1], constr[2], i * 100);
+      addMarkerWithTimeout(constr[0], constr[1], constr[2], i * 100, i);
       addLine(linepatharr, constr[3], constr[4], constr[5]);
       };
 
       var constr = constrs[i];
-      addMarkerWithTimeout(constr[0], constr[1], constr[2], i * 100);
+      addMarkerWithTimeout(constr[0], constr[1], constr[2], i * 100, i);
     }
 }
 /*Опускаем станции и рисуем линии в проекте*/
@@ -138,12 +151,12 @@ function dropProjStation() {
       var projectN = projects[i];
       var linepatharr = [project[1], projectN[1]];
 
-      addMarkerWithTimeout(project[0], project[1], project[2], i * 100);
+      addMarkerWithTimeout(project[0], project[1], project[2], i * 100, i);
       addLine(linepatharr, project[3], project[4], project[5]);
     };
 
       var project = projects[i];
-      addMarkerWithTimeout(project[0], project[1], project[2], i * 100);
+      addMarkerWithTimeout(project[0], project[1], project[2], i * 100, i);
     }
 }
 /*Опускаем станции и рисуем линии на 3 линии*/
@@ -225,10 +238,9 @@ function addLine(linepatharr, linecolor, lineOp, lineW) {
  linePath.setMap(map);
 }
 
-
   /*Функция определяющая значения маркера (определение одного маркера)*/
-function addMarkerWithTimeout(title, position, img, timeout) {
-  window.setTimeout(function() {
+function addMarkerWithTimeout(title, position, img, timeout, i) {
+  window.setTimeout(function(i) {
     markers.push(new google.maps.Marker({
       position: position,
       title: title,
@@ -254,11 +266,16 @@ function removeLine() {
 linePath= [];
 }
 
-function markerListener(){
+/*  var target = event.target;
   for (var i = 0; i < markers.length; i++) {
-    markers[i].addListener('click', toggleBounce);
-  }
-}
+    if (target == markers[i]){
+   // markers[i].addListener('click', function(){
+    Info1.open(map, markers[i]);
+    };
+  };
+}*/
+
+
        </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRTPdt0Qs9GVAsnrKy-pL0rjV1p8S5D0E&callback=initMap">
