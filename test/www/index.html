@@ -64,8 +64,11 @@ var pGreenIcon;
 var pOrangeIcon;
 var pVioletIcon;
 
-var cont = '<div> First station</div>';
-var cont2 = '<div> Second station</div>';
+var container = [
+['A'],
+['B']
+];
+
 
 function initMap() {
     var infowindow = new google.maps.InfoWindow();
@@ -75,27 +78,14 @@ function initMap() {
     });
 
     dropAll(infowindow);
-
-/*var infowindow = null;
-
-infowindow = new google.maps.InfoWindow({
-  content:cont
-});
-*/
 }
-
-/*window.onload= function(){
-  window.setTimeout(function(){
-    markerListener(); 
-  }, 800)  
-};*/
 
 /*Блок строящихся станций*/
 var constrs=[
-['1', {lat: 59.823, lng: 30.429}, cOrangeIcon, orangeline, 1.0, 3],
-['2', {lat: 59.840, lng: 30.410}, cOrangeIcon, orangeline, 0, 0],
-['3', {lat: 59.926641, lng: 30.297492}, cVioletIcon, violetline, 1.0, 3],
-['4', {lat: 59.973, lng: 30.211}, cVioletIcon, violetline, 1.0, 3],
+['1', {lat: 59.823, lng: 30.429}, container[0], cOrangeIcon, orangeline, 1.0, 3],
+['2', {lat: 59.840, lng: 30.410}, container[1], cOrangeIcon, orangeline, 0, 0],
+['3', {lat: 59.926641, lng: 30.297492}, container[1], cVioletIcon, violetline, 1.0, 3],
+['4', {lat: 59.973, lng: 30.211}, container[1], cVioletIcon, violetline, 1.0, 3],
 /*['5', {lat: 59.987, lng: 30.202}],
 ['6', {lat: 59.849, lng: 30.330}]
 ['7', lat: 59.932, lng: 30.261],
@@ -121,7 +111,7 @@ var l6st= [];
 /*Функция опускающая маркеры и рисующая линии при инициализации карты*/
 function dropAll(infowindow){
   dropConStation(infowindow);
-  dropProjStation();
+  dropProjStation(infowindow);
   /*dropl3st();
   dropl4st();
   dropl5st();
@@ -138,16 +128,17 @@ function dropConStation(infowindow) {
       var constrN = constrs[i+1];
       var linepatharr = [constr[1],constrN[1]]; 
 
-      addMarkerWithTimeout(constr[0], constr[1], constr[2], i * 100, infowindow);
-      addLine(linepatharr, constr[3], constr[4], constr[5]);
+      addMarkerWithTimeout(constr[0], constr[1], constr[2], constr[3], i * 100, infowindow);
+      addLine(linepatharr, constr[4], constr[5], constr[6]);
       };
 
       var constr = constrs[i];
-      addMarkerWithTimeout(constr[0], constr[1], constr[2], i * 100, infowindow);
+      addMarkerWithTimeout(constr[0], constr[1], constr[2], constr[3], i * 100, infowindow);
     }
 }
+
 /*Опускаем станции и рисуем линии в проекте*/
-function dropProjStation() {
+function dropProjStation(infowindow) {
   clearMarkers();
     for (var i = 0; i < projects.length; i++) {
       if (i != projects.length-1){
@@ -244,7 +235,7 @@ polyLine.push(linePath);
 }
 
   /*Функция определяющая значения маркера (определение одного маркера)*/
-function addMarkerWithTimeout(title, position, img, timeout, infowindow) {
+function addMarkerWithTimeout(title, position, text, img, timeout, infowindow) {
   window.setTimeout(function() {
     marker = new google.maps.Marker({
       position: position,
@@ -255,7 +246,7 @@ function addMarkerWithTimeout(title, position, img, timeout, infowindow) {
     });
     google.maps.event.addListener(marker, 'click', function(){
       infowindow.close;
-      infowindow.setContent("<div id='infowindow'>"+title+"</div>");
+      infowindow.setContent("<div id='infowindow'>"+text+"</div>");
       infowindow.open(map, this);
     });
     markers.push(marker);
@@ -278,14 +269,6 @@ function removeLine() {
   polyLine = [];
 }
 
-/*  var target = event.target;
-  for (var i = 0; i < markers.length; i++) {
-    if (target == markers[i]){
-   // markers[i].addListener('click', function(){
-    Info1.open(map, markers[i]);
-    };
-  };
-}*/
        </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRTPdt0Qs9GVAsnrKy-pL0rjV1p8S5D0E&callback=initMap">
