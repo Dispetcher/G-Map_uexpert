@@ -49,18 +49,38 @@ var greenline= '#034f0d';
 var orangeline= '#ff6500';
 var violetline= '#60008a';
 
+var cRedIcon;
+var cBlueIcon;
+var cGreenIcon;
+var cOrangeIcon = {url: 'Imgs/constructionOrange24.png'};
+var cVioletIcon = {url: 'Imgs/constructionViolet24.png'};
+
+var pRedIcon;
+var pBlueIcon;
+var pGreenIcon;
+var pOrangeIcon;
+var pVioletIcon;
+
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 10,
-    center: {lat:59.840,lng:30.330},
+    zoom: 11,
+    center: {lat:59.940,lng:30.330},
     });
-}
 
+    dropAll();
+}
+/*window.onload= function(){
+  window.setTimeout(function(){
+    markerListener(); 
+  }, 800)  
+};*/
+
+/*Блок строящихся станций*/
 var constrs=[
-['1', {lat: 59.823, lng: 30.429}, orangeline, 1.0, 2],
-['2', {lat: 59.840, lng: 30.410}, orangeline, 0, 0],
-['3', {lat: 59.926, lng: 30.297}, violetline, 1.0, 2],
-['4', {lat: 59.973, lng: 30.211}, violetline, 1.0, 2],
+['1', {lat: 59.823, lng: 30.429}, cOrangeIcon, orangeline, 1.0, 3],
+['2', {lat: 59.840, lng: 30.410}, cOrangeIcon, orangeline, 0, 0],
+['3', {lat: 59.926641, lng: 30.297492}, cVioletIcon, violetline, 1.0, 3],
+['4', {lat: 59.973, lng: 30.211}, cVioletIcon, violetline, 1.0, 3],
 /*['5', {lat: 59.987, lng: 30.202}],
 ['6', {lat: 59.849, lng: 30.330}]
 ['7', lat: 59.932, lng: 30.261],
@@ -68,44 +88,132 @@ var constrs=[
 ['9', lat: 59.881, lng: 30.266]*/
 ];
 
+/*Блок проектируемых станций*/
 var projects=[];
 
-  
+/*Блок станций 3 линии (зеленый)*/
+var l3st= [];
 
+/*Блок станций 4 линии (оранжевый)*/
+var l4st= [];
 
+/*Блок станций 5 линии (фиолетовый)*/
+var l5st= [];
 
-/*Функция опускающая все маркеры на карту*/
+/*Блок станций 6 линии (коричневый)*/
+var l6st= [];
+
+/*Функция опускающая маркеры и рисующая линии при инициализации карты*/
 function dropAll(){
   dropConStation();
   dropProjStation();
+  /*dropl3st();
+  dropl4st();
+  dropl5st();
+  dropl6st();*/
 }
 
-/*Опускаем станции в стройке*/
+
+/*Опускаем станции и рисуем линии в стройке*/
 function dropConStation() {
-  clearMarkers();
     for (var i = 0; i < constrs.length; i++) {
       if (i != constrs.length-1){
       var constr = constrs[i];
       var constrN = constrs[i+1];
       var linepatharr = [constr[1],constrN[1]]; 
 
-      addMarkerWithTimeout(constr[0], constr[1], i * 100);
-      addLine(linepatharr, constr[2], constr[3], constr[4]);
+      addMarkerWithTimeout(constr[0], constr[1], constr[2], i * 100);
+      addLine(linepatharr, constr[3], constr[4], constr[5]);
       };
 
       var constr = constrs[i];
-      addMarkerWithTimeout(constr[0], constr[1], i * 100);
+      addMarkerWithTimeout(constr[0], constr[1], constr[2], i * 100);
     }
 }
-/*Опускаем станции в проекте*/
+/*Опускаем станции и рисуем линии в проекте*/
 function dropProjStation() {
-  clearMarkers();
     for (var i = 0; i < projects.length; i++) {
+      if (i != projects.length-1){
       var project = projects[i];
-      addMarkerWithTimeout(project[0], project[1], i * 100);
+      var projectN = projects[i];
+      var linepatharr = [project[1], projectN[1]];
+
+      addMarkerWithTimeout(project[0], project[1], project[2], i * 100);
+      addLine(linepatharr, project[3], project[4], project[5]);
+    };
+
+      var project = projects[i];
+      addMarkerWithTimeout(project[0], project[1], project[2], i * 100);
+    }
+}
+/*Опускаем станции и рисуем линии на 3 линии*/
+function dropl3st() {
+    for (var i = 0; i < l3st.length; i++) {
+      if (i != l3st.length-1){
+      var l3 = l3st[i];
+      var l3N = l3st[i+1];
+      var linepatharr = [l3[1],l3N[1]]; 
+
+      addMarkerWithTimeout(l3[0], l3[1], l3[2], i * 100);
+      addLine(linepatharr, l3[3], l3[4], l3[5]);
+      };
+
+      var l3 = l3st[i];
+      addMarkerWithTimeout(l3[0], l3[1], l3[2], i * 100);
+    }
+}
+/*Опускаем станции и рисуем линии на 4 линии*/
+function dropl4st() {
+    for (var i = 0; i < l4st.length; i++) {
+      if (i != l4st.length-1){
+      var l4 = l4st[i];
+      var l4N = l4st[i+1];
+      var linepatharr = [l4[1],l4N[1]]; 
+
+      addMarkerWithTimeout(l4[0], l4[1], l4[2], i * 100);
+      addLine(linepatharr, l4[3], l4[4], l4[5]);
+      };
+
+      var l4 = l4st[i];
+      addMarkerWithTimeout(l4[0], l4[1], l4[2], i * 100);
     }
 }
 
+/*Опускаем станции и рисуем линии на 5 линии*/
+function dropl5st() {
+    for (var i = 0; i < l5st.length; i++) {
+      if (i != l5st.length-1){
+      var l5 = l5st[i];
+      var l5N = l5st[i+1];
+      var linepatharr = [l5[1],l5N[1]]; 
+
+      addMarkerWithTimeout(l5[0], l5[1], l5[2], i * 100);
+      addLine(linepatharr, l5[3], l5[4], l5[5]);
+      };
+
+      var l5 = l5st[i];
+      addMarkerWithTimeout(l5[0], l5[1], l5[2], i * 100);
+    }
+}
+
+/*Опускаем станции и рисуем линии на 6 линии*/
+function dropl6st() {
+    for (var i = 0; i < l6st.length; i++) {
+      if (i != l6st.length-1){
+      var l6 = l6st[i];
+      var l6N = l6st[i+1];
+      var linepatharr = [l6[1],l6N[1]]; 
+
+      addMarkerWithTimeout(l6[0], l6[1], l6[2], i * 100);
+      addLine(linepatharr, l6[3], l6[4], l6[5]);
+      };
+
+      var l6 = l6st[i];
+      addMarkerWithTimeout(l6[0], l6[1], l6[2], i * 100);
+    }
+}
+
+/*Добавление линии на карту*/
 function addLine(linepatharr, linecolor, lineOp, lineW) {
   linePath = new google.maps.Polyline({
           path: linepatharr,
@@ -119,41 +227,38 @@ function addLine(linepatharr, linecolor, lineOp, lineW) {
 
 
   /*Функция определяющая значения маркера (определение одного маркера)*/
-function addMarkerWithTimeout(title, position, timeout) {
+function addMarkerWithTimeout(title, position, img, timeout) {
   window.setTimeout(function() {
     markers.push(new google.maps.Marker({
       position: position,
-        title: title,
-        map: map,
-        animation: google.maps.Animation.DROP
+      title: title,
+      icon: img,
+      map: map,
+      animation: google.maps.Animation.DROP
     }));
   }, timeout);
 }
 
-  /*Функция очистки карты от маркеров*/
+  /*Удаление всех маркеров с карты*/
 function clearMarkers() {
   for (var i = 0; i < markers.length; i++) {
     markers[i].setMap(null);
   }
   markers = [];
 }
-
+/*Удалении нарисованных линий с карты*/
 function removeLine() {
-  linePath.setMap(null);
+  for (var i = 0; i < linePath.length; i++) {
+  linePath[i].setMap(null);
+  }
+linePath= [];
 }
 
-
-window.onload = dropAll();
-
-
-
-
-
-
-
-
-
-
+function markerListener(){
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].addListener('click', toggleBounce);
+  }
+}
        </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRTPdt0Qs9GVAsnrKy-pL0rjV1p8S5D0E&callback=initMap">
