@@ -34,27 +34,20 @@
   <body>
     <div id="map"></div>
       <div id="floating-panel">
-      <button id="drop" onclick="drop()">Drop Markers</button>
+      <button id="drop" onclick="dropAll()">Drop Markers</button>
     </div>
 
     <script>
 var markers = [];
 var map;
+var linePath;
+var linepatharr= [];
 
-var constrs=[
-/*['Первый', {lat: 59.849, lng: 30.330}],*/
-['Второй', {lat: 59.840, lng: 30.410}],
-['3', {lat: 59.823, lng: 30.429}],
-['4', {lat: 59.973, lng: 30.211}]
-/*['5', lat: 59.987, lng: 30.202],
-['6', lat: 59.926, lng: 30.297],
-['7', lat: 59.932, lng: 30.261],
-['8', lat: 59.860, lng: 30.230],
-['9', lat: 59.881, lng: 30.266]*/
-];
-
-var projects=[];
-
+var redline = '#d52d2d';
+var blueline= '2a0acb';
+var greenline= '#034f0d';
+var orangeline= '#ff6500';
+var violetline= '#60008a';
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
@@ -63,16 +56,43 @@ function initMap() {
     });
 }
 
+var constrs=[
+['1', {lat: 59.823, lng: 30.429}, orangeline, 1.0, 2],
+['2', {lat: 59.840, lng: 30.410}, orangeline, 0, 0],
+['3', {lat: 59.926, lng: 30.297}, violetline, 1.0, 2],
+['4', {lat: 59.973, lng: 30.211}, violetline, 1.0, 2],
+/*['5', {lat: 59.987, lng: 30.202}],
+['6', {lat: 59.849, lng: 30.330}]
+['7', lat: 59.932, lng: 30.261],
+['8', lat: 59.860, lng: 30.230],
+['9', lat: 59.881, lng: 30.266]*/
+];
+
+var projects=[];
+
+  
+
+
 
 /*Функция опускающая все маркеры на карту*/
 function dropAll(){
   dropConStation();
   dropProjStation();
 }
+
 /*Опускаем станции в стройке*/
 function dropConStation() {
   clearMarkers();
     for (var i = 0; i < constrs.length; i++) {
+      if (i != constrs.length-1){
+      var constr = constrs[i];
+      var constrN = constrs[i+1];
+      var linepatharr = [constr[1],constrN[1]]; 
+
+      addMarkerWithTimeout(constr[0], constr[1], i * 100);
+      addLine(linepatharr, constr[2], constr[3], constr[4]);
+      };
+
       var constr = constrs[i];
       addMarkerWithTimeout(constr[0], constr[1], i * 100);
     }
@@ -86,29 +106,44 @@ function dropProjStation() {
     }
 }
 
+function addLine(linepatharr, linecolor, lineOp, lineW) {
+  linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: lineOp,
+          strokeWeight: lineW
+        });
+
+ linePath.setMap(map);
+}
+
 
   /*Функция определяющая значения маркера (определение одного маркера)*/
-      function addMarkerWithTimeout(title, position, timeout) {
-        window.setTimeout(function() {
-          markers.push(new google.maps.Marker({
-            position: position,
-            title: title,
-            map: map,
-            animation: google.maps.Animation.DROP
-          }));
-        }, timeout);
-      }
+function addMarkerWithTimeout(title, position, timeout) {
+  window.setTimeout(function() {
+    markers.push(new google.maps.Marker({
+      position: position,
+        title: title,
+        map: map,
+        animation: google.maps.Animation.DROP
+    }));
+  }, timeout);
+}
+
   /*Функция очистки карты от маркеров*/
-      function clearMarkers() {
-        for (var i = 0; i < markers.length; i++) {
-          markers[i].setMap(null);
-        }
-        markers = [];
-      }
+function clearMarkers() {
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(null);
+  }
+  markers = [];
+}
+
+function removeLine() {
+  linePath.setMap(null);
+}
 
 
-
-window.onload = drop();
+window.onload = dropAll();
 
 
 
