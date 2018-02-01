@@ -52,19 +52,23 @@ var greenline= '#034f0d';
 var orangeline= '#ff6500';
 var violetline= '#60008a';
 
-var cRedIcon;
-var cBlueIcon;
-var cGreenIcon;
-var cOrangeIcon = {url: 'Imgs/constructionOrange24.png'};
-var cVioletIcon = {url: 'Imgs/constructionViolet24.png'};
-var cBrownIcon;
+/*Иконки станций построенных*/
+var GreenIcon = {url: 'Imgs/Green.png'};
+var OrangeIcon = {url: 'Imgs/Orange.png'};
+var VioletIcon = {url: 'Imgs/Violet.png'};
+var BrownIcon = {url: 'Imgs/Brown.png'};
 
-var pRedIcon;
-var pBlueIcon;
-var pGreenIcon;
-var pOrangeIcon;
-var pVioletIcon;
-var pBrownIcon;
+/*Иконки станций в стройке*/
+var cGreenIcon = {url: 'Imgs/cGreen.png'};
+var cOrangeIcon = {url: 'Imgs/cOrange.png'};
+var cVioletIcon = {url: 'Imgs/cViolet.png'};
+var cBrownIcon = {url: 'Imgs/cBrown.png'};
+
+/*Иконка станций в проекте*/
+var pGreenIcon = {url: 'Imgs/pGreen.png'};
+var pOrangeIcon= {url: 'Imgs/pOrange.png'};
+var pVioletIcon= {url: 'Imgs/pViolet.png'};
+var pBrownIcon= {url: 'Imgs/pBrown.png'};
 
 /*Описание станций в строительстве*/
 var containerConstr = [
@@ -155,8 +159,26 @@ var constrs=[
 ['Станция метро «Южная»', {lat: 59.973, lng: 30.211}, containerProj[1], cVioletIcon, violetline, 1.0, 3]
 ];
 
+var l3c = [];
+
+var l4c = [];
+
+var l5c = [];
+
+var l6c = [];
+
 /*Блок проектируемых станций*/
 var projects=[];
+
+var l3p = [];
+
+var l4p = [];
+
+var l5p = [];
+
+var l6p = [];
+
+
 
 /*Блок станций 3 линии (зеленый)*/
 var l3st= [];
@@ -169,6 +191,7 @@ var l5st= [];
 
 /*Блок станций 6 линии (коричневый)*/
 var l6st= [];
+
 
 /*Функция опускающая маркеры и рисующая линии при инициализации карты*/
 function dropAll(infowindow){
