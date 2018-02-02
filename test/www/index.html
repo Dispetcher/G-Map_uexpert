@@ -46,6 +46,21 @@ var linePath;
 var polyLine = [];
 var linepatharr= [];
 
+var polyLinel3st = [];
+var polyLinel4st = [];
+var polyLinel5st = [];
+var polyLinel6st = [];
+
+var polyLinel3c = [];
+var polyLinel4c = [];
+var polyLinel5c = [];
+var polyLinel6c = [];
+
+var polyLinel3p = [];
+var polyLinel4p = [];
+var polyLinel5p = [];
+var polyLinel6p = [];
+
 var redline = '#d52d2d';
 var blueline= '2a0acb';
 var greenline= '#034f0d';
@@ -137,16 +152,6 @@ var containerProj = [
 ];
 
 
-function initMap() {
-    var infowindow = new google.maps.InfoWindow();
-    map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 11,
-    center: {lat:59.940,lng:30.330},
-    });
-
-    dropAll(infowindow);
-}
-
 /*Блок строящихся станций*/
 var l3c = [
 ['Станция метро «Беговая»', {lat: 59.987998, lng: 30.202578}, containerConst[0], cGreenIcon, greenline, 1, 4, 1],
@@ -216,9 +221,9 @@ var l3p = [
 ];
 
 var l4p = [
-['Станция метро «Новокрестовская 2»', {lat: 59.926641, lng: 30.297492}, containerProj[2], cOrangeIcon, orangeline, 1.0, 4, 1],
-['Станция метро «Морской Фасад»', {lat: 59.973, lng: 30.211}, containerProj[3], cOrangeIcon, orangeline, 1.0, 4, 1],
-['Станция метро «Гавань»', {lat: 59.973, lng: 30.211}, containerProj[4], cOrangeIcon, orangeline, 1.0, 4, 1],
+['Станция метро «Новокрестовская 2»', {lat: 59.970987, lng: 30.213385}, containerProj[2], cOrangeIcon, orangeline, 1.0, 4, 1],
+['Станция метро «Морской Фасад»', {lat: 59.948496, lng: 30.211899}, containerProj[3], cOrangeIcon, orangeline, 1.0, 4, 1],
+['Станция метро «Гавань»', {lat: 59.932537, lng: 30.227705}, containerProj[4], cOrangeIcon, orangeline, 1.0, 4, 1],
 ['Станция метро «Спасская»', {lat: 59.926584, lng: 30.318189}, '', OrangeIcon, orangeline, 0.4, 4, 0],
 ['Станция метро «Достоевская»', {lat: 59.928333, lng: 30.346324}, '', OrangeIcon, orangeline, 0.4, 4, 0],
 ['Станция метро «Лиговский проспект»', {lat: 59.920985, lng: 30.354594}, '', OrangeIcon, orangeline, 0.4, 4, 0],
@@ -273,9 +278,9 @@ var l3st= [
 
 /*Блок станций 4 линии (оранжевый)*/
 var l4st= [
-['Станция метро «Новокрестовская 2»', {lat: 59.926641, lng: 30.297492}, containerProj[2], cOrangeIcon, orangeline, 1.0, 4, 1],
-['Станция метро «Морской Фасад»', {lat: 59.973, lng: 30.211}, containerProj[3], cOrangeIcon, orangeline, 1.0, 4, 1],
-['Станция метро «Гавань»', {lat: 59.973, lng: 30.211}, containerProj[4], cOrangeIcon, orangeline, 1.0, 4, 1],
+['Станция метро «Новокрестовская 2»', {lat: 59.970450, lng: 30.219798}, containerProj[2], cOrangeIcon, orangeline, 1.0, 4, 1],
+['Станция метро «Морской Фасад»', {lat: 59.948496, lng: 30.216191}, containerProj[3], cOrangeIcon, orangeline, 1.0, 4, 1],
+['Станция метро «Гавань»', {lat: 59.932537, lng: 30.227705}, containerProj[4], cOrangeIcon, orangeline, 1.0, 4, 1],
 ['Станция метро «Большой проспект»', {lat: 59.930386, lng: 30.261608}, containerConst[2], cOrangeIcon, orangeline, 1.0, 4, 1],
 ['Станция метро «Театральная»', {lat: 59.925180, lng: 30.297236}, containerConst[3], cOrangeIcon, orangeline, 1.0, 4, 1],
 ['Станция метро «Спасская»', {lat: 59.926584, lng: 30.318189}, '', OrangeIcon, orangeline, 0.4, 4, 0],
@@ -318,115 +323,109 @@ var l6st= [
 ['Станция метро «Юго-западная»', {lat: 59.859239, lng: 30.230442}, containerConst[5], cBrownIcon, brownline, 1.0, 4, 1]
 ];
 
+/*Функция инициализации карты*/
+function initMap() {
+    var infowindow = new google.maps.InfoWindow();
+    map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 11,
+    center: {lat:59.940,lng:30.330},
+    });
 
-/*Функция опускающая маркеры и рисующая линии при инициализации карты*/
-function dropAll(infowindow){
- // dropConStation(infowindow);
- /* dropProjStation(infowindow);
- dropl3st();
-  dropl4st();
-  dropl5st();
-  dropl6st();*/
- dropl3c(infowindow);
+    dropAll(infowindow);
 }
 
-/*Опускаем станции и рисуем линии в стройке*/
-function dropConStation(infowindow) {
+/*Функция опускающая маркеры и рисующая ВСЕ линии при инициализации карты*/
+function dropAll(infowindow){
+  dropl3st(infowindow);
+  dropl4st(infowindow);
+  dropl5st(infowindow);
+  dropl6st(infowindow);
+}
+
+function dropConstr(infowindow){
+  dropl3c(infowindow);
+  dropl4c(infowindow);
+  dropl5c(infowindow);
+  dropl6c(infowindow);
+}
+
+function dropProject(infowindow){
+  dropl3p(infowindow);
+  dropl4p(infowindow);
+  dropl5p(infowindow);
+  dropl6p(infowindow);
+}
+
+/*Прорисовка всей 3 линии*/
+function dropl3st(infowindow) {
   clearMarkers();
   removeLine();
-    for (var i = 0; i < constrs.length; i++) {
-      if (i != constrs.length-1){
-      var constr = constrs[i];
-      var constrN = constrs[i+1];
-      var linepatharr = [constr[1],constrN[1]]; 
-
-      addMarkerWithTimeout(constr[0], constr[1], constr[2], constr[3], i * 100, infowindow);
-      addLine(linepatharr, constr[4], constr[5], constr[6]);
-      };
-
-      var constr = constrs[i];
-      addMarkerWithTimeout(constr[0], constr[1], constr[2], constr[3], i * 100, infowindow);
-    }
-}
-/*Опускаем станции и рисуем линии в проекте*/
-function dropProjStation(infowindow) {
-  clearMarkers();
-    for (var i = 0; i < projects.length; i++) {
-      if (i != projects.length-1){
-      var project = projects[i];
-      var projectN = projects[i];
-      var linepatharr = [project[1], projectN[1]];
-
-      addMarkerWithTimeout(project[0], project[1], project[2], i * 100);
-      addLine(linepatharr, project[3], project[4], project[5]);
-    };
-
-      var project = projects[i];
-      addMarkerWithTimeout(project[0], project[1], project[2], i * 100);
-    }
-}
-/*Прорисовка всей 3 линии*/
-function dropl3st() {
     for (var i = 0; i < l3st.length; i++) {
       if (i != l3st.length-1){
       var l3 = l3st[i];
       var l3N = l3st[i+1];
       var linepatharr = [l3[1],l3N[1]]; 
 
-      addMarkerWithTimeout(l3[0], l3[1], l3[2], i * 100);
-      addLine(linepatharr, l3[3], l3[4], l3[5]);
+      addMarkerWithTimeout(l3[0], l3[1], l3[2], l3[3], i * 50, infowindow);
+      addLinel3st(linepatharr, l3[4], l3[5], l3[6], l3[7]);
       };
 
       var l3 = l3st[i];
-      addMarkerWithTimeout(l3[0], l3[1], l3[2], i * 100);
+      addMarkerWithTimeout(l3[0], l3[1], l3[2], l3[3], i * 50, infowindow);
     }
 }
 /*Прорисовка всей 4 линии*/
-function dropl4st() {
+function dropl4st(infowindow) {
+  clearMarkers();
+  removeLine();
     for (var i = 0; i < l4st.length; i++) {
       if (i != l4st.length-1){
       var l4 = l4st[i];
       var l4N = l4st[i+1];
       var linepatharr = [l4[1],l4N[1]]; 
 
-      addMarkerWithTimeout(l4[0], l4[1], l4[2], i * 100);
-      addLine(linepatharr, l4[3], l4[4], l4[5]);
+      addMarkerWithTimeout(l4[0], l4[1], l4[2], l4[3], i * 50, infowindow);
+      addLinel4st(linepatharr, l4[4], l4[5], l4[6], l4[7]);
       };
 
       var l4 = l4st[i];
-      addMarkerWithTimeout(l4[0], l4[1], l4[2], i * 100);
+      addMarkerWithTimeout(l4[0], l4[1], l4[2], l4[3], i * 50, infowindow);
     }
 }
 /*Прорисовка всей 5 линии*/
-function dropl5st() {
+function dropl5st(infowindow) {
+  clearMarkers();
+  removeLine();
     for (var i = 0; i < l5st.length; i++) {
       if (i != l5st.length-1){
       var l5 = l5st[i];
       var l5N = l5st[i+1];
       var linepatharr = [l5[1],l5N[1]]; 
 
-      addMarkerWithTimeout(l5[0], l5[1], l5[2], i * 100);
-      addLine(linepatharr, l5[3], l5[4], l5[5]);
+      addMarkerWithTimeout(l5[0], l5[1], l5[2], l5[3], i * 50, infowindow);
+      addLinel5st(linepatharr, l5[4], l5[5], l5[6], l5[7]);
       };
 
       var l5 = l5st[i];
-      addMarkerWithTimeout(l5[0], l5[1], l5[2], i * 100);
+      addMarkerWithTimeout(l5[0], l5[1], l5[2], l5[3], i * 50, infowindow);
     }
 }
 /*Прорисовка всей 6 линии*/
-function dropl6st() {
+function dropl6st(infowindow) {
+  clearMarkers();
+  removeLine();
     for (var i = 0; i < l6st.length; i++) {
       if (i != l6st.length-1){
       var l6 = l6st[i];
       var l6N = l6st[i+1];
       var linepatharr = [l6[1],l6N[1]]; 
 
-      addMarkerWithTimeout(l6[0], l6[1], l6[2], i * 100);
-      addLine(linepatharr, l6[3], l6[4], l6[5]);
+      addMarkerWithTimeout(l6[0], l6[1], l6[2], l6[3], i * 50, infowindow);
+      addLinel6st(linepatharr, l6[4], l6[5], l6[6], l6[7]);
       };
 
       var l6 = l6st[i];
-      addMarkerWithTimeout(l6[0], l6[1], l6[2], i * 100);
+      addMarkerWithTimeout(l6[0], l6[1], l6[2], l6[3], i * 50, infowindow);
     }
 }
 
@@ -441,7 +440,7 @@ function dropl3c(infowindow) {
       var linepatharr = [l3[1],l3N[1]]; 
 
       addMarkerWithTimeout(l3[0], l3[1], l3[2], l3[3], i * 50, infowindow);
-      addLine(linepatharr, l3[4], l3[5], l3[6], l3[7]);
+      addLinel3c(linepatharr, l3[4], l3[5], l3[6], l3[7]);
       };
 
       var l3 = l3c[i];
@@ -459,7 +458,7 @@ function dropl3p(infowindow) {
       var linepatharr = [l3[1],l3N[1]]; 
 
       addMarkerWithTimeout(l3[0], l3[1], l3[2], l3[3], i * 50, infowindow);
-      addLine(linepatharr, l3[4], l3[5], l3[6], l3[7]);
+      addLinel3p(linepatharr, l3[4], l3[5], l3[6], l3[7]);
       };
 
       var l3 = l3p[i];
@@ -478,7 +477,7 @@ function dropl4c(infowindow) {
       var linepatharr = [l4[1],l4N[1]]; 
 
       addMarkerWithTimeout(l4[0], l4[1], l4[2], l4[3], i * 50, infowindow);
-      addLine(linepatharr, l4[4], l4[5], l4[6], l4[7]);
+      addLinel4c(linepatharr, l4[4], l4[5], l4[6], l4[7]);
       };
 
       var l4 = l4c[i];
@@ -496,7 +495,7 @@ function dropl4p(infowindow) {
       var linepatharr = [l4[1],l4N[1]]; 
 
       addMarkerWithTimeout(l4[0], l4[1], l4[2], l4[3], i * 50, infowindow);
-      addLine(linepatharr, l4[4], l4[5], l4[6], l4[7]);
+      addLinel4p(linepatharr, l4[4], l4[5], l4[6], l4[7]);
       };
 
       var l4 = l4p[i];
@@ -515,7 +514,7 @@ function dropl5c(infowindow) {
       var linepatharr = [l5[1],l5N[1]]; 
 
       addMarkerWithTimeout(l5[0], l5[1], l5[2], l5[3], i * 50, infowindow);
-      addLine(linepatharr, l5[4], l5[5], l5[6], l5[7]);
+      addLinel5c(linepatharr, l5[4], l5[5], l5[6], l5[7]);
       };
 
       var l5 = l5c[i];
@@ -533,7 +532,7 @@ function dropl5p(infowindow) {
       var linepatharr = [l5[1],l5N[1]]; 
 
       addMarkerWithTimeout(l5[0], l5[1], l5[2], l5[3], i * 50, infowindow);
-      addLine(linepatharr, l5[4], l5[5], l5[6], l5[7]);
+      addLinel5p(linepatharr, l5[4], l5[5], l5[6], l5[7]);
       };
 
       var l5 = l5p[i];
@@ -552,7 +551,7 @@ function dropl6c(infowindow) {
       var linepatharr = [l6[1],l6N[1]]; 
 
       addMarkerWithTimeout(l6[0], l6[1], l6[2], l6[3], i * 50, infowindow);
-      addLine(linepatharr, l6[4], l6[5], l6[6], l6[7]);
+      addLinel6c(linepatharr, l6[4], l6[5], l6[6], l6[7]);
       };
 
       var l6 = l6c[i];
@@ -570,7 +569,7 @@ function dropl6p(infowindow) {
       var linepatharr = [l6[1],l6N[1]]; 
 
       addMarkerWithTimeout(l6[0], l6[1], l6[2], l6[3], i * 50, infowindow);
-      addLine(linepatharr, l6[4], l6[5], l6[6], l6[7]);
+      addLinel6p(linepatharr, l6[4], l6[5], l6[6], l6[7]);
       };
 
       var l6 = l6p[i];
@@ -579,7 +578,7 @@ function dropl6p(infowindow) {
 }
 
 /*Добавление линии на карту*/
-function addLine(linepatharr, linecolor, lineOp, lineW, dash) {
+function addLinel3st(linepatharr, linecolor, lineOp, lineW, dash) {
   var lineSymbol = {
           path: 'M 0,-1 0,1',
           strokeOpacity: 1,
@@ -607,9 +606,340 @@ function addLine(linepatharr, linecolor, lineOp, lineW, dash) {
           map: map
   });
   };
-  polyLine.push(linePath);
+  polyLinel3st.push(linePath);
+}
+function addLinel4st(linepatharr, linecolor, lineOp, lineW, dash) {
+  var lineSymbol = {
+          path: 'M 0,-1 0,1',
+          strokeOpacity: 1,
+          scale: lineW
+  };
+  if (dash == 1){      
+  linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: 0,
+          strokeWeight: lineW,
+         icons: [{
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '15px'
+         }],
+          map: map
+  });
+  }else{
+          linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: lineOp,
+          strokeWeight: lineW,
+          map: map
+  });
+  };
+  polyLinel4st.push(linePath);
+}
+function addLinel5st(linepatharr, linecolor, lineOp, lineW, dash) {
+  var lineSymbol = {
+          path: 'M 0,-1 0,1',
+          strokeOpacity: 1,
+          scale: lineW
+  };
+  if (dash == 1){      
+  linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: 0,
+          strokeWeight: lineW,
+         icons: [{
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '15px'
+         }],
+          map: map
+  });
+  }else{
+          linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: lineOp,
+          strokeWeight: lineW,
+          map: map
+  });
+  };
+  polyLinel5st.push(linePath);
+}
+function addLinel6st(linepatharr, linecolor, lineOp, lineW, dash) {
+  var lineSymbol = {
+          path: 'M 0,-1 0,1',
+          strokeOpacity: 1,
+          scale: lineW
+  };
+  if (dash == 1){      
+  linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: 0,
+          strokeWeight: lineW,
+         icons: [{
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '15px'
+         }],
+          map: map
+  });
+  }else{
+          linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: lineOp,
+          strokeWeight: lineW,
+          map: map
+  });
+  };
+  polyLinel6st.push(linePath);
 }
 
+function addLinel3c(linepatharr, linecolor, lineOp, lineW, dash) {
+  var lineSymbol = {
+          path: 'M 0,-1 0,1',
+          strokeOpacity: 1,
+          scale: lineW
+  };
+  if (dash == 1){      
+  linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: 0,
+          strokeWeight: lineW,
+         icons: [{
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '15px'
+         }],
+          map: map
+  });
+  }else{
+          linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: lineOp,
+          strokeWeight: lineW,
+          map: map
+  });
+  };
+  polyLinel4c.push(linePath);
+}
+function addLinel4c(linepatharr, linecolor, lineOp, lineW, dash) {
+  var lineSymbol = {
+          path: 'M 0,-1 0,1',
+          strokeOpacity: 1,
+          scale: lineW
+  };
+  if (dash == 1){      
+  linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: 0,
+          strokeWeight: lineW,
+         icons: [{
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '15px'
+         }],
+          map: map
+  });
+  }else{
+          linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: lineOp,
+          strokeWeight: lineW,
+          map: map
+  });
+  };
+  polyLinel4c.push(linePath);
+}
+function addLinel5c(linepatharr, linecolor, lineOp, lineW, dash) {
+  var lineSymbol = {
+          path: 'M 0,-1 0,1',
+          strokeOpacity: 1,
+          scale: lineW
+  };
+  if (dash == 1){      
+  linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: 0,
+          strokeWeight: lineW,
+         icons: [{
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '15px'
+         }],
+          map: map
+  });
+  }else{
+          linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: lineOp,
+          strokeWeight: lineW,
+          map: map
+  });
+  };
+  polyLinel5c.push(linePath);
+}
+function addLinel6c(linepatharr, linecolor, lineOp, lineW, dash) {
+  var lineSymbol = {
+          path: 'M 0,-1 0,1',
+          strokeOpacity: 1,
+          scale: lineW
+  };
+  if (dash == 1){      
+  linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: 0,
+          strokeWeight: lineW,
+         icons: [{
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '15px'
+         }],
+          map: map
+  });
+  }else{
+          linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: lineOp,
+          strokeWeight: lineW,
+          map: map
+  });
+  };
+  polyLinel6c.push(linePath);
+}
+
+function addLinel3p(linepatharr, linecolor, lineOp, lineW, dash) {
+  var lineSymbol = {
+          path: 'M 0,-1 0,1',
+          strokeOpacity: 1,
+          scale: lineW
+  };
+  if (dash == 1){      
+  linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: 0,
+          strokeWeight: lineW,
+         icons: [{
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '15px'
+         }],
+          map: map
+  });
+  }else{
+          linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: lineOp,
+          strokeWeight: lineW,
+          map: map
+  });
+  };
+  polyLinel3p.push(linePath);
+}
+function addLinel4p(linepatharr, linecolor, lineOp, lineW, dash) {
+  var lineSymbol = {
+          path: 'M 0,-1 0,1',
+          strokeOpacity: 1,
+          scale: lineW
+  };
+  if (dash == 1){      
+  linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: 0,
+          strokeWeight: lineW,
+         icons: [{
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '15px'
+         }],
+          map: map
+  });
+  }else{
+          linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: lineOp,
+          strokeWeight: lineW,
+          map: map
+  });
+  };
+  polyLinel4p.push(linePath);
+}
+function addLinel5p(linepatharr, linecolor, lineOp, lineW, dash) {
+  var lineSymbol = {
+          path: 'M 0,-1 0,1',
+          strokeOpacity: 1,
+          scale: lineW
+  };
+  if (dash == 1){      
+  linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: 0,
+          strokeWeight: lineW,
+         icons: [{
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '15px'
+         }],
+          map: map
+  });
+  }else{
+          linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: lineOp,
+          strokeWeight: lineW,
+          map: map
+  });
+  };
+  polyLinel5p.push(linePath);
+}
+function addLinel6p(linepatharr, linecolor, lineOp, lineW, dash) {
+  var lineSymbol = {
+          path: 'M 0,-1 0,1',
+          strokeOpacity: 1,
+          scale: lineW
+  };
+  if (dash == 1){      
+  linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: 0,
+          strokeWeight: lineW,
+         icons: [{
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '15px'
+         }],
+          map: map
+  });
+  }else{
+          linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: lineOp,
+          strokeWeight: lineW,
+          map: map
+  });
+  };
+  polyLinel6p.push(linePath);
+}
   /*Функция определяющая значения маркера (определение одного маркера)*/
 function addMarkerWithTimeout(title, position, text, img, timeout, infowindow) {
   window.setTimeout(function() {
