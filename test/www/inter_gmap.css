@@ -1,0 +1,65 @@
+#map {
+        height: 900px;
+        width:100vw;
+      }
+      #fl_fst_panel {
+        position: absolute;
+    display:flex;
+    justify-content: space-between;
+        top: 5px;
+        left: 30%;
+        z-index: 5;
+        padding: 5px;
+    width:450px;
+        text-align: center;
+        line-height: 30px;
+        padding-left: 10px;
+        margin-left: -52px;
+      }
+      #fl_scnd_panel{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        top: 60px;
+        left: 30%;
+        z-index: 5; 
+        width:450px;
+        text-align: center;
+        line-height: 30px;
+        padding-left: 10px;
+        margin-left: -52px;
+      } 
+      .btn_map{
+        height: 45px;
+        border-radius: 5%;
+        font-size: 16px;
+    font-weight:600;
+        background-color: rgba(109, 196, 220, 0.80);
+      }
+      .btn_map_line{
+        height: 34px;
+        width: 34px;
+        border-radius: 50%;
+        font-size: 24px;
+    font-weight: 600;
+        background-color: rgba(109, 196, 220, 0.80);
+    color:#fff;
+      }
+  .ln1{
+    background-color: rgba(179, 55, 32, 0.80);
+  }
+  .ln2{
+    background-color: rgba(65, 65, 200, 0.80);
+  }
+  .ln3{
+    background-color: rgba(15, 156, 87, 0.80);
+  }
+  .ln4{
+    background-color: rgba(246, 123, 0, 0.80);
+  }
+  .ln5{
+    background-color: rgba(156, 39, 177, 0.80);
+  }
+  .ln6{
+    background-color: rgba(120, 84, 72, 0.80);
+  }
