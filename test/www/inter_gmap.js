@@ -9,7 +9,7 @@ var polyLine = [];
 var linepatharr= [];
 var indx;
 /*Прозрачность линий (рабочей и в строеке/проекте)*/
-var lop = 0.3;
+var lop = 0.15;
 var cplop = 1.0;
 
 /*Ширина линий (рабочей и в строеке/проекте)*/
@@ -33,12 +33,18 @@ var polyLinel4p = [];
 var polyLinel5p = [];
 var polyLinel6p = [];
 
+var polyLinel3w = [];
+var polyLinel4w = [];
+var polyLinel5w = [];
+var polyLinel6w = [];
+
 var redline = '#d52d2d';
 var blueline= '#2a0acb';
 var greenline= '#034f0d';
 var orangeline= '#ff6500';
 var violetline= '#60008a';
 var brownline= '#5b4037';
+var greyline= '#aeaeb3';
 
 /*Иконки станций построенных*/
 var redIcon = {url: 'Imgs/Red.png'};
@@ -60,14 +66,13 @@ var pOrangeIcon= {url: 'Imgs/pOrange.png'};
 var pVioletIcon= {url: 'Imgs/pViolet.png'};
 var pBrownIcon= {url: 'Imgs/pBrown.png'};
 
+/*Иконки станций в разработке, до проекта*/
+var planIcon = {url: 'Imgs/plan.png'};
+
 /*Описание станций в строительстве*/
 var containerConst = [
-['<div class="content__body"><p><b>Время постройки</b> - апрель 2018 года, <b>Линия</b> - Невско-Василеостровская (3 линия «Зеленая»)</p>'+
-'<p><b>Адрес</b> - Ул. Савушкина, (юго-западнее пересечения ул. Савушкина и Туристской ул.)</p>'+
-'</div>'],
-['<div class="content__body"><p><b>Время постройки</b> - март 2018 года, <b>Линия</b> - Невско-Василеостровская (3 линия «Зеленая»)</p>'+
-'<p><b>Адрес</b> - Крестовский остров, западнее нового стадиона «Зенит-Арена»</p>'+
-'</div>'],
+[''],
+[''],
 ['<div class="content__body"><p><b>Время постройки</b> - ноябрь 2019 года, <b>Линия</b> - Правобережная (4 линия «Оранжевая»)</p>'+
 '<p><b>Адрес</b> - Большой пр. В.О. (юго-западнее пересечения Большого пр. и Косой линии)</p>'+
 '</div>'],

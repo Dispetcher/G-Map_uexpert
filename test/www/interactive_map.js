@@ -7,9 +7,9 @@ var map;
 var linePath;
 var polyLine = [];
 var linepatharr= [];
-
+var indx;
 /*Прозрачность линий (рабочей и в строеке/проекте)*/
-var lop = 0.3;
+var lop = 0.6;
 var cplop = 1.0;
 
 /*Ширина линий (рабочей и в строеке/проекте)*/
@@ -33,12 +33,18 @@ var polyLinel4p = [];
 var polyLinel5p = [];
 var polyLinel6p = [];
 
+var polyLinel3w = [];
+var polyLinel4w = [];
+var polyLinel5w = [];
+var polyLinel6w = [];
+
 var redline = '#d52d2d';
 var blueline= '#2a0acb';
 var greenline= '#034f0d';
 var orangeline= '#ff6500';
 var violetline= '#60008a';
 var brownline= '#5b4037';
+var greyline= '#8c8c94';
 
 /*Иконки станций построенных*/
 var redIcon = {url: 'Imgs/Red.png'};
@@ -60,14 +66,22 @@ var pOrangeIcon= {url: 'Imgs/pOrange.png'};
 var pVioletIcon= {url: 'Imgs/pViolet.png'};
 var pBrownIcon= {url: 'Imgs/pBrown.png'};
 
+/*Иконки станций в разработке, до проекта*/
+var planIcon = {url: 'Imgs/plan.png'};
+
+
+/*Описание перспективных станций */
+var containerProsp = [
+['<div class="content__body"><p><b>Время постройки</b> - после 2030 года, <b>Линия</b> - Красносельско-Калининская (6 линия «Кориченвая»)</p>'+
+'<p><b>Адрес</b> - </p>'+
+'</div>']
+];
+
+
 /*Описание станций в строительстве*/
 var containerConst = [
-['<div class="content__body"><p><b>Время постройки</b> - апрель 2018 года, <b>Линия</b> - Невско-Василеостровская (3 линия «Зеленая»)</p>'+
-'<p><b>Адрес</b> - Ул. Савушкина, (юго-западнее пересечения ул. Савушкина и Туристской ул.)</p>'+
-'</div>'],
-['<div class="content__body"><p><b>Время постройки</b> - март 2018 года, <b>Линия</b> - Невско-Василеостровская (3 линия «Зеленая»)</p>'+
-'<p><b>Адрес</b> - Крестовский остров, западнее нового стадиона «Зенит-Арена»</p>'+
-'</div>'],
+[''],
+[''],
 ['<div class="content__body"><p><b>Время постройки</b> - ноябрь 2019 года, <b>Линия</b> - Правобережная (4 линия «Оранжевая»)</p>'+
 '<p><b>Адрес</b> - Большой пр. В.О. (юго-западнее пересечения Большого пр. и Косой линии)</p>'+
 '</div>'],
@@ -125,6 +139,21 @@ var containerProj = [
 '</div>']
 ];
 
+/*Блок перпективных станций*/
+var l6pr = [
+['Станция метро «Ручьи»', {lat: 60.002356, lng: 30.451250}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Пискаревка»', {lat: 59.987520, lng: 30.425306}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Бестужевская»', {lat: 59.975723, lng: 30.418059}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Полюстровский проспект»', {lat: 59.959525, lng: 30.414923}, containerProsp[0], greyline, brownline, cplop, cplw, 1],
+['Станция метро «Смольный»', {lat: 59.949658, lng: 30.392099}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Суворовская»', {lat: 59.937906, lng: 30.374954}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Знаменская»', {lat: 59.932440, lng: 30.367117}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Лиговский проспект 2»', {lat: 59.925599, lng: 30.358057}, containerProsp[0], greyline, brownline, cplop, cplw, 1],
+['Станция метро «Брестская»', {lat: 59.856149, lng: 30.200588}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Улица Доблести»', {lat: 59.856828, lng: 30.176673}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Петергофское шоссе»', {lat: 59.847527, lng: 30.146442}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Сосновая Поляна»', {lat: 59.825703, lng: 30.145944}, containerProsp[0], planIcon, greyline, cplop, cplw, 1]
+];
 
 /*Блок строящихся станций*/
 var l3c = [
@@ -332,12 +361,24 @@ var l5st= [
 
 /*Блок станций 6 линии (коричневая)*/
 var l6st= [
+['Станция метро «Ручьи»', {lat: 60.002356, lng: 30.451250}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Пискаревка»', {lat: 59.987520, lng: 30.425306}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Бестужевская»', {lat: 59.975723, lng: 30.418059}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Полюстровский проспект»', {lat: 59.959525, lng: 30.414923}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Смольный»', {lat: 59.949658, lng: 30.392099}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Суворовская»', {lat: 59.937906, lng: 30.374954}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Знаменская»', {lat: 59.932440, lng: 30.367117}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Лиговский проспект 2»', {lat: 59.925599, lng: 30.358057}, containerProsp[0], greyline, brownline, cplop, cplw, 1],
 ['Станция метро «Каретная»', {lat: 59.913494, lng: 30.357769}, containerProj[6], pBrownIcon, brownline, cplop, cplw, 1, 2],
 ['Станция метро «Боровая»', {lat: 59.902969, lng: 30.329868}, containerProj[7], pBrownIcon, brownline, cplop, cplw, 1, 2],
 ['Станция метро «Заставская»', {lat: 59.893453, lng: 30.318412}, containerProj[8], pBrownIcon, brownline, cplop, cplw, 1, 2],
 ['Станция метро «Броневая»', {lat: 59.876138, lng: 30.304550}, containerProj[9], pBrownIcon, brownline, cplop, cplw, 1, 2],
 ['Станция метро «Путиловская»', {lat: 59.878694, lng: 30.264729}, containerConst[4], cBrownIcon, brownline, cplop, cplw, 1, 2],
-['Станция метро «Юго-западная»', {lat: 59.859239, lng: 30.230442}, containerConst[5], cBrownIcon, brownline, cplop, cplw, 1, 2]
+['Станция метро «Юго-западная»', {lat: 59.859239, lng: 30.230442}, containerConst[5], cBrownIcon, greyline, cplop, cplw, 1, 2],
+['Станция метро «Брестская»', {lat: 59.856149, lng: 30.200588}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Улица Доблести»', {lat: 59.856828, lng: 30.176673}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Петергофское шоссе»', {lat: 59.847527, lng: 30.146442}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Сосновая Поляна»', {lat: 59.825703, lng: 30.145944}, containerProsp[0], planIcon, greyline, cplop, cplw, 1]
 ];
 var a;
 /*Функция инициализации карты*/
@@ -378,6 +419,12 @@ function dropAll(infowindow){
   dropl4st(infowindow);
   dropl5st(infowindow);
   dropl6st(infowindow);
+}
+
+function dropProsp(infowindow){
+  clearMarkers();
+  removeLine();
+  dropl6w(infowindow);
 }
 
 function dropConstr(infowindow){
@@ -657,6 +704,22 @@ function dropl6p(infowindow) {
       };
 
       var l6 = l6p[i];
+      addMarkerWithTimeout(l6[0], l6[1], l6[2], l6[3], i * 50, infowindow);
+    }
+}
+/*Прорисовка 6-й линии в перспективе*/
+function dropl6w(infowindow) {
+    for (var i = 0; i < l6w.length; i++) {
+      if (i != l6w.length-1){
+      var l6 = l6w[i];
+      var l6N = l6w[i+1];
+      var linepatharr = [l6[1],l6N[1]]; 
+
+      addMarkerWithTimeout(l6[0], l6[1], l6[2], l6[3], i * 50, infowindow);
+      addLinel6w(linepatharr, l6[4], l6[5], l6[6], l6[7]);
+      };
+
+      var l6 = l6w[i];
       addMarkerWithTimeout(l6[0], l6[1], l6[2], l6[3], i * 50, infowindow);
     }
 }
@@ -1084,6 +1147,36 @@ function addLinel6p(linepatharr, linecolor, lineOp, lineW, dash) {
   };
   polyLinel6p.push(linePath);
 }
+function addLinel6w(linepatharr, linecolor, lineOp, lineW, dash) {
+  var lineSymbol = {
+          path: 'M 0,-1 0,1',
+          strokeOpacity: 1,
+          scale: lineW
+  };
+  if (dash == 1){      
+  linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: 0,
+          strokeWeight: lineW,
+         icons: [{
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '20px'
+         }],
+          map: map
+  });
+  }else{
+          linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: lineOp,
+          strokeWeight: lineW,
+          map: map
+  });
+  };
+  polyLinel6w.push(linePath);
+}
   /*Функция определяющая значения маркера (определение одного маркера)*/
 function addMarkerWithTimeout(title, position, text, img, timeout, infowindow, indx) {
 	if (indx != 2){
@@ -1175,9 +1268,12 @@ function removeLine() {
   for (var i = 0; i < polyLinel6p.length; i++) {
     polyLinel6p[i].setMap(null);
   }
+  for (var i = 0; i < polyLinel6w.length; i++) {
+    polyLinel6w[i].setMap(null);
+  }
   polyLinel6st = [];
   polyLinel6c = [];
   polyLinel6p = [];
-
+  polyLinel6w = [];
 }
 }
