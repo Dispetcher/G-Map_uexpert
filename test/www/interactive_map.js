@@ -9,7 +9,7 @@ var polyLine = [];
 var linepatharr= [];
 var indx;
 /*Прозрачность линий (рабочей и в строеке/проекте)*/
-var lop = 0.6;
+var lop = 0.5;
 var cplop = 1.0;
 
 /*Ширина линий (рабочей и в строеке/проекте)*/
@@ -72,11 +72,16 @@ var planIcon = {url: 'Imgs/plan.png'};
 
 /*Описание перспективных станций */
 var containerProsp = [
+['<div class="content__body"><p><b>Время постройки</b> - после 2030 года, <b>Линия</b> - Кировско-Выборгская линия (1 линия «Красная»)</p>'+
+'<p><b>Адрес</b> - </p>'+
+'</div>'],
+['<div class="content__body"><p><b>Время постройки</b> - после 2030 года, <b>Линия</b> - Правобережная (4 линия «Оранжевая»)</p>'+
+'<p><b>Адрес</b> - </p>'+
+'</div>'],
 ['<div class="content__body"><p><b>Время постройки</b> - после 2030 года, <b>Линия</b> - Красносельско-Калининская (6 линия «Кориченвая»)</p>'+
 '<p><b>Адрес</b> - </p>'+
 '</div>']
 ];
-
 
 /*Описание станций в строительстве*/
 var containerConst = [
@@ -140,25 +145,40 @@ var containerProj = [
 ];
 
 /*Блок перпективных станций*/
+var l1pr = [
+['Станция метро «Бугры»', {lat: 60.071203, lng: 30.395416}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Проспект Культуры»', {lat: 60.053989, lng: 30.383422}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Сосновка»', {lat: 60.042517, lng: 30.38710}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Александрино»', {lat: 59.833532, lng: 30.218573}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Проспект Маршала Жукова»', {lat: 59.828321, lng: 30.190634}, containerProsp[0], planIcon, greyline, cplop, cplw, 1]
+];
+
+var l4pr = [
+['Станция метро «Юнтолово»', {lat: 60.029623, lng: 30.135814}, containerProsp[1], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Конная Лахта»', {lat: 60.011791, lng: 30.114785}, containerProsp[1], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Лахта»', {lat: 59.994829, lng: 30.144055}, containerProsp[1], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Кудрово»', {lat: 59.890394, lng: 30.506622}, containerProsp[1], planIcon, greyline, cplop, cplw, 1]
+];
+
 var l6pr = [
-['Станция метро «Ручьи»', {lat: 60.002356, lng: 30.451250}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
-['Станция метро «Пискаревка»', {lat: 59.987520, lng: 30.425306}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
-['Станция метро «Бестужевская»', {lat: 59.975723, lng: 30.418059}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
-['Станция метро «Полюстровский проспект»', {lat: 59.959525, lng: 30.414923}, containerProsp[0], greyline, brownline, cplop, cplw, 1],
-['Станция метро «Смольный»', {lat: 59.949658, lng: 30.392099}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
-['Станция метро «Суворовская»', {lat: 59.937906, lng: 30.374954}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
-['Станция метро «Знаменская»', {lat: 59.932440, lng: 30.367117}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
-['Станция метро «Лиговский проспект 2»', {lat: 59.925599, lng: 30.358057}, containerProsp[0], greyline, brownline, cplop, cplw, 1],
-['Станция метро «Брестская»', {lat: 59.856149, lng: 30.200588}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
-['Станция метро «Улица Доблести»', {lat: 59.856828, lng: 30.176673}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
-['Станция метро «Петергофское шоссе»', {lat: 59.847527, lng: 30.146442}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
-['Станция метро «Сосновая Поляна»', {lat: 59.825703, lng: 30.145944}, containerProsp[0], planIcon, greyline, cplop, cplw, 1]
+['Станция метро «Ручьи»', {lat: 60.002356, lng: 30.451250}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Пискаревка»', {lat: 59.987520, lng: 30.425306}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Бестужевская»', {lat: 59.975723, lng: 30.418059}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Полюстровский проспект»', {lat: 59.959525, lng: 30.414923}, containerProsp[2], greyline, brownline, cplop, cplw, 1],
+['Станция метро «Смольный»', {lat: 59.949658, lng: 30.392099}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Суворовская»', {lat: 59.937906, lng: 30.374954}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Знаменская»', {lat: 59.932440, lng: 30.367117}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Лиговский проспект 2»', {lat: 59.925599, lng: 30.358057}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Брестская»', {lat: 59.856149, lng: 30.200588}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Улица Доблести»', {lat: 59.856828, lng: 30.176673}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Петергофское шоссе»', {lat: 59.847527, lng: 30.146442}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Сосновая Поляна»', {lat: 59.825703, lng: 30.145944}, containerProsp[2], planIcon, greyline, cplop, cplw, 1]
 ];
 
 /*Блок строящихся станций*/
 var l3c = [
-['Станция метро «Беговая»', {lat: 59.987998, lng: 30.202578}, containerConst[0], cGreenIcon, greenline, cplop, cplw, 1],
-['Станция метро «Новокрестовская 1»', {lat: 59.972948, lng: 30.211208}, containerConst[1], cGreenIcon, greenline, cplop, cplw, 1],
+['Станция метро «Беговая»', {lat: 59.987998, lng: 30.202578}, '', greenIcon, greenline, lop, lw, 0],
+['Станция метро «Новокрестовская 1»', {lat: 59.972948, lng: 30.211208},'', greenIcon, greenline, lop, lw, 0],
 ['Станция метро «Приморская»', {lat: 59.948459, lng: 30.234463}, '', greenIcon, greenline, lop, lw, 0],
 ['Станция метро «Василеостровская»', {lat: 59.942669, lng: 30.278136}, '', greenIcon, greenline, lop, lw, 0],
 ['Станция метро «Гостиный Двор»', {lat: 59.934121, lng: 30.333144}, '', greenIcon, greenline, lop, lw, 0],
@@ -263,6 +283,9 @@ var l6p = [
 /*Блок всех станций---------------------------*/
 /*Блок станций 1 линии (красная)*/
 var l1st = [
+['Станция метро «Бугры»', {lat: 60.071203, lng: 30.395416}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Проспект Культуры»', {lat: 60.053989, lng: 30.383422}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Сосновка»', {lat: 60.042517, lng: 30.38710}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
 ['Станция метро «Гражданский проспект»', {lat: 60.035226, lng: 30.418243}, '', redIcon, redline, lop, lw, 0],
 ['Станция метро «Академическая»', {lat: 60.012773, lng: 30.395945}, '', redIcon, redline, lop, lw, 0],
 ['Станция метро «Политехническая»', {lat:60.008905, lng: 30.370824}, '', redIcon, redline, lop, lw, 0],
@@ -279,7 +302,9 @@ var l1st = [
 ['Станция метро «Кировский завод»', {lat: 59.879802, lng: 30.261333}, '', redIcon, redline, lop, lw, 0],
 ['Станция метро «Автово»', {lat: 59.867294, lng: 30.261240}, '', redIcon, redline, lop, lw, 0],
 ['Станция метро «Ленинский проспект»', {lat: 59.850641, lng: 30.268387}, '', redIcon, redline, lop, lw, 0],
-['Станция метро «Проспект Ветеранов»', {lat: 59.842154, lng: 30.250260}, '', redIcon, redline, lop, lw, 0]
+['Станция метро «Проспект Ветеранов»', {lat: 59.842154, lng: 30.250260}, '', redIcon, greyline, lop, lw, 0],
+['Станция метро «Александрино»', {lat: 59.833532, lng: 30.218573}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Проспект Маршала Жукова»', {lat: 59.828321, lng: 30.190634}, containerProsp[0], planIcon, greyline, cplop, cplw, 1]
 ];
 
 /*Блок станций 2 линии (синия)*/
@@ -308,8 +333,8 @@ var l2st = [
 var l3st= [
 ['Станция метро «Планерная»', {lat: 60.021725, lng: 30.222013}, containerProj[0], pGreenIcon, greenline, cplop, cplw, 1],
 ['Станция метро «Туристская»', {lat: 60.001656, lng: 30.210603}, containerProj[1], pGreenIcon, greenline, cplop, cplw, 1],
-['Станция метро «Беговая»', {lat: 59.987998, lng: 30.202578}, containerConst[0], cGreenIcon, greenline, cplop, cplw, 1],
-['Станция метро «Новокрестовская 1»', {lat: 59.972948, lng: 30.211208}, containerConst[1], cGreenIcon, greenline, cplop, cplw, 1],
+['Станция метро «Беговая»', {lat: 59.987998, lng: 30.202578}, '', greenIcon, greenline, lop, lw, 0],
+['Станция метро «Новокрестовская 1»', {lat: 59.972948, lng: 30.211208}, '', greenIcon, greenline, lop, lw, 0],
 ['Станция метро «Приморская»', {lat: 59.948459, lng: 30.234463}, '', greenIcon, greenline, lop, lw, 0],
 ['Станция метро «Василеостровская»', {lat: 59.942669, lng: 30.278136}, '', greenIcon, greenline, lop, lw, 0],
 ['Станция метро «Гостиный Двор»', {lat: 59.934121, lng: 30.333144}, '', greenIcon, greenline, lop, lw, 0],
@@ -324,6 +349,9 @@ var l3st= [
 
 /*Блок станций 4 линии (оранжевая)*/
 var l4st= [
+['Станция метро «Юнтолово»', {lat: 60.029623, lng: 30.135814}, containerProsp[1], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Конная Лахта»', {lat: 60.011791, lng: 30.114785}, containerProsp[1], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Лахта»', {lat: 59.994829, lng: 30.144055}, containerProsp[1], planIcon, greyline, cplop, cplw, 1],
 ['Станция метро «Новокрестовская 2»', {lat: 59.970450, lng: 30.219798}, containerProj[2], pOrangeIcon, orangeline, cplop, cplw, 1],
 ['Станция метро «Морской Фасад»', {lat: 59.948496, lng: 30.216191}, containerProj[3], pOrangeIcon, orangeline, cplop, cplw, 1],
 ['Станция метро «Гавань»', {lat: 59.932537, lng: 30.227705}, containerProj[4], pOrangeIcon, orangeline, cplop, cplw, 1],
@@ -336,7 +364,8 @@ var l4st= [
 ['Станция метро «Новочеркасская»', {lat: 59.929081, lng: 30.412051}, '', orangeIcon, orangeline, lop, lw, 0],
 ['Станция метро «Ладожская»', {lat: 59.932498, lng: 30.439265}, '', orangeIcon, orangeline, lop, lw, 0],
 ['Станция метро «Проспект Большевиков»', {lat: 59.919837, lng: 30.466771}, '', orangeIcon, orangeline, lop, lw, 0],
-['Станция метро «Улица Дыбенко»', {lat: 59.907287, lng: 30.483336}, '', orangeIcon, orangeline, lop, lw, 0]
+['Станция метро «Улица Дыбенко»', {lat: 59.907287, lng: 30.483336}, '', orangeIcon, greyline, cplop, cplw, 1],
+['Станция метро «Кудрово»', {lat: 59.890394, lng: 30.506622}, containerProsp[1], planIcon, greyline, cplop, cplw, 1]
 ];
 
 /*Блок станций 5 линии (фиолетовая)*/
@@ -368,7 +397,7 @@ var l6st= [
 ['Станция метро «Смольный»', {lat: 59.949658, lng: 30.392099}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
 ['Станция метро «Суворовская»', {lat: 59.937906, lng: 30.374954}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
 ['Станция метро «Знаменская»', {lat: 59.932440, lng: 30.367117}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
-['Станция метро «Лиговский проспект 2»', {lat: 59.925599, lng: 30.358057}, containerProsp[0], greyline, brownline, cplop, cplw, 1],
+['Станция метро «Лиговский проспект 2»', {lat: 59.925599, lng: 30.358057}, containerProsp[0],planIcon, greyline, cplop, cplw, 1],
 ['Станция метро «Каретная»', {lat: 59.913494, lng: 30.357769}, containerProj[6], pBrownIcon, brownline, cplop, cplw, 1, 2],
 ['Станция метро «Боровая»', {lat: 59.902969, lng: 30.329868}, containerProj[7], pBrownIcon, brownline, cplop, cplw, 1, 2],
 ['Станция метро «Заставская»', {lat: 59.893453, lng: 30.318412}, containerProj[8], pBrownIcon, brownline, cplop, cplw, 1, 2],
@@ -424,6 +453,7 @@ function dropAll(infowindow){
 function dropProsp(infowindow){
   clearMarkers();
   removeLine();
+  dropl4w(infowindow);
   dropl6w(infowindow);
 }
 
@@ -638,6 +668,22 @@ function dropl4p(infowindow) {
       };
 
       var l4 = l4p[i];
+      addMarkerWithTimeout(l4[0], l4[1], l4[2], l4[3], i * 50, infowindow);
+    }
+}
+/*Прорисовка 4-й линии в перспективе*/
+function dropl4w(infowindow) {
+    for (var i = 0; i < l4w.length; i++) {
+      if (i != l4w.length-1){
+      var l4 = l4w[i];
+      var l4N = l4w[i+1];
+      var linepatharr = [l4[1],l4N[1]]; 
+
+      addMarkerWithTimeout(l4[0], l4[1], l4[2], l4[3], i * 50, infowindow);
+      addLinel4p(linepatharr, l4[4], l4[5], l4[6], l4[7]);
+      };
+
+      var l4 = l4w[i];
       addMarkerWithTimeout(l4[0], l4[1], l4[2], l4[3], i * 50, infowindow);
     }
 }
@@ -1147,6 +1193,37 @@ function addLinel6p(linepatharr, linecolor, lineOp, lineW, dash) {
   };
   polyLinel6p.push(linePath);
 }
+
+function addLinel4w(linepatharr, linecolor, lineOp, lineW, dash) {
+  var lineSymbol = {
+          path: 'M 0,-1 0,1',
+          strokeOpacity: 1,
+          scale: lineW
+  };
+  if (dash == 1){      
+  linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: 0,
+          strokeWeight: lineW,
+         icons: [{
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '20px'
+         }],
+          map: map
+  });
+  }else{
+          linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: lineOp,
+          strokeWeight: lineW,
+          map: map
+  });
+  };
+  polyLinel4w.push(linePath);
+}
 function addLinel6w(linepatharr, linecolor, lineOp, lineW, dash) {
   var lineSymbol = {
           path: 'M 0,-1 0,1',
@@ -1242,9 +1319,13 @@ function removeLine() {
   for (var i = 0; i < polyLinel4p.length; i++) {
     polyLinel4p[i].setMap(null);
   }
+  for (var i = 0; i < polyLinel4w.length; i++) {
+    polyLinel4w[i].setMap(null);
+  }
   polyLinel4st = [];
   polyLinel4c = [];
   polyLinel4p = [];
+  polyLinel4w = [];
 
   for (var i = 0; i < polyLinel5st.length; i++) {
     polyLinel5st[i].setMap(null);
