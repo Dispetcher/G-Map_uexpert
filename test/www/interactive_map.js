@@ -17,6 +17,7 @@ var lw = 6;
 var cplw = 4;
 
 var polyLinel1st = [];
+var polyLinel1stradius = [];
 var polyLinel2st = [];
 var polyLinel3st = [];
 var polyLinel4st = [];
@@ -69,6 +70,17 @@ var pBrownIcon= {url: 'Imgs/pBrown.png'};
 /*Иконки станций в разработке, до проекта*/
 var planIcon = {url: 'Imgs/plan.png'};
 
+var contprosp1ln = [
+['<div class="content__body"><p><b>Время постройки</b> - после 2030 года, <b>Линия</b> - Кировско-Выборгская линия (1 линия «Красная»)</p>'+
+'<p><b>Адрес</b> - пос. Бугры (Всеволожский район Ленинградской области)</p>'+
+'</div>'],
+['<div class="content__body"><p><b>Время постройки</b> - после 2030 года, <b>Линия</b> - Кировско-Выборгская линия (1 линия «Красная»)</p>'+
+'<p><b>Адрес</b> - проспект Культуры</p>'+
+'</div>'],
+['<div class="content__body"><p><b>Время постройки</b> - после 2030 года, <b>Линия</b> - Кировско-Выборгская линия (1 линия «Красная»)</p>'+
+'<p><b>Адрес</b> - проспект Культуры</p>'+
+'</div>']
+];
 
 /*Описание перспективных станций */
 var containerProsp = [
@@ -148,7 +160,7 @@ var containerProj = [
 var l1pr = [
 ['Станция метро «Бугры»', {lat: 60.071203, lng: 30.395416}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
 ['Станция метро «Проспект Культуры»', {lat: 60.053989, lng: 30.383422}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
-['Станция метро «Сосновка»', {lat: 60.042517, lng: 30.38710}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Сосновка»', {lat: 60.031134, lng: 30.365952}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
 ['Станция метро «Александрино»', {lat: 59.833532, lng: 30.218573}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
 ['Станция метро «Проспект Маршала Жукова»', {lat: 59.828321, lng: 30.190634}, containerProsp[0], planIcon, greyline, cplop, cplw, 1]
 ];
@@ -282,10 +294,14 @@ var l6p = [
 
 /*Блок всех станций---------------------------*/
 /*Блок станций 1 линии (красная)*/
-var l1st = [
+var l1stradius = [
 ['Станция метро «Бугры»', {lat: 60.071203, lng: 30.395416}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
 ['Станция метро «Проспект Культуры»', {lat: 60.053989, lng: 30.383422}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
-['Станция метро «Сосновка»', {lat: 60.042517, lng: 30.38710}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Сосновка»', {lat: 60.031134, lng: 30.365952}, containerProsp[0], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Политехническая»', {lat:60.008905, lng: 30.370824}, '', redIcon, redline, lop, lw, 0]
+];
+
+var l1st = [
 ['Станция метро «Гражданский проспект»', {lat: 60.035226, lng: 30.418243}, '', redIcon, redline, lop, lw, 0],
 ['Станция метро «Академическая»', {lat: 60.012773, lng: 30.395945}, '', redIcon, redline, lop, lw, 0],
 ['Станция метро «Политехническая»', {lat:60.008905, lng: 30.370824}, '', redIcon, redline, lop, lw, 0],
@@ -443,6 +459,7 @@ function dropAll(infowindow){
   clearMarkers();
   removeLine();
   dropl1st(infowindow);
+  dropl1stradius(infowindow);
   dropl2st(infowindow);
   dropl3st(infowindow);
   dropl4st(infowindow);
@@ -461,6 +478,7 @@ function dropConstr(infowindow){
   clearMarkers();
   removeLine();
   dropl1st(infowindow);
+  dropl1stradius(infowindow);
   dropl2st(infowindow);
   dropl3c(infowindow);
   dropl4c(infowindow);
@@ -472,6 +490,7 @@ function dropProject(infowindow){
   clearMarkers();
   removeLine();
   dropl1st(infowindow);
+  dropl1stradius(infowindow);
   dropl2st(infowindow);
   dropl3p(infowindow);
   dropl4p(infowindow);
@@ -483,6 +502,7 @@ function dropl1(infowindow){
   clearMarkers();
   removeLine();
   dropl1st(infowindow);
+  dropl1stradius(infowindow);
 }
 function dropl2(infowindow){
   clearMarkers();
@@ -522,6 +542,21 @@ function dropl1st(infowindow) {
       };
 
       var l1 = l1st[i];
+      addMarkerWithTimeout(l1[0], l1[1], l1[2], l1[3], i * 50, infowindow);
+    }
+}
+function dropl1stradius(infowindow) {
+    for (var i = 0; i < l1stradius.length; i++) {
+      if (i != l1stradius.length-1){
+      var l1 = l1stradius[i];
+      var l1N = l1stradius[i+1];
+      var linepatharr = [l1[1],l1N[1]]; 
+
+      addMarkerWithTimeout(l1[0], l1[1], l1[2], l1[3], i * 50, infowindow);
+      addLinel1stradius(linepatharr, l1[4], l1[5], l1[6], l1[7]);
+      };
+
+      var l1 = l1stradius[i];
       addMarkerWithTimeout(l1[0], l1[1], l1[2], l1[3], i * 50, infowindow);
     }
 }
@@ -772,6 +807,36 @@ function dropl6w(infowindow) {
 
 /*Добавление линии на карту*/
 function addLinel1st(linepatharr, linecolor, lineOp, lineW, dash) {
+  var lineSymbol = {
+          path: 'M 0,-1 0,1',
+          strokeOpacity: 1,
+          scale: lineW
+  };
+  if (dash == 1){      
+  linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: 0,
+          strokeWeight: lineW,
+         icons: [{
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '18px'
+         }],
+          map: map
+  });
+  }else{
+          linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: lineOp,
+          strokeWeight: lineW,
+          map: map
+  });
+  };
+  polyLinel1st.push(linePath);
+}
+function addLinel1stradius(linepatharr, linecolor, lineOp, lineW, dash) {
   var lineSymbol = {
           path: 'M 0,-1 0,1',
           strokeOpacity: 1,
@@ -1193,7 +1258,36 @@ function addLinel6p(linepatharr, linecolor, lineOp, lineW, dash) {
   };
   polyLinel6p.push(linePath);
 }
-
+function addLinel1w(linepatharr, linecolor, lineOp, lineW, dash) {
+  var lineSymbol = {
+          path: 'M 0,-1 0,1',
+          strokeOpacity: 1,
+          scale: lineW
+  };
+  if (dash == 1){      
+  linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: 0,
+          strokeWeight: lineW,
+         icons: [{
+          icon: lineSymbol,
+          offset: '0',
+          repeat: '20px'
+         }],
+          map: map
+  });
+  }else{
+          linePath = new google.maps.Polyline({
+          path: linepatharr,
+          strokeColor: linecolor,
+          strokeOpacity: lineOp,
+          strokeWeight: lineW,
+          map: map
+  });
+  };
+  polyLinel1w.push(linePath);
+}
 function addLinel4w(linepatharr, linecolor, lineOp, lineW, dash) {
   var lineSymbol = {
           path: 'M 0,-1 0,1',
@@ -1290,7 +1384,11 @@ function removeLine() {
   for (var i = 0; i < polyLinel1st.length; i++) {
     polyLinel1st[i].setMap(null);
   }
+  for (var i = 0; i < polyLinel1stradius.length; i++) {
+    polyLinel1stradius[i].setMap(null);
+  }
   polyLinel1st = [];
+  polyLinel1stradius = [];
 
   for (var i = 0; i < polyLinel2st.length; i++) {
     polyLinel2st[i].setMap(null);
