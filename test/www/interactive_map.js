@@ -381,13 +381,7 @@ var contL5 = [
 '</div>']
 ];
 
-/*Описание проектируемых станций 5 линии*/
-var contPrL5 = [
-[fpartprosp + '2023-2025 года</p>'+'<p><b>Линия</b> - '+ nameline5 +'</p>'+
-'<p><b>Адрес</b> - на пересечении Шуваловского пр. с пр. Авиаконструкторов</p></div>'+
-'</div>']
-];
-
+/*Описание строящихся станций 5 линии*/
 var contConstrL5 = [
 [fpartprosp + 'конец 2018 года</p>'+'<p><b>Линия</b> - '+ nameline5 +'</p>'+
 '<p><b>Адрес</b> - Два вестибюля: Бухарестская ул., (южнее пересечения пр. Славы с Бухарестской ул.);<br>'+
@@ -401,16 +395,81 @@ var contConstrL5 = [
 '</div>']
 ];
 
-/*Описание проектируемых станций 6 линии*/
-var contPrL6 = [
+/*Описание проектируемых станций 5 линии*/
+var contPrL5 = [
+[fpartprosp + '2023-2025 года</p>'+'<p><b>Линия</b> - '+ nameline5 +'</p>'+
+'<p><b>Адрес</b> - на пересечении Шуваловского пр. с пр. Авиаконструкторов</p></div>'+
+'</div>']
 ];
 
 /*Описание строящихся станций 6 линии*/
-var contConstrL6 = [];
+var contConstrL6 = [
+[fpartprosp + 'июнь 2022 года</p>'+'<p><b>Линия</b> - '+ nameline6 +'</p>'+
+'<p><b>Адрес</b> - Ул. Васи Алексеева (западнее дома №12 корп.1 по ул. Маршала Говорова)</p></div>'+
+'</div>'],
+[fpartprosp + 'июнь 2022 года</p>'+'<p><b>Линия</b> - '+ nameline6 +'</p>'+
+'<p><b>Адрес</b> - Ул. Маршала Казакова (юго-западнее пересечения ул. Маршала Казакова и пр.Маршала Жукова)</p></div>'+
+'</div>']
+];
+
+/*Описание проектируемых станций 6 линии*/
+var contPrL6 = [
+[fpartprosp + '2026-2027 года</p>'+'<p><b>Линия</b> - '+ nameline6 +'</p>'+
+'<p><b>Адрес</b> - юго-восточнее дома 42 на наб. Обводного канала</p></div>'+
+'</div>'],
+[fpartprosp + '2026-2027 года</p>'+'<p><b>Линия</b> - '+ nameline6 +'</p>'+
+'<p><b>Адрес</b> - Два вестибюля: Киевская ул. (юго-западнее пересечения с Черниговской ул.)<br>'+
+'Лиговский пр. (севернее дома № 236, литера Б)</p></div>'+
+'</div>'],
+[fpartprosp + '2026-2027 года</p>'+'<p><b>Линия</b> - '+ nameline6 +'</p>'+
+'<p><b>Адрес</b> - Ташкентская ул. (северо-западнее дома № 103, корп.6, литера А, по Московскому пр.)</p></div>'+
+'</div>'],
+[fpartprosp + '2026-2027 года</p>'+'<p><b>Линия</b> - '+ nameline6 +'</p>'+
+'<p><b>Адрес</b> - Два вестибюля: подземный - будет расположен на северо-западной стороне Т-образного перекрестка<br>'+
+'Благодатной ул. и Новоизмайловского пр. с выходами из подземного перехода во все стороны перекрёстка.<br>'+
+'Второй расположится на западной стороне Митрофаньевского шоссе, недалеко от ЗСД</p></div>'+
+'</div>']
+];
 
 /*Описание перспективных станций 6 линии*/
 var contProspL6 = [
-
+[fpartprosp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameline6 +'</p>'+
+'<p><b>Адрес</b> - восточнее пересечение Пискаревского пр. и Ручьевской дор.</p></div>'+
+'</div>'],
+[fpartprosp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameline6 +'</p>'+
+'<p><b>Адрес</b> - между ж/д ст. Пискаревка и Брюсовской ул.</p></div>'+
+'</div>'],
+[fpartprosp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameline6 +'</p>'+
+'<p><b>Адрес</b> - Два вестибюля: перекресток Бестужевской ул. и Екатерининского пр.;<br>'+
+'пересечение пр. Маршала Блюхера и пр. Энергетиков</p></div>'+
+'</div>'],
+[fpartprosp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameline6 +'</p>'+
+'<p><b>Адрес</b> - пересечение шоссе Революции и Среднеохтинского пр.</p></div>'+
+'</div>'],
+[fpartprosp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameline6 +'</p>'+
+'<p><b>Адрес</b> - вблизи от здания администрации губернатора Петербурга</p></div>'+
+'</div>'],
+[fpartprosp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameline6 +'</p>'+
+'<p><b>Адрес</b> - угол Суворовского пр. и ул. Моисеенко</p></div>'+
+'</div>'],
+[fpartprosp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameline6 +'</p>'+
+'<p><b>Адрес</b> - выход запланирован в подземном пр-ве южной части Площади Восстания (вместо а/м парковки)</p></div>'+
+'</div>'],
+[fpartprosp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameline6 +'</p>'+
+'<p><b>Адрес</b> - пересечение Лиговского пр. и Кузнечного пер.</p></div>'+
+'</div>'],
+[fpartprosp + '2026-2027 года</p>'+'<p><b>Линия</b> - '+ nameline6 +'</p>'+
+'<p><b>Адрес</b> - пересечение Ленинского пр. и Брестского бул.</p></div>'+
+'</div>'],
+[fpartprosp + '2026-2027 года</p>'+'<p><b>Линия</b> - '+ nameline6 +'</p>'+
+'<p><b>Адрес</b> - пересечение ул. Доблести и ул. Маршала Захарова</p></div>'+
+'</div>'],
+[fpartprosp + '2026-2027 года</p>'+'<p><b>Линия</b> - '+ nameline6 +'</p>'+
+'<p><b>Адрес</b> - южная часть Южно-Приморского парка</p></div>'+
+'</div>'],
+[fpartprosp + '2026-2027 года</p>'+'<p><b>Линия</b> - '+ nameline6 +'</p>'+
+'<p><b>Адрес</b> - вблизи ж/д станции "Сосновая Поляна"</p></div>'+
+'</div>']
 ];
 
 
@@ -494,15 +553,15 @@ var l4pr = [
 var l6pr = [
 ['Станция метро «Ручьи»', {lat: 60.002356, lng: 30.451250}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
 ['Станция метро «Пискаревка»', {lat: 59.987520, lng: 30.425306}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
-['Станция метро «Бестужевская»', {lat: 59.975723, lng: 30.418059}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Бестужевская»', {lat: 59.974786, lng: 30.435452}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
 ['Станция метро «Полюстровский проспект»', {lat: 59.959525, lng: 30.414923}, containerProsp[2], greyline, brownline, cplop, cplw, 1],
 ['Станция метро «Смольный»', {lat: 59.949658, lng: 30.392099}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
-['Станция метро «Суворовская»', {lat: 59.937906, lng: 30.374954}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
-['Станция метро «Знаменская»', {lat: 59.932440, lng: 30.367117}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
-['Станция метро «Лиговский проспект 2»', {lat: 59.925599, lng: 30.358057}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Суворовская»', {lat: 59.938027, lng: 30.373974}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Знаменская»', {lat: 59.930780, lng: 30.361255}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Лиговский проспект 2»', {lat: 59.926757, lng: 30.357762}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
 ['Станция метро «Брестская»', {lat: 59.856149, lng: 30.200588}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
 ['Станция метро «Улица Доблести»', {lat: 59.856828, lng: 30.176673}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
-['Станция метро «Петергофское шоссе»', {lat: 59.847527, lng: 30.146442}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Петергофское шоссе»', {lat: 59.847732, lng: 30.160696}, containerProsp[2], planIcon, greyline, cplop, cplw, 1],
 ['Станция метро «Сосновая Поляна»', {lat: 59.825703, lng: 30.145944}, containerProsp[2], planIcon, greyline, cplop, cplw, 1]
 ];
 
@@ -686,7 +745,7 @@ var l3st= [
 var l4st= [
 ['Станция метро «Юнтолово»', {lat: 60.029623, lng: 30.135814}, containerProsp[1], planIcon, greyline, cplop, cplw, 1],
 ['Станция метро «Конная Лахта»', {lat: 60.011791, lng: 30.114785}, containerProsp[1], planIcon, greyline, cplop, cplw, 1],
-['Станция метро «Лахта»', {lat: 59.994829, lng: 30.144055}, containerProsp[1], planIcon, greyline, cplop, cplw, 1],
+['Станция метро «Лахта»', {lat: 59.988845, lng: 30.176518}, containerProsp[1], planIcon, greyline, cplop, cplw, 1],
 ['Станция метро «Новокрестовская 2»', {lat: 59.970450, lng: 30.219798}, containerProj[2], pOrangeIcon, orangeline, cplop, cplw, 1],
 ['Станция метро «Морской Фасад»', {lat: 59.948496, lng: 30.216191}, containerProj[3], pOrangeIcon, orangeline, cplop, cplw, 1],
 ['Станция метро «Гавань»', {lat: 59.932537, lng: 30.227705}, containerProj[4], pOrangeIcon, orangeline, cplop, cplw, 1],
@@ -727,12 +786,12 @@ var l5st= [
 var l6st= [
 ['Станция метро «Ручьи»', {lat: 60.002356, lng: 30.451250}, containerProsp[0], planIcon, greyline, cplop, cplw, 1, 2],
 ['Станция метро «Пискаревка»', {lat: 59.987520, lng: 30.425306}, containerProsp[0], planIcon, greyline, cplop, cplw, 1, 2],
-['Станция метро «Бестужевская»', {lat: 59.975723, lng: 30.418059}, containerProsp[0], planIcon, greyline, cplop, cplw, 1, 2],
+['Станция метро «Бестужевская»', {lat: 59.974786, lng: 30.435452}, containerProsp[0], planIcon, greyline, cplop, cplw, 1, 2],
 ['Станция метро «Полюстровский проспект»', {lat: 59.959525, lng: 30.414923}, containerProsp[0], planIcon, greyline, cplop, cplw, 1, 2],
 ['Станция метро «Смольный»', {lat: 59.949658, lng: 30.392099}, containerProsp[0], planIcon, greyline, cplop, cplw, 1, 2],
-['Станция метро «Суворовская»', {lat: 59.937906, lng: 30.374954}, containerProsp[0], planIcon, greyline, cplop, cplw, 1, 2],
-['Станция метро «Знаменская»', {lat: 59.932440, lng: 30.367117}, containerProsp[0], planIcon, greyline, cplop, cplw, 1, 2],
-['Станция метро «Лиговский проспект 2»', {lat: 59.925599, lng: 30.358057}, containerProsp[0],planIcon, greyline, cplop, cplw, 1, 2],
+['Станция метро «Суворовская»', {lat: 59.938027, lng:30.373974}, containerProsp[0], planIcon, greyline, cplop, cplw, 1, 2],
+['Станция метро «Знаменская»', {lat: 59.930780, lng: 30.361255}, containerProsp[0], planIcon, greyline, cplop, cplw, 1, 2],
+['Станция метро «Лиговский проспект 2»', {lat: 59.926757, lng: 30.357762}, containerProsp[0],planIcon, greyline, cplop, cplw, 1, 2],
 ['Станция метро «Каретная»', {lat: 59.913494, lng: 30.357769}, containerProj[6], pBrownIcon, brownline, cplop, cplw, 1, 2],
 ['Станция метро «Боровая»', {lat: 59.902969, lng: 30.329868}, containerProj[7], pBrownIcon, brownline, cplop, cplw, 1, 2],
 ['Станция метро «Заставская»', {lat: 59.893453, lng: 30.318412}, containerProj[8], pBrownIcon, brownline, cplop, cplw, 1, 2],
@@ -741,7 +800,7 @@ var l6st= [
 ['Станция метро «Юго-западная»', {lat: 59.859239, lng: 30.230442}, containerConst[5], cBrownIcon, greyline, cplop, cplw, 1, 2],
 ['Станция метро «Брестская»', {lat: 59.856149, lng: 30.200588}, containerProsp[0], planIcon, greyline, cplop, cplw, 1, 2],
 ['Станция метро «Улица Доблести»', {lat: 59.856828, lng: 30.176673}, containerProsp[0], planIcon, greyline, cplop, cplw, 1, 2],
-['Станция метро «Петергофское шоссе»', {lat: 59.847527, lng: 30.146442}, containerProsp[0], planIcon, greyline, cplop, cplw, 1, 2],
+['Станция метро «Петергофское шоссе»', {lat: 59.847732, lng: 30.160696}, containerProsp[0], planIcon, greyline, cplop, cplw, 1, 2],
 ['Станция метро «Сосновая Поляна»', {lat: 59.825703, lng: 30.145944}, containerProsp[0], planIcon, greyline, cplop, cplw, 1, 2]
 ];
 var a;
