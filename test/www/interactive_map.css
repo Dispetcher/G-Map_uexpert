@@ -1,30 +1,73 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
 #map {
-  height: 770px;
+  height: 900px;
+  width:100vw;
 }
-#buttonsBlock {
-  /*border: 1px solid;*/
-  width: 650px;
+#fl_fst_panel {
   position: absolute;
-  top: 10px;
-  left: 150px;
+  display:flex;
+  justify-content: space-between;
+  top: 5px;
+  left: 30%;
   z-index: 5;
+  padding: 5px;
+  width:450px;
+  text-align: center;
+  line-height: 30px;
+  padding-left: 10px;
+  margin-left: -52px;
 }
-#buttonsBlock span {
-  display: inline-block;
-  padding: 10px;
-  background: rgba(255, 255, 255, .6);
-  border: 1px solid #fff;
-  margin-right: 6px;
-
+#fl_scnd_panel{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 60px;
+  left: 30%;
+  z-index: 5; 
+  width:450px;
+  text-align: center;
+  line-height: 30px;
+  padding-left: 10px;
+  margin-left: -52px;
+} 
+.btn_map{
+  height: 45px;
+  border-radius: 5%;
+  font-size: 16px;
+  font-weight:600;
+  background-color: rgba(109, 196, 220, 0.80);
 }
-input[type='button'] {
-  padding: 6px;
-  font-size: 12pt;
-  font-weight: bold;
-  opacity: 1;
+.btn_map_line{
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: rgba(109, 196, 220, 0.80);
+  color:#fff;
+}
+.ln1{
+  background-color: rgba(179, 55, 32, 0.80);
+}
+.ln2{
+  background-color: rgba(65, 65, 200, 0.80);
+}
+.ln3{
+  background-color: rgba(15, 156, 87, 0.80);
+}
+.ln4{
+  background-color: rgba(246, 123, 0, 0.80);
+}
+.ln5{
+  background-color: rgba(156, 39, 177, 0.80);
+}
+.ln6{
+  background-color: rgba(120, 84, 72, 0.80);
+}
+.station_content{
+  display:  inline-flex;
+}
+.station_img{
+  display: inline-flex;
+  margin: 5px;
+  background-image: 'Imgs/imgtest.jpg';
 }
