@@ -46,28 +46,28 @@
   color:#fff;
 }
 .ln1{
-  background-color: rgba(179, 55, 32, 0.80);
+  background-color: rgba(195, 22, 22, 0.95);
+  color: #fff;
 }
 .ln2{
-  background-color: rgba(65, 65, 200, 0.80);
+  background-color: rgba(51, 121, 171, 0.95);
 }
 .ln3{
-  background-color: rgba(15, 156, 87, 0.80);
+  background-color: rgba(8, 84, 47, 0.95);
 }
 .ln4{
-  background-color: rgba(246, 123, 0, 0.80);
+  background-color: rgba(216, 102, 20, 0.96);
 }
 .ln5{
-  background-color: rgba(156, 39, 177, 0.80);
+  background-color: rgba(156, 39, 177, 0.95);
 }
 .ln6{
-  background-color: rgba(120, 84, 72, 0.80);
+  background-color: rgba(80, 34, 34, 0.95);
 }
 .station_content{
-  display:  inline-flex;
+  display: inline-block;
 }
 .station_img{
-  display: inline-flex;
-  margin: 5px;
-  background-image: 'Imgs/imgtest.jpg';
+  display: inline-block;
+  margin: 5px 10px;
 }
