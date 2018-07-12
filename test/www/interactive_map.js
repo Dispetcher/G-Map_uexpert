@@ -77,6 +77,7 @@ var pBrownIcon= {url: 'Imgs/pBrown.png'};
 
 /*Иконки станций в разработке, до проекта*/
 var planIcon = {url: 'Imgs/plan.png'};
+var red7Icon = {url: 'Imgs/Red7.png'};
 
 /*Название линий*/
 var nameLine1 = 'Кировско-Выборгская (1 линия «Красная»)';
@@ -904,7 +905,7 @@ var l6st= [
 
 /*Блок перспективных станций 7 линии (ярко-синяя) для отображении со всеми линиями*/
 var l7st = [
-['Станция метро «Лесная -1/-2»', {lat: 59.984789, lng: 30.344253}, contProspL7[0], planIcon, ligthGrLine, cplop, cplw, 1, 10],
+['Станция метро «Лесная -1/-2»', {lat: 59.984789, lng: 30.344253}, contProspL7[0], red7Icon, ligthGrLine, cplop, cplw, 1, 10],
 ['Станция метро «Кантемировская»', {lat: 59.980808, lng: 30.330515}, contProspL7[1], planIcon, ligthGrLine, cplop, cplw, 1, 10],
 ['Станция метро «Петроградская -1/-2»', {lat: 59.966413, lng: 30.311513}, contProspL7[2], planIcon, ligthGrLine, cplop, cplw, 1, 10],
 ['Станция метро «Спортивная -1/-2»', {lat: 59.951835, lng: 30.290691}, contProspL7[3], planIcon, ligthGrLine, cplop, cplw, 1, 10],
@@ -924,7 +925,7 @@ var l7st = [
 ['Станция метро «Полюстровский проспект -1/-2»', {lat: 59.959525, lng: 30.414923}, contProspL7[17], planIcon, ligthGrLine, cplop, cplw, 1, 10],
 ['Станция метро «Площадь Калинина»', {lat: 59.969344, lng: 30.386147}, contProspL7[18], planIcon, ligthGrLine, cplop, cplw, 1, 10],
 ['Станция метро «Арсенальная»', {lat: 59.977804, lng: 30.368204}, contProspL7[19], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Лесная -1/-2»', {lat: 59.984789, lng: 30.344253}, contProspL7[0], planIcon, ligthGrLine, cplop, cplw, 1, 10]
+['Станция метро «Лесная -1/-2»', {lat: 59.984789, lng: 30.344253}, contProspL7[0], red7Icon, ligthGrLine, cplop, cplw, 1, 10]
 ];
 
 var a;
@@ -949,8 +950,10 @@ function initMap(a) {
   }else if (a == 6){
     dropl6(infowindow);
   }else if (a == 7){
-    dropConstr(infowindow);
+    dropl7(infowindow);
   }else if (a == 8){
+    dropConstr(infowindow);
+  }else if (a == 9){
     dropProject(infowindow);
   }else{
     dropAll(infowindow);
