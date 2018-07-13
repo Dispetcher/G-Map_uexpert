@@ -16,6 +16,9 @@ var cplop = 1.0;
 var lw = 7;
 var cplw = 4;
 
+/*Задержка отображения станций*/
+var del_ren = 12;
+
 var polyLinel1st = [];
 var polyLinel1stradius = [];
 var polyLinel2st = [];
@@ -905,27 +908,27 @@ var l6st= [
 
 /*Блок перспективных станций 7 линии (ярко-синяя) для отображении со всеми линиями*/
 var l7st = [
-['Станция метро «Лесная -1/-2»', {lat: 59.984789, lng: 30.344253}, contProspL7[0], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Кантемировская»', {lat: 59.980808, lng: 30.330515}, contProspL7[1], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Петроградская -1/-2»', {lat: 59.966413, lng: 30.311513}, contProspL7[2], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Спортивная -1/-2»', {lat: 59.951835, lng: 30.290691}, contProspL7[3], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Василеостровская -1/-2»', {lat: 59.942669, lng: 30.278136}, contProspL7[4], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Горный институт / Большой проспект-2»', {lat: 59.930386, lng: 30.261608}, contProspL7[5], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Двинская»', {lat: 59.909501, lng: 30.254303}, contProspL7[6], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Нарвская -1/-2»', {lat: 59.901178, lng: 30.274983}, contProspL7[7], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Броневая -1/-2»', {lat: 59.876138, lng: 30.304550}, contProspL7[8], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Парк Победы -1/-2»', {lat: 59.866232, lng: 30.321752}, contProspL7[9], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Витебский проспект»', {lat: 59.865323, lng: 30.356574}, contProspL7[10], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Международная -1/-2»', {lat: 59.870227, lng: 30.379399}, contProspL7[11], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Фарфоровская»', {lat: 59.880034, lng: 30.403531}, contProspL7[12], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Елизаровская -1/-2»', {lat: 59.896690, lng: 30.423680}, contProspL7[13], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Дальневосточный проспект»', {lat: 59.913860, lng: 30.442489}, contProspL7[14], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Ладожская -1/-2»', {lat: 59.932498, lng: 30.439265}, contProspL7[15], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Большеохтинская»', {lat: 59.943242, lng: 30.413506}, contProspL7[16], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Полюстровский проспект -1/-2»', {lat: 59.959525, lng: 30.414923}, contProspL7[17], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Площадь Калинина»', {lat: 59.969344, lng: 30.386147}, contProspL7[18], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Арсенальная»', {lat: 59.977804, lng: 30.368204}, contProspL7[19], planIcon, ligthGrLine, cplop, cplw, 1, 10],
-['Станция метро «Лесная -1/-2»', {lat: 59.984789, lng: 30.344253}, contProspL7[0], planIcon, ligthGrLine, cplop, cplw, 1, 10]
+['Станция метро «Лесная -1/-2»', {lat: 59.984789, lng: 30.344253}, contProspL7[0], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Кантемировская»', {lat: 59.980808, lng: 30.330515}, contProspL7[1], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Петроградская -1/-2»', {lat: 59.966413, lng: 30.311513}, contProspL7[2], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Спортивная -1/-2»', {lat: 59.951835, lng: 30.290691}, contProspL7[3], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Василеостровская -1/-2»', {lat: 59.942669, lng: 30.278136}, contProspL7[4], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Горный институт / Большой проспект-2»', {lat: 59.930386, lng: 30.261608}, contProspL7[5], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Двинская»', {lat: 59.909501, lng: 30.254303}, contProspL7[6], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Нарвская -1/-2»', {lat: 59.901178, lng: 30.274983}, contProspL7[7], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Броневая -1/-2»', {lat: 59.876138, lng: 30.304550}, contProspL7[8], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Парк Победы -1/-2»', {lat: 59.866232, lng: 30.321752}, contProspL7[9], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Витебский проспект»', {lat: 59.865323, lng: 30.356574}, contProspL7[10], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Международная -1/-2»', {lat: 59.870227, lng: 30.379399}, contProspL7[11], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Фарфоровская»', {lat: 59.880034, lng: 30.403531}, contProspL7[12], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Елизаровская -1/-2»', {lat: 59.896690, lng: 30.423680}, contProspL7[13], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Дальневосточный проспект»', {lat: 59.913860, lng: 30.442489}, contProspL7[14], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Ладожская -1/-2»', {lat: 59.932498, lng: 30.439265}, contProspL7[15], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Большеохтинская»', {lat: 59.943242, lng: 30.413506}, contProspL7[16], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Полюстровский проспект -1/-2»', {lat: 59.959525, lng: 30.414923}, contProspL7[17], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Площадь Калинина»', {lat: 59.969344, lng: 30.386147}, contProspL7[18], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Арсенальная»', {lat: 59.977804, lng: 30.368204}, contProspL7[19], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
+['Станция метро «Лесная -1/-2»', {lat: 59.984789, lng: 30.344253}, contProspL7[0], planIcon, ligthGrLine, cplop, cplw, 1, del_ren]
 ];
 
 var l7prosp = l7st;

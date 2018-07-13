@@ -80,7 +80,7 @@
   margin-bottom: 7px;
   text-decoration: underline;
 }
-@media(max-width: 800px){
+@media(max-width: 750px){
   #fl_panel{
     top: 90px;
   }
@@ -90,7 +90,7 @@
 }
 /*Iphone 8PLUS*/
 @media(max-width: 420px){
-  #floating-panel, #fl_panel{
+  #floating_panel, #fl_panel{
     margin-left: -82px;
   }
   .btn_map{
@@ -117,7 +117,7 @@
 }
 /*Samsung Galaxy S5*/
 @media(max-width: 365px){
-  #floating-panel{
+  #floating_panel{
     margin-left: -78px;
   }
   .content{

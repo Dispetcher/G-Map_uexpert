@@ -17,33 +17,25 @@
         height: 900px;
         width:98vw;
       }
-      #floating-panel {
+      #floating_panel, #fl_panel{
         position: absolute;
-        top: 5px;
-        left: 20%;
+        left: 25%;
         z-index: 5;
-       /* background-color: #fff;*/
-        padding: 5px;
-        /*border: 1px solid #999;*/
         text-align: center;
         font-family: 'Arial';
         line-height: 30px;
         padding-left: 10px;
         margin-left: -52px;
       }
+      #floating_panel {
+        top: 5px;
+        padding: 5px;
+      }
       #fl_panel{
-        position: absolute;
         display: flex;
         justify-content: space-between;
         top: 50px;
-        left: 20%;
-        z-index: 5; 
         width:350px;
-        text-align: center;
-        font-family: 'Arial';
-        line-height: 30px;
-        padding-left: 10px;
-        margin-left: -52px;
       } 
       .btn_map{
         height: 30px;
@@ -61,98 +53,98 @@
         color: #fff;      
       }
       .ln1{
-  background-color: rgba(195, 22, 22, 0.95);
-}
-.ln2{
-  background-color: rgba(51, 121, 171, 0.95);
-}
-.ln3{
-  background-color: rgba(8, 84, 47, 0.95);
-}
-.ln4{
-  background-color: rgba(216, 102, 20, 0.96);
-}
-.ln5{
-  background-color: rgba(156, 39, 177, 0.95);
-}
-.ln6{
-  background-color: rgba(80, 34, 34, 0.95);
-}
-.ln7{
-  background-color: rgba(9, 208, 253, 0.95);
-}
-.station_content{
-  display: inline-block;
-}
-.station_img{
-  display: inline-block;
-  margin: 5px 10px;
-}
-.article_header{
-  margin-top: -10px;
-  margin-bottom: 7px;
-  text-decoration: underline;
-}
-.prosp_header{
-  margin-top: 7px;
-  margin-bottom: 7px;
-  text-decoration: underline;
-}
-@media(max-width: 800px){
-  #fl_panel{
-    top: 90px;
-  }
-  #floating-panel{
-    top: 45px;
-  }
-}
-/*Iphone 8PLUS*/
-@media(max-width: 420px){
-  #floating-panel, #fl_panel{
-    margin-left: -82px;
-  }
-  .btn_map{
-    font-size: 16px;
-  }
-  .content{
-    max-width: 340px;
-  }
-  .station_content{
-    font-size: 11px;
-  }
-  .station_img{
-    margin: auto;
-  }
-}
-/*Iphone X*/
-@media(max-width: 380px){
-  .content{
-    max-width: 300px;
-  }
-  .content__header{
-    font-size: 18px;
-  }
-}
-/*Samsung Galaxy S5*/
-@media(max-width: 365px){
-  #floating-panel{
-    margin-left: -78px;
-  }
-  .content{
-    max-width: 285px;
-  }
-  .content__header{
-    font-size: 18px;
-  }
-  .btn_map{
-    font-size: 15px;
-  }
-}
+        background-color: rgba(195, 22, 22, 0.95);
+      }
+      .ln2{
+        background-color: rgba(51, 121, 171, 0.95);
+      }
+      .ln3{
+        background-color: rgba(8, 84, 47, 0.95);
+      }
+      .ln4{
+        background-color: rgba(216, 102, 20, 0.96);
+      }
+      .ln5{
+        background-color: rgba(156, 39, 177, 0.95);
+      }
+      .ln6{
+        background-color: rgba(80, 34, 34, 0.95);
+      }
+      .ln7{
+        background-color: rgba(9, 208, 253, 0.95);
+      }
+      .station_content{
+        display: inline-block;
+      }
+      .station_img{
+        display: inline-block;
+        margin: 5px 10px;
+      }
+      .article_header{
+        margin-top: -10px;
+        margin-bottom: 7px;
+        text-decoration: underline;
+      }
+      .prosp_header{
+        margin-top: 7px;
+        margin-bottom: 7px;
+        text-decoration: underline;
+      }
+      @media(max-width: 750px){
+        #fl_panel{
+          top: 90px;
+        }
+        #floating_panel{
+          top: 45px;
+        }
+      }
+      /*Iphone 8PLUS*/
+      @media(max-width: 420px){
+        #floating_panel, #fl_panel{
+          margin-left: -82px;
+        }
+        .btn_map{
+          font-size: 16px;
+        }
+        .content{
+          max-width: 340px;
+        }
+        .station_content{
+          font-size: 11px;
+        }
+        .station_img{
+          margin: auto;
+        }
+      }
+      /*Iphone X*/
+      @media(max-width: 380px){
+        .content{
+          max-width: 300px;
+        }
+        .content__header{
+          font-size: 18px;
+        }
+      }
+      /*Samsung Galaxy S5*/
+      @media(max-width: 365px){
+        #floating_panel{
+          margin-left: -78px;
+        }
+        .content{
+          max-width: 285px;
+        }
+        .content__header{
+          font-size: 18px;
+        }
+        .btn_map{
+          font-size: 15px;
+        }
+      }
       </style>
   </head>
   <body>
     <div id="map"></div>
-      <div id="floating-panel">
+      <div id="floating_panel">
       <button id="drop" class="btn_map" onclick="initMap(0);">Все станции</button>
       <button id="Constr" class="btn_map" onclick="initMap(8);">Строящиеся</button>
       <button id="Projects" class="btn_map" onclick="initMap(9);">Проектируемые</button>
