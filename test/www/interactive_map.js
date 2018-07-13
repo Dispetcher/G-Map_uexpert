@@ -17,7 +17,8 @@ var lw = 7;
 var cplw = 4;
 
 /*Задержка отображения станций*/
-var del_ren = 12;
+var delRenL6 = 10;
+var delRenL7 = 12;
 
 var polyLine = [];
 var polyLinel1st = [];
@@ -887,49 +888,49 @@ var l5st= [
 
 /*Блок станций 6 линии (коричневая)*/
 var l6st= [
-['Станция метро «Ручьи»', {lat: 60.002356, lng: 30.451250}, contProspL6[0], planIcon, greyLine, cplop, cplw, 1, 2],
-['Станция метро «Пискаревка»', {lat: 59.987520, lng: 30.425306}, contProspL6[1], planIcon, greyLine, cplop, cplw, 1, 2],
-['Станция метро «Бестужевская»', {lat: 59.974786, lng: 30.435452}, contProspL6[2], planIcon, greyLine, cplop, cplw, 1, 2],
-['Станция метро «Полюстровский проспект»', {lat: 59.959525, lng: 30.414923}, contProspL6[3], planIcon, greyLine, cplop, cplw, 1, 2],
-['Станция метро «Смольный»', {lat: 59.949658, lng: 30.392099}, contProspL6[4], planIcon, greyLine, cplop, cplw, 1, 2],
-['Станция метро «Суворовская»', {lat: 59.938027, lng:30.373974}, contProspL6[5], planIcon, greyLine, cplop, cplw, 1, 2],
-['Станция метро «Знаменская»', {lat: 59.930780, lng: 30.361255}, contProspL6[6], planIcon, greyLine, cplop, cplw, 1, 2],
-['Станция метро «Лиговский проспект 2»', {lat: 59.926757, lng: 30.357762}, contProspL6[7],planIcon, greyLine, cplop, cplw, 1, 2],
-['Станция метро «Каретная»', {lat: 59.913494, lng: 30.357769}, contPrL6[0], pBrownIcon, brownLine, cplop, cplw, 1, 2],
-['Станция метро «Боровая»', {lat: 59.902969, lng: 30.329868}, contPrL6[1], pBrownIcon, brownLine, cplop, cplw, 1, 2],
-['Станция метро «Заставская»', {lat: 59.893453, lng: 30.318412}, contPrL6[2], pBrownIcon, brownLine, cplop, cplw, 1, 2],
-['Станция метро «Броневая»', {lat: 59.876138, lng: 30.304550}, contPrL6[3], pBrownIcon, brownLine, cplop, cplw, 1, 2],
-['Станция метро «Путиловская»', {lat: 59.878694, lng: 30.264729}, contConstrL6[0], cBrownIcon, brownLine, cplop, cplw, 1, 2],
-['Станция метро «Юго-западная»', {lat: 59.859239, lng: 30.230442}, contConstrL6[1], cBrownIcon, greyLine, cplop, cplw, 1, 2],
-['Станция метро «Брестская»', {lat: 59.856149, lng: 30.200588}, contProspL6[8], planIcon, greyLine, cplop, cplw, 1, 2],
-['Станция метро «Улица Доблести»', {lat: 59.862192, lng: 30.179290}, contProspL6[9], planIcon, greyLine, cplop, cplw, 1, 2],
-['Станция метро «Петергофское шоссе»', {lat: 59.847732, lng: 30.160696}, contProspL6[10], planIcon, greyLine, cplop, cplw, 1, 2],
-['Станция метро «Сосновая Поляна»', {lat: 59.825703, lng: 30.145944}, contProspL6[11], planIcon, greyLine, cplop, cplw, 1, 2]
+['Станция метро «Ручьи»', {lat: 60.002356, lng: 30.451250}, contProspL6[0], planIcon, greyLine, cplop, cplw, 1, delRenL6],
+['Станция метро «Пискаревка»', {lat: 59.987520, lng: 30.425306}, contProspL6[1], planIcon, greyLine, cplop, cplw, 1, delRenL6],
+['Станция метро «Бестужевская»', {lat: 59.974786, lng: 30.435452}, contProspL6[2], planIcon, greyLine, cplop, cplw, 1, delRenL6],
+['Станция метро «Полюстровский проспект»', {lat: 59.959525, lng: 30.414923}, contProspL6[3], planIcon, greyLine, cplop, cplw, 1, delRenL6],
+['Станция метро «Смольный»', {lat: 59.949658, lng: 30.392099}, contProspL6[4], planIcon, greyLine, cplop, cplw, 1, delRenL6],
+['Станция метро «Суворовская»', {lat: 59.938027, lng:30.373974}, contProspL6[5], planIcon, greyLine, cplop, cplw, 1, delRenL6],
+['Станция метро «Знаменская»', {lat: 59.930780, lng: 30.361255}, contProspL6[6], planIcon, greyLine, cplop, cplw, 1, delRenL6],
+['Станция метро «Лиговский проспект 2»', {lat: 59.926757, lng: 30.357762}, contProspL6[7],planIcon, greyLine, cplop, cplw, 1, delRenL6],
+['Станция метро «Каретная»', {lat: 59.913494, lng: 30.357769}, contPrL6[0], pBrownIcon, brownLine, cplop, cplw, 1, delRenL6],
+['Станция метро «Боровая»', {lat: 59.902969, lng: 30.329868}, contPrL6[1], pBrownIcon, brownLine, cplop, cplw, 1, delRenL6],
+['Станция метро «Заставская»', {lat: 59.893453, lng: 30.318412}, contPrL6[2], pBrownIcon, brownLine, cplop, cplw, 1, delRenL6],
+['Станция метро «Броневая»', {lat: 59.876138, lng: 30.304550}, contPrL6[3], pBrownIcon, brownLine, cplop, cplw, 1, delRenL6],
+['Станция метро «Путиловская»', {lat: 59.878694, lng: 30.264729}, contConstrL6[0], cBrownIcon, brownLine, cplop, cplw, 1, delRenL6],
+['Станция метро «Юго-западная»', {lat: 59.859239, lng: 30.230442}, contConstrL6[1], cBrownIcon, greyLine, cplop, cplw, 1, delRenL6],
+['Станция метро «Брестская»', {lat: 59.856149, lng: 30.200588}, contProspL6[8], planIcon, greyLine, cplop, cplw, 1, delRenL6],
+['Станция метро «Улица Доблести»', {lat: 59.862192, lng: 30.179290}, contProspL6[9], planIcon, greyLine, cplop, cplw, 1, delRenL6],
+['Станция метро «Петергофское шоссе»', {lat: 59.847732, lng: 30.160696}, contProspL6[10], planIcon, greyLine, cplop, cplw, 1, delRenL6],
+['Станция метро «Сосновая Поляна»', {lat: 59.825703, lng: 30.145944}, contProspL6[11], planIcon, greyLine, cplop, cplw, 1, delRenL6]
 ];
 
 /*Блок перспективных станций 7 линии (ярко-синяя) для отображении со всеми линиями*/
 var l7st = [
-['Станция метро «Лесная -1/-2»', {lat: 59.984789, lng: 30.344253}, contProspL7[0], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Кантемировская»', {lat: 59.980808, lng: 30.330515}, contProspL7[1], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Петроградская -1/-2»', {lat: 59.966413, lng: 30.311513}, contProspL7[2], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Спортивная -1/-2»', {lat: 59.951835, lng: 30.290691}, contProspL7[3], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Василеостровская -1/-2»', {lat: 59.942669, lng: 30.278136}, contProspL7[4], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Горный институт / Большой проспект-2»', {lat: 59.930386, lng: 30.261608}, contProspL7[5], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Двинская»', {lat: 59.909501, lng: 30.254303}, contProspL7[6], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Нарвская -1/-2»', {lat: 59.901178, lng: 30.274983}, contProspL7[7], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Броневая -1/-2»', {lat: 59.876138, lng: 30.304550}, contProspL7[8], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Парк Победы -1/-2»', {lat: 59.866232, lng: 30.321752}, contProspL7[9], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Витебский проспект»', {lat: 59.865323, lng: 30.356574}, contProspL7[10], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Международная -1/-2»', {lat: 59.870227, lng: 30.379399}, contProspL7[11], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Фарфоровская»', {lat: 59.880034, lng: 30.403531}, contProspL7[12], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Елизаровская -1/-2»', {lat: 59.896690, lng: 30.423680}, contProspL7[13], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Дальневосточный проспект»', {lat: 59.913860, lng: 30.442489}, contProspL7[14], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Ладожская -1/-2»', {lat: 59.932498, lng: 30.439265}, contProspL7[15], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Большеохтинская»', {lat: 59.943242, lng: 30.413506}, contProspL7[16], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Полюстровский проспект -1/-2»', {lat: 59.959525, lng: 30.414923}, contProspL7[17], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Площадь Калинина»', {lat: 59.969344, lng: 30.386147}, contProspL7[18], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Арсенальная»', {lat: 59.977804, lng: 30.368204}, contProspL7[19], planIcon, ligthGrLine, cplop, cplw, 1, del_ren],
-['Станция метро «Лесная -1/-2»', {lat: 59.984789, lng: 30.344253}, contProspL7[0], planIcon, ligthGrLine, cplop, cplw, 1, del_ren]
+['Станция метро «Лесная -1/-2»', {lat: 59.984789, lng: 30.344253}, contProspL7[0], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Кантемировская»', {lat: 59.980808, lng: 30.330515}, contProspL7[1], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Петроградская -1/-2»', {lat: 59.966413, lng: 30.311513}, contProspL7[2], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Спортивная -1/-2»', {lat: 59.951835, lng: 30.290691}, contProspL7[3], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Василеостровская -1/-2»', {lat: 59.942669, lng: 30.278136}, contProspL7[4], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Горный институт / Большой проспект-2»', {lat: 59.930386, lng: 30.261608}, contProspL7[5], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Двинская»', {lat: 59.909501, lng: 30.254303}, contProspL7[6], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Нарвская -1/-2»', {lat: 59.901178, lng: 30.274983}, contProspL7[7], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Броневая -1/-2»', {lat: 59.876138, lng: 30.304550}, contProspL7[8], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Парк Победы -1/-2»', {lat: 59.866232, lng: 30.321752}, contProspL7[9], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Витебский проспект»', {lat: 59.865323, lng: 30.356574}, contProspL7[10], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Международная -1/-2»', {lat: 59.870227, lng: 30.379399}, contProspL7[11], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Фарфоровская»', {lat: 59.880034, lng: 30.403531}, contProspL7[12], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Елизаровская -1/-2»', {lat: 59.896690, lng: 30.423680}, contProspL7[13], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Дальневосточный проспект»', {lat: 59.913860, lng: 30.442489}, contProspL7[14], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Ладожская -1/-2»', {lat: 59.932498, lng: 30.439265}, contProspL7[15], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Большеохтинская»', {lat: 59.943242, lng: 30.413506}, contProspL7[16], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Полюстровский проспект -1/-2»', {lat: 59.959525, lng: 30.414923}, contProspL7[17], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Площадь Калинина»', {lat: 59.969344, lng: 30.386147}, contProspL7[18], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Арсенальная»', {lat: 59.977804, lng: 30.368204}, contProspL7[19], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7],
+['Станция метро «Лесная -1/-2»', {lat: 59.984789, lng: 30.344253}, contProspL7[0], planIcon, ligthGrLine, cplop, cplw, 1, delRenL7]
 ];
 
 var l7prosp = l7st;
@@ -944,19 +945,19 @@ function initMap(a) {
     });
 
   if(a == 1){
-    dropl1(infowindow);
+    dropLineFull(infowindow, 1);
   }else if (a == 2){
-    dropl2(infowindow);
+    dropLineFull(infowindow, 2);
   }else if (a == 3){
-    dropl3(infowindow);
+    dropLineFull(infowindow, 3);
   }else if (a == 4){
-    dropl4(infowindow);
+    dropLineFull(infowindow, 4);
   }else if (a == 5){
-    dropl5(infowindow);
+    dropLineFull(infowindow, 5);
   }else if (a == 6){
-    dropl6(infowindow);
+    dropLineFull(infowindow, 6);
   }else if (a == 7){
-    dropl7(infowindow);
+    dropLineFull(infowindow, 7);
   }else if (a == 8){
     dropConstr(infowindow);
   }else if (a == 9){
@@ -969,413 +970,115 @@ function initMap(a) {
 function dropAll(infowindow){
   clearMarkers();
   removeLine();
-  dropl1st(infowindow);
-  dropl1stradius(infowindow);
-  dropl2st(infowindow);
-  dropl3st(infowindow);
-  dropl4st(infowindow);
-  dropl5st(infowindow);
-  dropl6st(infowindow);
-  dropl7st(infowindow);
+  dropline(infowindow, l1st);
+  dropline(infowindow, l1stradius);
+  dropline(infowindow, l2st);
+  dropline(infowindow, l3st);
+  dropline(infowindow, l4st);
+  dropline(infowindow, l5st);
+  dropline6(infowindow, l6st);
+  dropline7(infowindow, l7st);
 }
 
 function dropConstr(infowindow){
   clearMarkers();
   removeLine();
-  dropl1c(infowindow);
-  dropl2st(infowindow);
-  dropl3c(infowindow);
-  dropl4c(infowindow);
-  dropl5c(infowindow);
-  dropl6c(infowindow);
+  dropline(infowindow, l1c);
+  dropline(infowindow, l2st);
+  dropline(infowindow, l3c);
+  dropline(infowindow, l4c);
+  dropline(infowindow, l5c);
+  dropline6(infowindow, l6c);
 }
 
 function dropProject(infowindow){
   clearMarkers();
   removeLine();
-  dropl1c(infowindow);
-  dropl2st(infowindow);
-  dropl3p(infowindow);
-  dropl4p(infowindow);
-  dropl5p(infowindow);
-  dropl6p(infowindow);
+  dropline(infowindow, l1c);
+  dropline(infowindow, l2st);
+  dropline(infowindow, l3p);
+  dropline(infowindow, l4p);
+  dropline(infowindow, l5p);
+  dropline6(infowindow, l6p);
 }
 
-function dropl1(infowindow){
+function dropLineFull(infowindow, line){
   clearMarkers();
   removeLine();
-  dropl1st(infowindow);
-  dropl1stradius(infowindow);
-}
-function dropl2(infowindow){
-  clearMarkers();
-  removeLine();
-  dropl2st(infowindow);
-}
-function dropl3(infowindow){
-  clearMarkers();
-  removeLine();
-  dropl3st(infowindow);
-}
-function dropl4(infowindow){
-  clearMarkers();
-  removeLine();
-  dropl4st(infowindow);
-}
-function dropl5(infowindow){
-  clearMarkers();
-  removeLine();
-  dropl5st(infowindow);
-}
-function dropl6(infowindow){
-  clearMarkers();
-  removeLine();
-  dropl6st(infowindow);
-}
-function dropl7(infowindow){
-  clearMarkers();
-  removeLine();
-  dropl7prosp(infowindow);
+  var lineNum;
+
+  if (line == 1){
+  	lineNum = l1stradius;
+  	dropline(infowindow, lineNum);
+  	lineNum = l1st;
+  }else if (line == 2){
+  	lineNum = l2st;
+  }else if (line == 3){
+  	lineNum = l3st;
+  }else if (line == 4){
+  	lineNum = l4st;
+  }else if (line == 5){
+  	lineNum = l5st;
+  }else if (line == 6){
+  	lineNum = l6st;
+  }else{
+  	lineNum = l7st;
+  }
+
+  dropline(infowindow, lineNum);
 }
 
 /**************************************************
-/*Прорисовка всей 1 линии*/
+/*Прорисовка всех линий*/
 /**************************************************/
-function dropl1st(infowindow) {
-    for (var i = 0; i < l1st.length; i++) {
-      if (i != l1st.length-1){
-      var l1 = l1st[i];
-      var l1N = l1st[i+1];
+function dropline(infowindow, lineN) {
+	var lineNum = lineN;
+    for (var i = 0; i < lineNum.length; i++) {
+      if (i != lineNum.length-1){
+      var l1 = lineNum[i];
+      var l1N = lineNum[i+1];
       var linepatharr = [l1[1],l1N[1]]; 
 
-      addMarkerWithTimeout(l1[0], l1[1], l1[2], l1[3], i * 50, infowindow);
+      addMarkerWithTimeout(l1[0], l1[1], l1[2], l1[3], i*50, infowindow);
       addLine(linepatharr, l1[4], l1[5], l1[6], l1[7]);
       };
 
-      var l1 = l1st[i];
-      addMarkerWithTimeout(l1[0], l1[1], l1[2], l1[3], i * 50, infowindow);
+      var l1 = lineNum[i];
+      addMarkerWithTimeout(l1[0], l1[1], l1[2], l1[3], i*50, infowindow);
     }
 }
-function dropl1stradius(infowindow) {
-    for (var i = 0; i < l1stradius.length; i++) {
-      if (i != l1stradius.length-1){
-      var l1 = l1stradius[i];
-      var l1N = l1stradius[i+1];
+
+function dropline6(infowindow, lineN) {
+	var lineNum = lineN;
+    for (var i = 0; i < lineNum.length; i++) {
+      if (i != lineNum.length-1){
+      var l1 = lineNum[i];
+      var l1N = lineNum[i+1];
       var linepatharr = [l1[1],l1N[1]]; 
 
-      addMarkerWithTimeout(l1[0], l1[1], l1[2], l1[3], i * 50, infowindow);
+      addMarkerWithTimeout(l1[0], l1[1], l1[2], l1[3], l1[8] * 75, infowindow);
       addLine(linepatharr, l1[4], l1[5], l1[6], l1[7]);
       };
 
-      var l1 = l1stradius[i];
-      addMarkerWithTimeout(l1[0], l1[1], l1[2], l1[3], i * 50, infowindow);
+      var l1 = lineNum[i];
+      addMarkerWithTimeout(l1[0], l1[1], l1[2], l1[3], l1[8] * 75, infowindow);
     }
 }
-/*Прорисовка 1-й линии в стройке*/
-function dropl1c(infowindow) {
-    for (var i = 0; i < l1c.length; i++) {
-      if (i != l1c.length-1){
-      var l1 = l1c[i];
-      var l1N = l1c[i+1];
+
+function dropline7(infowindow, lineN) {
+	var lineNum = lineN;
+    for (var i = 0; i < lineNum.length; i++) {
+      if (i != lineNum.length-1){
+      var l1 = lineNum[i];
+      var l1N = lineNum[i+1];
       var linepatharr = [l1[1],l1N[1]]; 
 
-      addMarkerWithTimeout(l1[0], l1[1], l1[2], l1[3], i * 50, infowindow);
+      addMarkerWithTimeout(l1[0], l1[1], l1[2], l1[3], l1[8] * 125, infowindow);
       addLine(linepatharr, l1[4], l1[5], l1[6], l1[7]);
       };
 
-      var l1 = l1c[i];
-      addMarkerWithTimeout(l1[0], l1[1], l1[2], l1[3], i * 50, infowindow);
-    }
-}
-
-
-/**************************************************
-/*Прорисовка всей 2 линии*/
-/**************************************************/
-function dropl2st(infowindow) {
-    for (var i = 0; i < l2st.length; i++) {
-      if (i != l2st.length-1){
-      var l2 = l2st[i];
-      var l2N = l2st[i+1];
-      var linepatharr = [l2[1],l2N[1]]; 
-
-      addMarkerWithTimeout(l2[0], l2[1], l2[2], l2[3], i * 50, infowindow);
-      addLine(linepatharr, l2[4], l2[5], l2[6], l2[7]);
-      };
-
-      var l2 = l2st[i];
-      addMarkerWithTimeout(l2[0], l2[1], l2[2], l2[3], i * 50, infowindow);
-    }
-}
-
-/**************************************************
-/*Прорисовка всей 3 линии*/
-/**************************************************/
-function dropl3st(infowindow) {
-    for (var i = 0; i < l3st.length; i++) {
-      if (i != l3st.length-1){
-      var l3 = l3st[i];
-      var l3N = l3st[i+1];
-      var linepatharr = [l3[1],l3N[1]]; 
-
-      addMarkerWithTimeout(l3[0], l3[1], l3[2], l3[3], i * 50, infowindow);
-      addLine(linepatharr, l3[4], l3[5], l3[6], l3[7]);
-      };
-
-      var l3 = l3st[i];
-      addMarkerWithTimeout(l3[0], l3[1], l3[2], l3[3], i * 50, infowindow);
-    }
-}
-/*Прорисовка 3-й линии в стройке*/
-function dropl3c(infowindow) {
-    for (var i = 0; i < l3c.length; i++) {
-      if (i != l3c.length-1){
-      var l3 = l3c[i];
-      var l3N = l3c[i+1];
-      var linepatharr = [l3[1],l3N[1]]; 
-
-      addMarkerWithTimeout(l3[0], l3[1], l3[2], l3[3], i * 50, infowindow);
-      addLine(linepatharr, l3[4], l3[5], l3[6], l3[7]);
-      };
-
-      var l3 = l3c[i];
-      addMarkerWithTimeout(l3[0], l3[1], l3[2], l3[3], i * 50, infowindow);
-    }
-}
-/*Прорисовка 3-й линии в проекте*/
-function dropl3p(infowindow) {
-    for (var i = 0; i < l3p.length; i++) {
-      if (i != l3p.length-1){
-      var l3 = l3p[i];
-      var l3N = l3p[i+1];
-      var linepatharr = [l3[1],l3N[1]]; 
-
-      addMarkerWithTimeout(l3[0], l3[1], l3[2], l3[3], i * 50, infowindow);
-      addLine(linepatharr, l3[4], l3[5], l3[6], l3[7]);
-      };
-
-      var l3 = l3p[i];
-      addMarkerWithTimeout(l3[0], l3[1], l3[2], l3[3], i * 50, infowindow);
-    }
-}
-
-/**************************************************
-/*Прорисовка всей 4 линии*/
-/**************************************************/
-function dropl4st(infowindow) {
-    for (var i = 0; i < l4st.length; i++) {
-      if (i != l4st.length-1){
-      var l4 = l4st[i];
-      var l4N = l4st[i+1];
-      var linepatharr = [l4[1],l4N[1]]; 
-
-      addMarkerWithTimeout(l4[0], l4[1], l4[2], l4[3], i * 50, infowindow);
-      addLine(linepatharr, l4[4], l4[5], l4[6], l4[7]);
-      };
-
-      var l4 = l4st[i];
-      addMarkerWithTimeout(l4[0], l4[1], l4[2], l4[3], i * 50, infowindow);
-    }
-}
-/*Прорисовка 4-й линии в стройке*/
-function dropl4c(infowindow) {
-    for (var i = 0; i < l4c.length; i++) {
-      if (i != l4c.length-1){
-      var l4 = l4c[i];
-      var l4N = l4c[i+1];
-      var linepatharr = [l4[1],l4N[1]]; 
-
-      addMarkerWithTimeout(l4[0], l4[1], l4[2], l4[3], i * 50, infowindow);
-      addLine(linepatharr, l4[4], l4[5], l4[6], l4[7]);
-      };
-
-      var l4 = l4c[i];
-      addMarkerWithTimeout(l4[0], l4[1], l4[2], l4[3], i * 50, infowindow);
-    }
-}
-/*Прорисовка 4-й линии в проекте*/
-function dropl4p(infowindow) {
-    for (var i = 0; i < l4p.length; i++) {
-      if (i != l4p.length-1){
-      var l4 = l4p[i];
-      var l4N = l4p[i+1];
-      var linepatharr = [l4[1],l4N[1]]; 
-
-      addMarkerWithTimeout(l4[0], l4[1], l4[2], l4[3], l4[8] * 50, infowindow);
-      addLine(linepatharr, l4[4], l4[5], l4[6], l4[7]);
-      };
-
-      var l4 = l4p[i];
-      addMarkerWithTimeout(l4[0], l4[1], l4[2], l4[3], l4[8] * 50, infowindow);
-    }
-}
-/*Прорисовка 4-й линии в перспективе*/
-function dropl4prosp(infowindow) {
-    for (var i = 0; i < l4prosp.length; i++) {
-      if (i != l4prosp.length-1){
-      var l4 = l4prosp[i];
-      var l4N = l4prosp[i+1];
-      var linepatharr = [l4[1],l4N[1]]; 
-
-      addMarkerWithTimeout(l4[0], l4[1], l4[2], l4[3], i * 50, infowindow);
-      addLine(linepatharr, l4[4], l4[5], l4[6], l4[7]);
-      };
-
-      var l4 = l4prosp[i];
-      addMarkerWithTimeout(l4[0], l4[1], l4[2], l4[3], i * 50, infowindow);
-    }
-}
-
-/**************************************************
-/*Прорисовка всей 5 линии*/
-/**************************************************/
-function dropl5st(infowindow) {
-    for (var i = 0; i < l5st.length; i++) {
-      if (i != l5st.length-1){
-      var l5 = l5st[i];
-      var l5N = l5st[i+1];
-      var linepatharr = [l5[1],l5N[1]]; 
-
-      addMarkerWithTimeout(l5[0], l5[1], l5[2], l5[3], i * 50, infowindow);
-      addLine(linepatharr, l5[4], l5[5], l5[6], l5[7]);
-      };
-
-      var l5 = l5st[i];
-      addMarkerWithTimeout(l5[0], l5[1], l5[2], l5[3], i * 50, infowindow);
-    }
-}
-/*Прорисовка 5-й линии в стройке*/
-function dropl5c(infowindow) {
-    for (var i = 0; i < l5c.length; i++) {
-      if (i != l5c.length-1){
-      var l5 = l5c[i];
-      var l5N = l5c[i+1];
-      var linepatharr = [l5[1],l5N[1]]; 
-
-      addMarkerWithTimeout(l5[0], l5[1], l5[2], l5[3], i * 50, infowindow);
-      addLine(linepatharr, l5[4], l5[5], l5[6], l5[7]);
-      };
-
-      var l5 = l5c[i];
-      addMarkerWithTimeout(l5[0], l5[1], l5[2], l5[3], i * 50, infowindow);
-    }
-}
-/*Прорисовка 5-й линии в проекте*/
-function dropl5p(infowindow) {
-    for (var i = 0; i < l5p.length; i++) {
-      if (i != l5p.length-1){
-      var l5 = l5p[i];
-      var l5N = l5p[i+1];
-      var linepatharr = [l5[1],l5N[1]]; 
-
-      addMarkerWithTimeout(l5[0], l5[1], l5[2], l5[3], i * 50, infowindow);
-      addLine(linepatharr, l5[4], l5[5], l5[6], l5[7]);
-      };
-
-      var l5 = l5p[i];
-      addMarkerWithTimeout(l5[0], l5[1], l5[2], l5[3], i * 50, infowindow);
-    }
-}
-
-/**************************************************
-/*Прорисовка всей 6 линии*/
-/**************************************************/
-function dropl6st(infowindow) {
-    for (var i = 0; i < l6st.length; i++) {
-      if (i != l6st.length-1){
-      var l6 = l6st[i];
-      var l6N = l6st[i+1];
-      var linepatharr = [l6[1],l6N[1]]; 
-
-      addMarkerWithTimeout(l6[0], l6[1], l6[2], l6[3], i * 75, infowindow);
-      addLine(linepatharr, l6[4], l6[5], l6[6], l6[7]);
-      };
-
-      var l6 = l6st[i];
-      addMarkerWithTimeout(l6[0], l6[1], l6[2], l6[3], i * 75, infowindow);
-    }
-}
-/*Прорисовка 6-й линии в стройке*/
-function dropl6c(infowindow) {
-    for (var i = 0; i < l6c.length; i++) {
-      if (i != l6c.length-1){
-      var l6 = l6c[i];
-      var l6N = l6c[i+1];
-      var linepatharr = [l6[1],l6N[1]]; 
-
-      addMarkerWithTimeout(l6[0], l6[1], l6[2], l6[3], l6[8] * 100, infowindow);
-      addLine(linepatharr, l6[4], l6[5], l6[6], l6[7]);
-      };
-
-      var l6 = l6c[i];
-      addMarkerWithTimeout(l6[0], l6[1], l6[2], l6[3], l6[8] * 100, infowindow);
-    }
-}
-/*Прорисовка 6-й линии в проекте*/
-function dropl6p(infowindow) {
-    for (var i = 0; i < l6p.length; i++) {
-      if (i != l6p.length-1){
-      var l6 = l6p[i];
-      var l6N = l6p[i+1];
-      var linepatharr = [l6[1],l6N[1]]; 
-
-      addMarkerWithTimeout(l6[0], l6[1], l6[2], l6[3], l6[8] * 75, infowindow);
-      addLine(linepatharr, l6[4], l6[5], l6[6], l6[7]);
-      };
-
-      var l6 = l6p[i];
-      addMarkerWithTimeout(l6[0], l6[1], l6[2], l6[3], l6[8] * 75, infowindow);
-    }
-}
-/*Прорисовка 6-й линии в перспективе*/
-function dropl6prosp(infowindow) {
-    for (var i = 0; i < l6prosp.length; i++) {
-      if (i != l6prosp.length-1){
-      var l6 = l6prosp[i];
-      var l6N = l6prosp[i+1];
-      var linepatharr = [l6[1],l6N[1]]; 
-
-      addMarkerWithTimeout(l6[0], l6[1], l6[2], l6[3], i * 50, infowindow);
-      addLine(linepatharr, l6[4], l6[5], l6[6], l6[7]);
-      };
-
-      var l6 = l6prosp[i];
-      addMarkerWithTimeout(l6[0], l6[1], l6[2], l6[3], i * 50, infowindow);
-    }
-}
-
-/**************************************************
-/*Прорисовка всей 7 линии*/
-/**************************************************/
-function dropl7st(infowindow) {
-    for (var i = 0; i < l7st.length; i++) {
-      if (i != l7st.length-1){
-      var l7 = l7st[i];
-      var l7N = l7st[i+1];
-      var linepatharr = [l7[1],l7N[1]]; 
-
-      addMarkerWithTimeout(l7[0], l7[1], l7[2], l7[3], l7[8] * 100, infowindow);
-      addLine(linepatharr, l7[4], l7[5], l7[6], l7[7]);
-      };
-
-      var l7 = l7st[i];
-      addMarkerWithTimeout(l7[0], l7[1], l7[2], l7[3], l7[8] * 100, infowindow);
-    }
-}
-/*Прорисовка 7-й линии в перспективе*/
-function dropl7prosp(infowindow) {
-    for (var i = 0; i < l7prosp.length; i++) {
-      if (i != l7prosp.length-1){
-      var l7 = l7prosp[i];
-      var l7N = l7prosp[i+1];
-      var linepatharr = [l7[1],l7N[1]]; 
-
-      addMarkerWithTimeout(l7[0], l7[1], l7[2], l7[3], i * 50, infowindow);
-      addLine(linepatharr, l7[4], l7[5], l7[6], l7[7]);
-      };
-
-      var l7 = l7prosp[i];
-      addMarkerWithTimeout(l7[0], l7[1], l7[2], l7[3], i * 50, infowindow);
+      var l1 = lineNum[i];
+      addMarkerWithTimeout(l1[0], l1[1], l1[2], l1[3], l1[8] * 125, infowindow);
     }
 }
 /**************************************************/
@@ -1437,7 +1140,15 @@ function addMarkerWithTimeout(title, position, text, img, timeout, infowindow, i
   }, timeout);
 }
 
-
+function removeMarkers() {
+	let marker;
+	for (var i = 0; i < markers.length; i++) {
+		marker = markers[i];
+		if (marker.title == 'Станция метро «Лесная»'){
+			markers[i].setMap(null);
+		}
+	}
+}
   /*Удаление всех маркеров с карты*/
 function clearMarkers() {
   for (var i = 0; i < markers.length; i++) {
