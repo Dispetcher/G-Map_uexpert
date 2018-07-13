@@ -70,3 +70,63 @@
   display: inline-block;
   margin: 5px 10px;
 }
+.article_header{
+  margin-top: -10px;
+  margin-bottom: 7px;
+  text-decoration: underline;
+}
+.prosp_header{
+  margin-top: 7px;
+  margin-bottom: 7px;
+  text-decoration: underline;
+}
+@media(max-width: 800px){
+  #fl_panel{
+    top: 90px;
+  }
+  #floating_panel{
+    top: 45px;
+  }
+}
+/*Iphone 8PLUS*/
+@media(max-width: 420px){
+  #floating-panel, #fl_panel{
+    margin-left: -82px;
+  }
+  .btn_map{
+    font-size: 16px;
+  }
+  .content{
+    max-width: 340px;
+  }
+  .station_content{
+    font-size: 11px;
+  }
+  .station_img{
+    margin: auto;
+  }
+}
+/*Iphone X*/
+@media(max-width: 380px){
+  .content{
+    max-width: 300px;
+  }
+  .content__header{
+    font-size: 18px;
+  }
+}
+/*Samsung Galaxy S5*/
+@media(max-width: 365px){
+  #floating-panel{
+    margin-left: -78px;
+  }
+  .content{
+    max-width: 285px;
+  }
+  .content__header{
+    font-size: 18px;
+  }
+  .btn_map{
+    font-size: 15px;
+  }
+}
