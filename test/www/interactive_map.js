@@ -1,4 +1,4 @@
-/*@Dispetcher last edit 01.02.18*/
+/*@Dispetcher last edit 17.07.18*/
 
 var a; //Для определения какую функцию вызывать внутри InitMap();
 var marker;
