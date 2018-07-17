@@ -10,6 +10,7 @@ var linepatharr= [];
 var indx;
 /*Прозрачность линий (рабочей и в строеке/проекте)*/
 var lop = 0.5;
+var rlop = 0.7;
 var cplop = 1.0;
 
 /*Ширина линий (рабочей и в строеке/проекте)*/
@@ -804,28 +805,28 @@ var l1stradius = [
 ['Станция метро «Бугры»', {lat: 60.071203, lng: 30.395416}, contProspL1[0], planIcon, greyLine, cplop, cplw, 1],
 ['Станция метро «Проспект Культуры»', {lat: 60.044656, lng: 30.372311}, contProspL1[1], planIcon, greyLine, cplop, cplw, 1],
 ['Станция метро «Сосновка»', {lat: 60.031134, lng: 30.365952}, contProspL1[2], planIcon, greyLine, cplop, cplw, 1],
-['Станция метро «Политехническая»', {lat:60.008905, lng: 30.370824}, contL1[2], redIcon, redLine, lop, lw, 0]
+['Станция метро «Политехническая»', {lat:60.008905, lng: 30.370824}, contL1[2], redIcon, redLine, cplop, lw, 0]
 ];
 
 var l1st = [
-['Станция метро «Девяткино»', {lat: 60.050456, lng: 30.443683}, contL1[0], redIcon, redLine, lop, lw, 0],
-['Станция метро «Гражданский проспект»', {lat: 60.035226, lng: 30.418243}, contL1[1], redIcon, redLine, lop, lw, 0],
-['Станция метро «Академическая»', {lat: 60.012773, lng: 30.395945}, contL1[2], redIcon, redLine, lop, lw, 0],
-['Станция метро «Политехническая»', {lat:60.008905, lng: 30.370824}, contL1[3], redIcon, redLine, lop, lw, 0],
-['Станция метро «Площадь Мужества»', {lat: 59.999673, lng: 30.366052}, contL1[4], redIcon, redLine, lop, lw, 0],
-['Станция метро «Лесная»', {lat: 59.984789, lng: 30.344253}, contL1[5], emptyIcon, redLine, lop, lw, 0],
-['Станция метро «Выборгская»', {lat: 59.970963, lng: 30.347567}, contL1[6], redIcon, redLine, lop, lw, 0],
-['Станция метро «Площадь Ленина»', {lat: 59.958511, lng: 30.355031}, contL1[7], redIcon, redLine, lop, lw, 0],
-['Станция метро «Чернышевская»', {lat: 59.944606, lng: 30.359709}, contL1[8], redIcon, redLine, lop, lw, 0],
-['Станция метро «Площадь Восстания»', {lat: 59.931589, lng: 30.360368}, contL1[9], redIcon, redLine, lop, lw, 0],
-['Станция метро «Владимирская»', {lat: 59.927593, lng: 30.347866}, contL1[10], redIcon, redLine, lop, lw, 0],
-['Станция метро «Пушкинская»', {lat: 59.920536, lng: 30.329714}, contL1[11], redIcon, redLine, lop, lw, 0],
-['Станция метро «Технологический институт»', {lat: 59.916281, lng: 30.318447}, contL1[12], redIcon, redLine, lop, lw, 0],
-['Станция метро «Балтийская»', {lat: 59.907681, lng: 30.300104}, contL1[13], redIcon, redLine, lop, lw, 0],
-['Станция метро «Нарвская»', {lat: 59.901178, lng: 30.274983}, contL1[14], emptyIcon, redLine, lop, lw, 0],
-['Станция метро «Кировский завод»', {lat: 59.879802, lng: 30.261333}, contL1[15], redIcon, redLine, lop, lw, 0],
+['Станция метро «Девяткино»', {lat: 60.050456, lng: 30.443683}, contL1[0], redIcon, redLine, rlop, lw, 0],
+['Станция метро «Гражданский проспект»', {lat: 60.035226, lng: 30.418243}, contL1[1], redIcon, redLine, rlop, lw, 0],
+['Станция метро «Академическая»', {lat: 60.012773, lng: 30.395945}, contL1[2], redIcon, redLine, rlop, lw, 0],
+['Станция метро «Политехническая»', {lat:60.008905, lng: 30.370824}, contL1[3], redIcon, redLine, rlop, lw, 0],
+['Станция метро «Площадь Мужества»', {lat: 59.999673, lng: 30.366052}, contL1[4], redIcon, redLine, rlop, lw, 0],
+['Станция метро «Лесная»', {lat: 59.984789, lng: 30.344253}, contL1[5], emptyIcon, redLine, rlop, lw, 0],
+['Станция метро «Выборгская»', {lat: 59.970963, lng: 30.347567}, contL1[6], redIcon, redLine, rlop, lw, 0],
+['Станция метро «Площадь Ленина»', {lat: 59.958511, lng: 30.355031}, contL1[7], redIcon, redLine, rlop, lw, 0],
+['Станция метро «Чернышевская»', {lat: 59.944606, lng: 30.359709}, contL1[8], redIcon, redLine, rlop, lw, 0],
+['Станция метро «Площадь Восстания»', {lat: 59.931589, lng: 30.360368}, contL1[9], redIcon, redLine, rlop, lw, 0],
+['Станция метро «Владимирская»', {lat: 59.927593, lng: 30.347866}, contL1[10], redIcon, redLine, rlop, lw, 0],
+['Станция метро «Пушкинская»', {lat: 59.920536, lng: 30.329714}, contL1[11], redIcon, redLine, rlop, lw, 0],
+['Станция метро «Технологический институт»', {lat: 59.916281, lng: 30.318447}, contL1[12], redIcon, redLine, rlop, lw, 0],
+['Станция метро «Балтийская»', {lat: 59.907681, lng: 30.300104}, contL1[13], redIcon, redLine, rlop, lw, 0],
+['Станция метро «Нарвская»', {lat: 59.901178, lng: 30.274983}, contL1[14], emptyIcon, redLine, rlop, lw, 0],
+['Станция метро «Кировский завод»', {lat: 59.879802, lng: 30.261333}, contL1[15], redIcon, redLine, rlop, lw, 0],
 ['Станция метро «Автово»', {lat: 59.867294, lng: 30.261240}, contL1[16], redIcon, redLine, lop, lw, 0],
-['Станция метро «Ленинский проспект»', {lat: 59.850641, lng: 30.268387}, contL1[17], redIcon, redLine, lop, lw, 0],
+['Станция метро «Ленинский проспект»', {lat: 59.850641, lng: 30.268387}, contL1[17], redIcon, redLine, rlop, lw, 0],
 ['Станция метро «Проспект Ветеранов»', {lat: 59.842154, lng: 30.250260}, contL1[18], redIcon, greyLine, cplop, cplw, 1],
 ['Станция метро «Александрино»', {lat: 59.833532, lng: 30.218573}, contProspL1[3], planIcon, greyLine, cplop, cplw, 1],
 ['Станция метро «Проспект Маршала Жукова»', {lat: 59.828321, lng: 30.190634}, contProspL1[4], planIcon, greyLine, cplop, cplw, 1]
@@ -1109,7 +1110,7 @@ function dropline(infowindow, lineN) {
       lN = lineNum[i+1];
       var linepatharr = [l[1],lN[1]]; 
 
-      addMarkerWithTimeout(l[0], l[1], l[2], l[3], i*50, infowindow);
+     /* addMarkerWithTimeout(l[0], l[1], l[2], l[3], i*50, infowindow);*/
       addLine(linepatharr, l[4], l[5], l[6], l[7]);
       };
 
