@@ -112,69 +112,69 @@ var fPartPrL7 = '<div class="station_content"><p><h3 class="article_header">Пр
 var fPartProspL7 = '<div class="station_content"><p><h3 class="article_header">Перспективная станция - 1</h3></p>'+'<p><b>Время постройки</b> - ';
 var lPartL7 = '<p><h3 class="article_header prosp_header">Перспективная станция</h3></p>'+'<p><b>Время постройки</b> - после 2030 года</p>'+'<p><b>Линия</b> - '+ nameLine7 +'</p></div>';
 var lPartProspL7 = '<p><h3 class="article_header prosp_header">Перспективная станция - 2</h3></p>'+'<p><b>Время постройки</b> - после 2030 года</p>'+'<p><b>Линия</b> - '+ nameLine7 +'</p></div>';
-var fPartProsp ='<div class="station_content"><div class="content__body"><p><b>Время постройки</b> - ';
-var fImgPart = '<div class="station_img"><img src=';
+var fPartProsp ='<div class="station_content"><p><b>Время постройки</b> - ';
+var fImgPart = '<div class="station_img"><img src="https://undergroundexpert.info/wp-content/themes/shablon/Imgs/';
 var lImgPart = ' height=75 width=100>';
 
 /*Описание действующих станций 1 линии*/
 var contL1 = [
 [fPart + '1978</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 0 метров (наземная станция)</p>'+'<p><b>Время работы</b> - 05:32 -- 01:00</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1978</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 64 метра</p>'+'<p><b>Время работы</b> - 05:30 -- 01:00</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1975</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 64 метра</p>'+'<p><b>Время работы</b> - 05:35 -- 00:55</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1975</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 65 метров</p>'+'<p><b>Время работы</b> - 05:37 -- 00:50</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1975</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 67 метров</p>'+'<p><b>Время работы</b> - 05:40 -- 00:55</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1975</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 64 метра</p>'+'<p><b>Время работы</b> - 05:42 -- 00:50</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1975</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 67 метров</p>'+'<p><b>Время работы</b> - 05:45 -- 00:45</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1958</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 71 метров</p>'+'<p><b>Время работы</b> - 05:35 -- 00:45</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1958</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 70 метров</p>'+'<p><b>Время работы</b> - 05:38 -- 00:40</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1955</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 58 метров</p>'+'<p><b>Время работы</b> - 05:40 -- 00:45</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1955</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 55 метров</p>'+'<p><b>Время работы</b> - 05:38 -- 00:45</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1956</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 57 метров</p>'+'<p><b>Время работы</b> - 05:38 -- 00:45</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1955</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 60 метров</p>'+'<p><b>Время работы</b> - 07:00 -- 20:00</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1955</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 57 метров</p>'+'<p><b>Время работы</b> - 05:36 -- 00:50</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1955</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 52 метра</p>'+'<p><b>Время работы</b> - 05:36 -- 00:50</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1955</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 50 метров</p>'+'<p><b>Время работы</b> - 05:30 -- 00:55</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1955</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 12 метров</p>'+'<p><b>Время работы</b> - 05:30 -- 00:55</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1977</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 8 метров</p>'+'<p><b>Время работы</b> - 05:40 -- 01:00</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1977</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 8 метров</p>'+'<p><b>Время работы</b> - 05:38 -- 01:00</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>']
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>']
 ];
 
 /*Описание перспективных станций 1 линии*/
@@ -200,98 +200,98 @@ var contProspL1 = [
 var contL2 = [
 [fPart + '2006</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 0 метров (наземная станция)</p>'+'<p><b>Время работы</b> - 05:32 -- 01:00</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1988</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 65 метров</p>'+'<p><b>Время работы</b> - 05:30 -- 01:00</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1988</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 59 метров</p>'+'<p><b>Время работы</b> - 05:35 -- 00:55</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1982</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 64 метра</p>'+'<p><b>Время работы</b> - 05:37 -- 00:50</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1982</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 67 метров</p>'+'<p><b>Время работы</b> - 05:40 -- 00:55</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1982</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 67 метров</p>'+'<p><b>Время работы</b> - 05:42 -- 00:50</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1963</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 53 метра</p>'+'<p><b>Время работы</b> - 05:32 -- 01:00</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1963</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 53 метра</p>'+'<p><b>Время работы</b> - 05:30 -- 01:00</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1963</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 63 метра</p>'+'<p><b>Время работы</b> - 05:35 -- 00:55</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1963</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 55 метров</p>'+'<p><b>Время работы</b> - 05:37 -- 00:50</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1961</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 60 метров</p>'+'<p><b>Время работы</b> - 05:40 -- 00:55</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1961</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 39 метров</p>'+'<p><b>Время работы</b> - 05:42 -- 00:50</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1961</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 35 метров (наземная станция)</p>'+'<p><b>Время работы</b> - 05:32 -- 01:00</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1961</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 35 метров</p>'+'<p><b>Время работы</b> - 05:30 -- 01:00</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1961</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 35 метров</p>'+'<p><b>Время работы</b> - 05:35 -- 00:55</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1969</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 29 метров</p>'+'<p><b>Время работы</b> - 05:37 -- 00:50</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1972</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 22 метров</p>'+'<p><b>Время работы</b> - 05:40 -- 00:55</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1972</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 0 метров (наземная станция)</p>'+'<p><b>Время работы</b> - 05:42 -- 00:50</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>']
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>']
 ];
 
 /*Описание действующих станций 3 линии*/
 var contL3 = [
 [fPart + '2018</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 17 метров</p>'+'<p><b>Время работы</b> - 05:30 -- 01:05</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '2018</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 17 метров</p>'+'<p><b>Время работы</b> - 05:40 -- 01:05</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1979</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 71 метр</p>'+'<p><b>Время работы</b> - 05:34 -- 01:00</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1967</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 64 метра</p>'+'<p><b>Время работы</b> - 05:35 -- 00:50</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1967</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 56 метров</p>'+'<p><b>Время работы</b> - 05:38 -- 00:50</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1967</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 51 метр</p>'+'<p><b>Время работы</b> - 05:40 -- 00:45</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1967</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 54 метра</p>'+'<p><b>Время работы</b> - 05:32 -- 00:45</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1970</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 62 метра</p>'+'<p><b>Время работы</b> - 05:38 -- 00:45</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1970</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 65 метров</p>'+'<p><b>Время работы</b> - 05:35 -- 00:50</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1981</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 72 метра</p>'+'<p><b>Время работы</b> - 05:36 -- 00:55</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1981</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 62 метра</p>'+'<p><b>Время работы</b> - 05:38 -- 01:00</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1984</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 0 метров (наземная станция)</p>'+'<p><b>Время работы</b> - 05:37 -- 00:55</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>']
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>']
 ];
 
 /*Описание проектируемых станций 3 линии*/
@@ -331,38 +331,38 @@ var contProspL3 = [
 var contL4 = [
 [fPart + '2009</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Глубина</b> - 60 метров</p>'+'<p><b>Время работы</b> - 05:38 -- 00:45</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1991</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Глубина</b> - 62 метра</p>'+'<p><b>Время работы</b> - 07:00 -- 20:00</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1991</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Глубина</b> - 66 метров</p>'+'<p><b>Время работы</b> - 05:40 -- 00:35</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1985</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Глубина</b> - 60 метров</p>'+'<p><b>Время работы</b> - 05:32 -- 00:23</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1985</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Глубина</b> - 61 метр</p>'+'<p><b>Время работы</b> - 05:39 -- 00:35</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1985</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Глубина</b> - 61 метр</p>'+'<p><b>Время работы</b> - 05:40 -- 00:40</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1985</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Глубина</b> - 68 метра</p>'+'<p><b>Время работы</b> - 05:37 -- 00:45</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1987</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Глубина</b> - 61 метра</p>'+'<p><b>Время работы</b> - 05:35 -- 00:45</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 ];
 
 /*Описание строящихся станций 4 линии*/
 var contConstrL4 = [
 [fPartProsp + 'ноябрь 2019 года</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Адрес</b> - Большой пр. В.О. (юго-западнее пересечения Большого пр. и Косой линии)</p></div>'+
-'</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPartProsp + 'ноябрь 2019 года</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Адрес</b> - Ул. Декабристов (южнее пересечения ул. Декабристов и ул. Глинки)</p></div>'+
-'</div>']
+fImgPart + '4th_line/Teatralnaya.png"' + lImgPart + '</div>']
 ];
 
 /*Описание проектируемых станций 4 линии*/
@@ -396,40 +396,40 @@ var contProspL4 = [
 var contL5 = [
 [fPart + '2005</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 75 метров</p>'+'<p><b>Время работы</b> - 05:36 -- 00:55</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1999</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 61 метр</p>'+'<p><b>Время работы</b> - 05:37 -- 00:50</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1999</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 49 метров</p>'+'<p><b>Время работы</b> - 05:42 -- 00:45</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1997</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 60 метров</p>'+'<p><b>Время работы</b> - 05:35 -- 00:40</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1997</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 64 метров</p>'+'<p><b>Время работы</b> - 05:36 -- 00:40</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '2011</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 86 метров</p>'+'<p><b>Время работы</b> - 05:38 -- 00:40</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '1991</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 71 метр</p>'+'<p><b>Время работы</b> - 05:36 -- 00:45</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '2009</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 57 метров</p>'+'<p><b>Время работы</b> - 05:40 -- 00:50</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '2010</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 61 метр</p>'+'<p><b>Время работы</b> - 05:35 -- 00:45</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '2008</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 61 метр</p>'+'<p><b>Время работы</b> - 05:35 -- 00:45</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '2012</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 65 метров</p>'+'<p><b>Время работы</b> - 05:37 -- 00:50</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPart + '2012</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 65 метров</p>'+'<p><b>Время работы</b> - 05:35 -- 00:50</p></div>'+
-fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>']
+fImgPart + 'imgtest.jpg"' + lImgPart + '</div>']
 ];
 
 /*Описание строящихся станций 5 линии*/
@@ -471,29 +471,29 @@ var contProspL5 = [
 var contConstrL6 = [
 [fPartProsp + 'июнь 2022 года</p>'+'<p><b>Линия</b> - '+ nameLine6 +'</p>'+
 '<p><b>Адрес</b> - Ул. Васи Алексеева (западнее дома №12 корп.1 по ул. Маршала Говорова)</p></div>'+
-'</div>'],
+fImgPart + '6th_line/Putilovskaya.png"' + lImgPart + '</div>'],
 [fPartProsp + 'июнь 2022 года</p>'+'<p><b>Линия</b> - '+ nameLine6 +'</p>'+
 '<p><b>Адрес</b> - Ул. Маршала Казакова (юго-западнее пересечения ул. Маршала Казакова и пр.Маршала Жукова)</p></div>'+
-'</div>']
+fImgPart + '6th_line/Yugo-zapadnaya.png"' + lImgPart + '</div>']
 ];
 
 /*Описание проектируемых станций 6 линии*/
 var contPrL6 = [
 [fPartProsp + '2026-2027 год</p>'+'<p><b>Линия</b> - '+ nameLine6 +'</p>'+
 '<p><b>Адрес</b> - юго-восточнее дома 42 на наб. Обводного канала</p></div>'+
-'</div>'],
+fImgPart + '6th_line/Karertnaya.png"' + lImgPart + '</div>'],
 [fPartProsp + '2026-2027 год</p>'+'<p><b>Линия</b> - '+ nameLine6 +'</p>'+
 '<p><b>Адрес</b> - Два вестибюля: Киевская ул. (юго-западнее пересечения с Черниговской ул.)<br>'+
 'Лиговский пр. (севернее дома № 236, литера Б)</p></div>'+
-'</div>'],
+fImgPart + '6th_line/Borovaya.png"' + lImgPart + '</div>'],
 [fPartProsp + '2026-2027 год</p>'+'<p><b>Линия</b> - '+ nameLine6 +'</p>'+
 '<p><b>Адрес</b> - Ташкентская ул. (северо-западнее дома № 103, корп.6, литера А, по Московскому пр.)</p></div>'+
-'</div>'],
+fImgPart + '6th_line/Zastavskaya.png"' + lImgPart + '</div>'],
 [fPartProsp + '2026-2027 год</p>'+'<p><b>Линия</b> - '+ nameLine6 +'</p>'+
 '<p><b>Адрес</b> - Два вестибюля: подземный - на северо-западной стороне<br>'+
 'Т-образного перекрестка Благодатной ул. и Новоизмайловского пр.<br>'+
 'Второй - на западной стороне Митрофаньевского ш., недалеко от ЗСД</p></div>'+
-'</div>']
+fImgPart + '6th_line/Bronevaya.png"' + lImgPart + '</div>']
 ];
 
 /*Описание перспективных станций 6 линии*/
@@ -541,54 +541,54 @@ var contProspL6 = [
 var contProspL7 = [
 [fPartWorkL7 + '1975</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 64 метра</p>'+'<p><b>Время работы</b> - 05:42 -- 00:50</p>'+
-lPartL7 + fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+lPartL7 + fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPartProsp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameLine7 +'</p>'+
 '<p><b>Адрес</b> - пересечение Кантемировской ул. и Выборгской наб.</p></div>'+'</div>'],
 [fPartWorkL7 + '1963</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 53 метра</p>'+'<p><b>Время работы</b> - 05:32 -- 01:00</p>'+
-lPartL7 + fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+lPartL7 + fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPartWorkL7 + '1997</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 64 метра</p>'+'<p><b>Время работы</b> - 05:36 -- 00:40</p>'+
-lPartL7 + fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+lPartL7 + fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPartWorkL7 + '1967</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 64 метра</p>'+'<p><b>Время работы</b> - 05:35 -- 00:50</p>'+
-lPartL7 + fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+lPartL7 + fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPartConstrL7 + 'ноябрь 2019 года</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Адрес</b> - Большой пр. В.О. (юго-западнее пересечения Большого пр. и Косой линии)</p>'+
-lPartL7 + fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+lPartL7 + fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPartProsp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameLine7 +'</p>'+
 '<p><b>Адрес</b> - между д.3 и д.5 по Двинской ул. </p></div>'+'</div>'],
 [fPartWorkL7 + '1955</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 52 метра</p>'+'<p><b>Время работы</b> - 05:36 -- 00:50</p>'+
-lPartL7 + fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+lPartL7 + fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPartPrL7 + '2026-2027 год</p>'+'<p><b>Линия</b> - '+ nameLine6 +'</p>'+
 '<p><b>Адрес</b> - Два вестибюля: подземный - на северо-западной стороне<br>'+
 'Т-образного перекрестка Благодатной ул. и Новоизмайловского пр.<br>'+
 'Второй - на западной стороне Митрофаньевского ш., недалеко от ЗСД</p>'+
-lPartL7 + fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+lPartL7 + fImgPart + '6th_line/Bronevaya.png"' + lImgPart + '</div>'],
 [fPartWorkL7 + '1961</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 35 метров</p>'+'<p><b>Время работы</b> - 05:35 -- 00:55</p>'+
-lPartL7 + fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+lPartL7 + fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPartProsp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameLine7 +'</p>'+
 '<p><b>Адрес</b> - пересечение Витебского пр. и Бассейной ул.</p></div>'+'</div>'],
 [fPartWorkL7 + '1961</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 65 метров</p>'+'<p><b>Время работы</b> - 05:35 -- 00:50</p>'+
-lPartL7 + fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+lPartL7 + fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPartProsp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameLine7 +'</p>'+
 '<p><b>Адрес</b> - вблизи ж/д станции "Фарфоровская"</p></div>'+'</div>'],
 [fPartWorkL7 + '1970</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 62 метра</p>'+'<p><b>Время работы</b> - 05:38 -- 00:45</p>'+
-lPartL7 + fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+lPartL7 + fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPartProsp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameLine7 +'</p>'+
 '<p><b>Адрес</b> - пересечение ул. Колонтай и Дальневосточного пр.</p></div>'+'</div>'],
 [fPartWorkL7 + '1985/p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Глубина</b> - 61 метр</p>'+'<p><b>Время работы</b> - 05:40 -- 00:40</p>'+
-lPartL7 + fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+lPartL7 + fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPartProsp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameLine7 +'</p>'+
 '<p><b>Адрес</b> - Красногвардейская пл.</p></div>'+'</div>'],
 [fPartProspL7 + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameLine6 +'</p>'+
 '<p><b>Адрес</b> - пересечение шоссе Революции и Среднеохтинского пр.</p>'+ 
-lPartProspL7 + fImgPart + "Imgs/imgtest.jpg" + lImgPart + '</div>'],
+lPartProspL7 + fImgPart + 'imgtest.jpg"' + lImgPart + '</div>'],
 [fPartProsp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameLine7 +'</p>'+
 '<p><b>Адрес</b> - площадь Калинина</p></div>'+'</div>'],
 [fPartProsp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameLine7 +'</p>'+

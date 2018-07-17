@@ -28,6 +28,9 @@
   line-height: 30px;
   padding-left: 10px;
   margin-left: -52px;
+}
+.station_content{
+  max-width: 400px;
 } 
 .btn_map{
   height: 45px;
@@ -68,6 +71,7 @@
 }
 .station_img{
   display: inline-block;
+  vertical-align: top;
   margin: 5px 10px;
 }
 .article_header{
@@ -91,10 +95,12 @@
 /*Iphone 8PLUS*/
 @media(max-width: 420px){
   #floating_panel, #fl_panel{
-    margin-left: -82px;
+    margin-left: -80px;
+    left: 23%;
+    padding-left: 0;
   }
   .btn_map{
-    font-size: 16px;
+    font-size: 15px;
   }
   .content{
     max-width: 340px;

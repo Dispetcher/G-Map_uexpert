@@ -52,6 +52,9 @@
         opacity: 0.8;  
         color: #fff;      
       }
+      .station_content{
+        max-width: 400px;
+      } 
       .ln1{
         background-color: rgba(195, 22, 22, 0.95);
       }
@@ -78,6 +81,7 @@
       }
       .station_img{
         display: inline-block;
+        vertical-align: top;
         margin: 5px 10px;
       }
       .article_header{
@@ -97,14 +101,19 @@
         #floating_panel{
           top: 45px;
         }
+        .content{
+          max-width: 400px;
+        }
       }
       /*Iphone 8PLUS*/
       @media(max-width: 420px){
         #floating_panel, #fl_panel{
-          margin-left: -82px;
+          margin-left: -80px;
+          left: 23%;
+          padding-left: 0;
         }
         .btn_map{
-          font-size: 16px;
+          font-size: 15px;
         }
         .content{
           max-width: 340px;
