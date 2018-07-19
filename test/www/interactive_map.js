@@ -1162,7 +1162,6 @@ function dropmarker(infowindow, lineN) {
     for (var i = 0; i < lineNum.length; i++) {
       l = lineNum[i];
       addMarkerWithTimeout(l[0], l[1], l[2], l[3], i*50, infowindow);
-      addMarkerWithTimeout(l[0], l[1], l[2], l[3], i*50, infowindow);
     }
 }
 /**************************************************/
