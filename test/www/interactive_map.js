@@ -1004,7 +1004,7 @@ function initMap(a) {
     var infowindow = new google.maps.InfoWindow();
     map = new google.maps.Map(document.getElementById('map'), {
     zoom: 11,
-    center: {lat:59.960,lng:30.330},
+    center: {lat:59.973,lng:30.330},
     });
 
   if(a == 1){
@@ -1110,7 +1110,6 @@ function dropline(infowindow, lineN) {
       lN = lineNum[i+1];
       var linepatharr = [l[1],lN[1]]; 
 
-     /* addMarkerWithTimeout(l[0], l[1], l[2], l[3], i*50, infowindow);*/
       addLine(linepatharr, l[4], l[5], l[6], l[7]);
       };
 
@@ -1129,7 +1128,6 @@ function dropline6(infowindow, lineN) {
 	  lN = lineNum[i+1];
       var linepatharr = [l[1],lN[1]]; 
 
-      addMarkerWithTimeout(l[0], l[1], l[2], l[3], l[8] * 75, infowindow);
       addLine(linepatharr, l[4], l[5], l[6], l[7]);
       };
 
@@ -1148,7 +1146,6 @@ function dropline7(infowindow, lineN) {
       lN = lineNum[i+1];
       var linepatharr = [l[1],lN[1]]; 
 
-      addMarkerWithTimeout(l[0], l[1], l[2], l[3], l[8] * 100, infowindow);
       addLine(linepatharr, l[4], l[5], l[6], l[7]);
       };
 
