@@ -1,3 +1,6 @@
+h3{
+  font-size: 18px;
+}
 #map {
   height: 900px;
   width:100vw;
@@ -65,6 +68,12 @@
 }
 .ln6{
   background-color: rgba(80, 34, 34, 0.95);
+}
+.content__header{
+        max-width: 400px;
+}
+.content__header--transfer{
+        margin: 10px 0;
 }
 .station_content{
   display: inline-block;
