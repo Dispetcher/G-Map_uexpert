@@ -121,7 +121,7 @@ const nameLine7 = 'Кольцевая (7 линия)';
 
 const fPart = '<div class="station_content"><p><b>Год открытия</b> - ';
 const fPartWorkL7 = '<div class="station_content"><p><h3 class="article_header">Действующая станция</h3></p>'+'<p><b>Год открытия</b> - ';
-const fPartConstrL7 = '<div class="station_content"><p><h3 class="article_headerr">Строящаяся станция</h3></p>'+'<p><b>Время постройки</b> - ';
+const fPartConstrL7 = '<div class="station_content"><p><h3 class="article_header">Строящаяся станция</h3></p>'+'<p><b>Время постройки</b> - ';
 const fPartPrL7 = '<div class="station_content"><p><h3 class="article_header">Проектируемая станция</h3></p>'+'<p><b>Время постройки</b> - ';
 const fPartProspL7 = '<div class="station_content"><p><h3 class="article_header">Перспективная станция - 1</h3></p>'+'<p><b>Время постройки</b> - ';
 const lPartL7 = '<p><h3 class="article_header prosp_header">Перспективная станция</h3></p>'+'<p><b>Время постройки</b> - после 2030 года</p>'+'<p><b>Линия</b> - '+ nameLine7 +'</p></div>';
@@ -137,43 +137,43 @@ const contL1 = [
 fImgPart + '1st_line/Devyatkino.png"' + lImgPart + '</div>'],
 [fPart + '1978</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 64 метра</p>'+'<p><b>Время работы</b> - 05:30 -- 01:00</p></div>'+
-fImgPart + '1st_line/"' + lImgPart + '</div>'],
+fImgPart + '1st_line/GrajdanskyPr.png"' + lImgPart + '</div>'],
 [fPart + '1975</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 64 метра</p>'+'<p><b>Время работы</b> - 05:35 -- 00:55</p></div>'+
 fImgPart + '1st_line/Akademicheskaya.png"' + lImgPart + '</div>'],
 [fPart + '1975</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 65 метров</p>'+'<p><b>Время работы</b> - 05:37 -- 00:50</p></div>'+
-fImgPart + '1st_line/Pl_Muzhestva.png"' + lImgPart + '</div>'],
+fImgPart + '1st_line/Politehnicheskaya.png"' + lImgPart + '</div>'],
 [fPart + '1975</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 67 метров</p>'+'<p><b>Время работы</b> - 05:40 -- 00:55</p></div>'+
-fImgPart + '1st_line/"' + lImgPart + '</div>'],
+fImgPart + '1st_line/Pl_Muzhestva.png"' + lImgPart + '</div>'],
 [fPart + '1975</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 64 метра</p>'+'<p><b>Время работы</b> - 05:42 -- 00:50</p></div>'+
-fImgPart + '1st_line/"' + lImgPart + '</div>'],
+fImgPart + '1st_line/Lesnaya.png"' + lImgPart + '</div>'],
 [fPart + '1975</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 67 метров</p>'+'<p><b>Время работы</b> - 05:45 -- 00:45</p></div>'+
 fImgPart + '1st_line/Vyborgskaya.png"' + lImgPart + '</div>'],
 [fPart + '1958</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 71 метров</p>'+'<p><b>Время работы</b> - 05:35 -- 00:45</p></div>'+
-fImgPart + '1st_line/"' + lImgPart + '</div>'],
+fImgPart + '1st_line/PlLenina.png"' + lImgPart + '</div>'],
 [fPart + '1958</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 70 метров</p>'+'<p><b>Время работы</b> - 05:38 -- 00:40</p></div>'+
-fImgPart + '1st_line/"' + lImgPart + '</div>'],
+fImgPart + '1st_line/Chernyshevskaya.png"' + lImgPart + '</div>'],
 [fPart + '1955</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 58 метров</p>'+'<p><b>Время работы</b> - 05:40 -- 00:45</p></div>'+
 fImgPart + '1st_line/Pl_Vosstaniya.png"' + lImgPart + '</div>'],
 [fPart + '1955</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 55 метров</p>'+'<p><b>Время работы</b> - 05:38 -- 00:45</p></div>'+
-fImgPart + '1st_line/"' + lImgPart + '</div>'],
+fImgPart + '1st_line/Vladimirskaya.png"' + lImgPart + '</div>'],
 [fPart + '1956</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 57 метров</p>'+'<p><b>Время работы</b> - 05:38 -- 00:45</p></div>'+
 fImgPart + '1st_line/Pushkinskaya.png"' + lImgPart + '</div>'],
 [fPart + '1955</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 60 метров</p>'+'<p><b>Время работы</b> - 07:00 -- 20:00</p></div>'+
-fImgPart + '1st_line/"' + lImgPart + '</div>'],
+fImgPart + '2nd_line/TechnologicheskyIns_2.png"' + lImgPart + '</div>'],
 [fPart + '1955</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 57 метров</p>'+'<p><b>Время работы</b> - 05:36 -- 00:50</p></div>'+
-fImgPart + '1st_line/"' + lImgPart + '</div>'],
+fImgPart + '1st_line/Baltiyskaya.png"' + lImgPart + '</div>'],
 [fPart + '1955</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 52 метра</p>'+'<p><b>Время работы</b> - 05:36 -- 00:50</p></div>'+
 fImgPart + '1st_line/Narvskaya.png"' + lImgPart + '</div>'],
@@ -214,16 +214,16 @@ const contProspL1 = [
 const contL2 = [
 [fPart + '2006</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 0 метров (наземная станция)</p>'+'<p><b>Время работы</b> - 05:32 -- 01:00</p></div>'+
-fImgPart + '2nd_line/"' + lImgPart + '</div>'],
+fImgPart + '2nd_line/Parnas.png"' + lImgPart + '</div>'],
 [fPart + '1988</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 65 метров</p>'+'<p><b>Время работы</b> - 05:30 -- 01:00</p></div>'+
-fImgPart + '2nd_line/"' + lImgPart + '</div>'],
+fImgPart + '2nd_line/PrProsvescheniya.png"' + lImgPart + '</div>'],
 [fPart + '1988</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 59 метров</p>'+'<p><b>Время работы</b> - 05:35 -- 00:55</p></div>'+
-fImgPart + '2nd_line/"' + lImgPart + '</div>'],
+fImgPart + '2nd_line/Ozerki.png"' + lImgPart + '</div>'],
 [fPart + '1982</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 64 метра</p>'+'<p><b>Время работы</b> - 05:37 -- 00:50</p></div>'+
-fImgPart + '2nd_line/"' + lImgPart + '</div>'],
+fImgPart + '2nd_line/Udelnaya.png"' + lImgPart + '</div>'],
 [fPart + '1982</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 67 метров</p>'+'<p><b>Время работы</b> - 05:40 -- 00:55</p></div>'+
 fImgPart + '2nd_line/Pionerskaya.png"' + lImgPart + '</div>'],
@@ -238,13 +238,13 @@ fImgPart + '2nd_line/Petrogradskaya.png"' + lImgPart + '</div>'],
 fImgPart + '2nd_line/Gorkovskaya.png"' + lImgPart + '</div>'],
 [fPart + '1963</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 63 метра</p>'+'<p><b>Время работы</b> - 05:35 -- 00:55</p></div>'+
-fImgPart + '2nd_line/"' + lImgPart + '</div>'],
+fImgPart + '2nd_line/NevskyPr.png"' + lImgPart + '</div>'],
 [fPart + '1963</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 55 метров</p>'+'<p><b>Время работы</b> - 05:37 -- 00:50</p></div>'+
 fImgPart + '2nd_line/Sennaya_Pl.png"' + lImgPart + '</div>'],
 [fPart + '1961</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 60 метров</p>'+'<p><b>Время работы</b> - 05:40 -- 00:55</p></div>'+
-fImgPart + '2nd_line/Technologichesky_Ins.png"' + lImgPart + '</div>'],
+fImgPart + '2nd_line/TechnologicheskyIns_2.png"' + lImgPart + '</div>'],
 [fPart + '1961</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
 '<p><b>Глубина</b> - 39 метров</p>'+'<p><b>Время работы</b> - 05:42 -- 00:50</p></div>'+
 fImgPart + '2nd_line/Frunzenskaya.png"' + lImgPart + '</div>'],
@@ -290,7 +290,7 @@ fImgPart + '3rd_line/Gostinyi_Dvor.png"' + lImgPart + '</div>'],
 fImgPart + '3rd_line/Mayakovskaya.png"' + lImgPart + '</div>'],
 [fPart + '1967</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 54 метра</p>'+'<p><b>Время работы</b> - 05:32 -- 00:45</p></div>'+
-fImgPart + '3rd_line/"' + lImgPart + '</div>'],
+fImgPart + '3rd_line/PlAlNevskogo_1.png"' + lImgPart + '</div>'],
 [fPart + '1970</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 62 метра</p>'+'<p><b>Время работы</b> - 05:38 -- 00:45</p></div>'+
 fImgPart + '3rd_line/Elizarovskaya.png"' + lImgPart + '</div>'],
@@ -302,7 +302,7 @@ fImgPart + '3rd_line/Lomonosovskaya.png"' + lImgPart + '</div>'],
 fImgPart + '3rd_line/Proletarskaya.png"' + lImgPart + '</div>'],
 [fPart + '1981</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 62 метра</p>'+'<p><b>Время работы</b> - 05:38 -- 01:00</p></div>'+
-fImgPart + '3rd_line/"' + lImgPart + '</div>'],
+fImgPart + '3rd_line/Obuhovo.png"' + lImgPart + '</div>'],
 [fPart + '1984</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 0 метров (наземная станция)</p>'+'<p><b>Время работы</b> - 05:37 -- 00:55</p></div>'+
 fImgPart + '3rd_line/Rybackoe.png"' + lImgPart + '</div>']
@@ -345,28 +345,28 @@ const contProspL3 = [
 const contL4 = [
 [fPart + '2009</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Глубина</b> - 60 метров</p>'+'<p><b>Время работы</b> - 05:38 -- 00:45</p></div>'+
-fImgPart + '4th_line/"' + lImgPart + '</div>'],
+fImgPart + '4th_line/Spasskaya.png"' + lImgPart + '</div>'],
 [fPart + '1991</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Глубина</b> - 62 метра</p>'+'<p><b>Время работы</b> - 07:00 -- 20:00</p></div>'+
 fImgPart + '4th_line/Dostoevskaya.png"' + lImgPart + '</div>'],
 [fPart + '1991</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Глубина</b> - 66 метров</p>'+'<p><b>Время работы</b> - 05:40 -- 00:35</p></div>'+
-fImgPart + '4th_line/"' + lImgPart + '</div>'],
+fImgPart + '4th_line/LigovskyPr.png"' + lImgPart + '</div>'],
 [fPart + '1985</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Глубина</b> - 60 метров</p>'+'<p><b>Время работы</b> - 05:32 -- 00:23</p></div>'+
-fImgPart + '4th_line/Pl_Al_Nevskogo.png"' + lImgPart + '</div>'],
+fImgPart + '4th_line/PlAlNevskogo_2.png"' + lImgPart + '</div>'],
 [fPart + '1985</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Глубина</b> - 61 метр</p>'+'<p><b>Время работы</b> - 05:39 -- 00:35</p></div>'+
 fImgPart + '4th_line/Novocherkasskaya.png"' + lImgPart + '</div>'],
 [fPart + '1985</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Глубина</b> - 61 метр</p>'+'<p><b>Время работы</b> - 05:40 -- 00:40</p></div>'+
-fImgPart + '4th_line/"' + lImgPart + '</div>'],
+fImgPart + '4th_line/Ladozhskaya.png"' + lImgPart + '</div>'],
 [fPart + '1985</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Глубина</b> - 68 метра</p>'+'<p><b>Время работы</b> - 05:37 -- 00:45</p></div>'+
 fImgPart + '4th_line/Pr_Bolshevikov.png"' + lImgPart + '</div>'],
 [fPart + '1987</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Глубина</b> - 61 метра</p>'+'<p><b>Время работы</b> - 05:35 -- 00:45</p></div>'+
-fImgPart + '4th_line/Ul_Dybenko.png"' + lImgPart + '</div>'],
+fImgPart + '4th_line/UlDybenko.png"' + lImgPart + '</div>'],
 ];
 
 /*Описание строящихся станций 4 линии*/
@@ -558,7 +558,7 @@ const contProspL6 = [
 const contProspL7 = [
 [fPartWorkL7 + '1975</p>'+'<p><b>Линия</b> - '+ nameLine1 +'</p>'+
 '<p><b>Глубина</b> - 64 метра</p>'+'<p><b>Время работы</b> - 05:42 -- 00:50</p>'+
-lPartL7 + '</div>'],
+lPartL7 + fImgPart + '1st_line/Lesnaya.png"' + lImgPart + '</div>'],
 [fPartProsp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameLine7 +'</p>'+
 '<p><b>Адрес</b> - пересечение Кантемировской ул. и Выборгской наб.</p></div>'+'</div>'],
 [fPartWorkL7 + '1963</p>'+'<p><b>Линия</b> - '+ nameLine2 +'</p>'+
@@ -600,7 +600,7 @@ lPartL7 + fImgPart + '3rd_line/Elizarovskaya.png"' + lImgPart + '</div>'],
 '<p><b>Адрес</b> - пересечение ул. Колонтай и Дальневосточного пр.</p></div>'+'</div>'],
 [fPartWorkL7 + '1985</p>'+'<p><b>Линия</b> - '+ nameLine4 +'</p>'+
 '<p><b>Глубина</b> - 61 метр</p>'+'<p><b>Время работы</b> - 05:40 -- 00:40</p>'+
-lPartL7 + '</div>'],
+lPartL7 + fImgPart + '4th_line/Ladozhskaya.png"' + lImgPart + '</div>'],
 [fPartProsp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameLine7 +'</p>'+
 '<p><b>Адрес</b> - Красногвардейская пл.</p></div>'+'</div>'],
 [fPartProspL7 + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameLine6 +'</p>'+
