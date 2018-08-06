@@ -275,7 +275,7 @@ const contL3 = [
 fImgPart + '3rd_line/Begovaya.png"' + lImgPart + '</div>'],
 [fPart + '2018</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 17 метров</p>'+'<p><b>Время работы</b> - 05:40 -- 01:05</p></div>'+
-fImgPart + '3rd_line/"' + lImgPart + '</div>'],
+'</div>'],
 [fPart + '1979</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
 '<p><b>Глубина</b> - 71 метр</p>'+'<p><b>Время работы</b> - 05:34 -- 01:00</p></div>'+
 fImgPart + '3rd_line/Primorskaya.png"' + lImgPart + '</div>'],
@@ -413,7 +413,7 @@ const contProspL4 = [
 const contL5 = [
 [fPart + '2005</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 75 метров</p>'+'<p><b>Время работы</b> - 05:36 -- 00:55</p></div>'+
-fImgPart + '5th_line/"' + lImgPart + '</div>'],
+fImgPart + '5th_line/KomendantskyPr.png"' + lImgPart + '</div>'],
 [fPart + '1999</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 61 метр</p>'+'<p><b>Время работы</b> - 05:37 -- 00:50</p></div>'+
 fImgPart + '5th_line/Staraya_Derevnya.png"' + lImgPart + '</div>'],
@@ -440,13 +440,13 @@ fImgPart + '5th_line/Zvenigorodskaya.png"' + lImgPart + '</div>'],
 fImgPart + '5th_line/Obvodnyi_Kanal.png"' + lImgPart + '</div>'],
 [fPart + '2008</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 61 метр</p>'+'<p><b>Время работы</b> - 05:35 -- 00:45</p></div>'+
-fImgPart + '5th_line/"' + lImgPart + '</div>'],
+fImgPart + '5th_line/Volkovskaya.png"' + lImgPart + '</div>'],
 [fPart + '2012</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 65 метров</p>'+'<p><b>Время работы</b> - 05:37 -- 00:50</p></div>'+
-fImgPart + '5th_line/"' + lImgPart + '</div>'],
+fImgPart + '5th_line/Buharestskaya.png"' + lImgPart + '</div>'],
 [fPart + '2012</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 65 метров</p>'+'<p><b>Время работы</b> - 05:35 -- 00:50</p></div>'+
-fImgPart + '5th_line/"' + lImgPart + '</div>']
+fImgPart + '5th_line/Mezhdunarodnaya.png"' + lImgPart + '</div>']
 ];
 
 /*Описание строящихся станций 5 линии*/
@@ -460,7 +460,7 @@ fImgPart + '5th_line/Pr_Slavy.png"' + lImgPart + '</div>'],
 fImgPart + '5th_line/Dunaiskaya.png"' + lImgPart + '</div>'],
 [fPartProsp + 'конец 2018 года</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Адрес</b> - пос. Шушары, Автозаводская ул., уч. №1 (западнее пересечения с Софийской ул.)</p></div>'+
-'</div>']
+fImgPart + '5th_line/Yuzhnaya.png"' + lImgPart + '</div>']
 ];
 
 /*Описание проектируемых станций 5 линии*/
@@ -498,7 +498,7 @@ fImgPart + '6th_line/Yugo-zapadnaya.png"' + lImgPart + '</div>']
 const contPrL6 = [
 [fPartProsp + '2026-2027 год</p>'+'<p><b>Линия</b> - '+ nameLine6 +'</p>'+
 '<p><b>Адрес</b> - юго-восточнее дома 42 на наб. Обводного канала</p></div>'+
-fImgPart + '6th_line/Karertnaya.png"' + lImgPart + '</div>'],
+fImgPart + '6th_line/Karetnaya.png"' + lImgPart + '</div>'],
 [fPartProsp + '2026-2027 год</p>'+'<p><b>Линия</b> - '+ nameLine6 +'</p>'+
 '<p><b>Адрес</b> - Два вестибюля: Киевская ул. (юго-западнее пересечения с Черниговской ул.);<br>'+
 'Лиговский пр. (севернее дома № 236, литера Б)</p></div>'+
@@ -590,7 +590,7 @@ lPartL7 + fImgPart + '2nd_line/Park_Pobedy.png"' + lImgPart + '</div>'],
 '<p><b>Адрес</b> - пересечение Витебского пр. и Бассейной ул.</p></div>'+'</div>'],
 [fPartWorkL7 + '1961</p>'+'<p><b>Линия</b> - '+ nameLine5 +'</p>'+
 '<p><b>Глубина</b> - 65 метров</p>'+'<p><b>Время работы</b> - 05:35 -- 00:50</p>'+
-lPartL7 + '</div>'],
+lPartL7 + fImgPart + '5th_line/Mezhdunarodnaya.png"' + lImgPart + '</div>'],
 [fPartProsp + 'после 2030 года</p>'+'<p><b>Линия</b> - '+ nameLine7 +'</p>'+
 '<p><b>Адрес</b> - вблизи ж/д станции "Фарфоровская"</p></div>'+'</div>'],
 [fPartWorkL7 + '1970</p>'+'<p><b>Линия</b> - '+ nameLine3 +'</p>'+
