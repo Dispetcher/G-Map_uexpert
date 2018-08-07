@@ -1,0 +1,148 @@
+h3{
+  font-size: 18px;
+}
+#map {
+  height: 900px;
+  width:100vw;
+}
+#fl_fst_panel {
+  position: absolute;
+  display:flex;
+  justify-content: space-between;
+  top: 5px;
+  left: 30%;
+  z-index: 5;
+  padding: 5px;
+  width:450px;
+  text-align: center;
+  line-height: 30px;
+  padding-left: 10px;
+  margin-left: -52px;
+}
+#fl_scnd_panel{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 60px;
+  left: 30%;
+  z-index: 5; 
+  width:450px;
+  text-align: center;
+  line-height: 30px;
+  padding-left: 10px;
+  margin-left: -52px;
+}
+.station_content{
+  max-width: 400px;
+} 
+.btn_map{
+  height: 45px;
+  border-radius: 5%;
+  font-size: 16px;
+  font-weight:600;
+  background-color: rgba(109, 196, 220, 0.80);
+}
+.btn_map_line{
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: rgba(109, 196, 220, 0.80);
+  color:#fff;
+}
+.ln1{
+  background-color: rgba(195, 22, 22, 0.95);
+}
+.ln2{
+  background-color: rgba(51, 121, 171, 0.95);
+}
+.ln3{
+  background-color: rgba(8, 84, 47, 0.95);
+}
+.ln4{
+  background-color: rgba(216, 102, 20, 0.96);
+}
+.ln5{
+  background-color: rgba(156, 39, 177, 0.95);
+}
+.ln6{
+  background-color: rgba(80, 34, 34, 0.95);
+}
+.content__header{
+        max-width: 400px;
+}
+.content__header--transfer{
+        margin: 10px 0;
+}
+.station_content{
+  display: inline-block;
+}
+.station_img{
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px 10px;
+  float: right;
+}
+.article_header{
+  margin-top: -10px;
+  margin-bottom: 7px;
+  text-decoration: underline;
+}
+.prosp_header{
+  margin-top: 7px;
+  margin-bottom: 7px;
+  text-decoration: underline;
+}
+@media(max-width: 750px){
+  #fl_panel{
+    top: 90px;
+  }
+  #floating_panel{
+    top: 45px;
+  }
+}
+/*Iphone 8PLUS*/
+@media(max-width: 420px){
+  #floating_panel, #fl_panel{
+    margin-left: -80px;
+    left: 23%;
+    padding-left: 0;
+  }
+  .btn_map{
+    font-size: 15px;
+  }
+  .content{
+    max-width: 340px;
+  }
+  .station_content{
+    font-size: 11px;
+  }
+  .station_img{
+    margin: auto;
+  }
+}
+/*Iphone X*/
+@media(max-width: 380px){
+  .content{
+    max-width: 300px;
+  }
+  .content__header{
+    font-size: 18px;
+  }
+}
+/*Samsung Galaxy S5*/
+@media(max-width: 365px){
+  #floating_panel{
+    margin-left: -78px;
+  }
+  .content{
+    max-width: 285px;
+  }
+  .content__header{
+    font-size: 18px;
+  }
+  .btn_map{
+    font-size: 15px;
+  }
+}

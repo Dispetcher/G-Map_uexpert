@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Карта строящихся и проектируемых станций Санкт-Петербургского метрополитена</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://undergroundexpert.info/wp-content/themes/shablon/css/inter_gmap.css" />
+    <script type="text/javascript" src="https://undergroundexpert.info/wp-content/themes/shablon/js/inter_gmap.js"></script>
+  </head>
+  <body style="margin:0">
+	<div id="map"></div>
+  	<div class="fl_panel fst_panel">
+      <button id="drop" class="btn_map" onclick="initMap(0);">Все линии</button>
+      <button id="Constr" class="btn_map" onclick="initMap(8);">Строящиеся участки</button>
+      <button id="Projects" class="btn_map" onclick="initMap(9);">Проектируемые участки</button>
+      </div>
+    <div class="fl_panel scnd_panel">
+      <button id="l1" class="btn_map_line ln1" onclick="initMap(1);">1</button>
+      <button id="l2" class="btn_map_line ln2" onclick="initMap(2);">2</button>
+      <button id="l3" class="btn_map_line ln3" onclick="initMap(3);">3</button>
+      <button id="l4" class="btn_map_line ln4" onclick="initMap(4);">4</button>
+      <button id="l5" class="btn_map_line ln5" onclick="initMap(5);">5</button>
+      <button id="l6" class="btn_map_line ln6" onclick="initMap(6);">6</button>
+	  <button id="l7" class="btn_map_line ln7" onclick="initMap(7);">7</button>
+    </div>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRTPdt0Qs9GVAsnrKy-pL0rjV1p8S5D0E&callback=initMap">
+    </script>
+  </body>
+</html>

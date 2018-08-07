@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Complex icons</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      p{
+        margin: 0 0 7px 0;
+        padding: 0;
+      }
+      h3{
+        font-size: 18px;
+      }
+      #map {
+        height: 900px;
+        width:98vw;
+      }
+      #floating_panel, #fl_panel{
+        position: absolute;
+        left: 25%;
+        z-index: 5;
+        text-align: center;
+        font-family: 'Arial';
+        line-height: 30px;
+        padding-left: 10px;
+        margin-left: -52px;
+      }
+      #floating_panel {
+        top: 5px;
+        padding: 5px;
+      }
+      #fl_panel{
+        display: flex;
+        justify-content: space-between;
+        top: 50px;
+        width:350px;
+      } 
+      .btn_map{
+        height: 30px;
+        border-radius: 5%;
+        font-size: 16px;
+        background-color: rgba(0, 148, 255, 0.70);
+      }
+      .btn_map_line{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        font-size: 20px;
+        background-color: rgba(0, 148, 255, 0.70);
+        opacity: 0.8;  
+        color: #fff;      
+      }
+      .station_content{
+        max-width: 400px;
+      } 
+      .ln1{
+        background-color: rgba(195, 22, 22, 0.95);
+      }
+      .ln2{
+        background-color: rgba(51, 121, 171, 0.95);
+      }
+      .ln3{
+        background-color: rgba(8, 84, 47, 0.95);
+      }
+      .ln4{
+        background-color: rgba(216, 102, 20, 0.96);
+      }
+      .ln5{
+        background-color: rgba(156, 39, 177, 0.95);
+      }
+      .ln6{
+        background-color: rgba(80, 34, 34, 0.95);
+      }
+      .ln7{
+        background-color: rgba(9, 208, 253, 0.95);
+      }
+      .content__header{
+        max-width: 420px;
+      }
+      .content__header--transfer{
+        margin: 10px 0;
+      }
+      .station_content{
+        display: inline-block;
+      }
+      .station_img{
+        display: inline-block;
+        vertical-align: top;
+        margin: 5px 10px;
+        float: right;
+      }
+      .article_header{
+        margin-top: -10px;
+        margin-bottom: 7px;
+        text-decoration: underline;
+      }
+      .prosp_header{
+        margin-top: 7px;
+        margin-bottom: 7px;
+        text-decoration: underline;
+      }
+      @media(max-width: 750px){
+        #fl_panel{
+          top: 90px;
+        }
+        #floating_panel{
+          top: 45px;
+        }
+        .content{
+          max-width: 400px;
+        }
+      }
+      /*Iphone 8PLUS*/
+      @media(max-width: 420px){
+        #floating_panel, #fl_panel{
+          margin-left: -80px;
+          left: 23%;
+          padding-left: 0;
+        }
+        .btn_map{
+          font-size: 15px;
+        }
+        .content{
+          max-width: 340px;
+        }
+        .station_content{
+          font-size: 11px;
+        }
+        .station_img{
+          margin: auto;
+        }
+      }
+      /*Iphone X*/
+      @media(max-width: 380px){
+        .content{
+          max-width: 300px;
+        }
+        .content__header{
+          font-size: 18px;
+        }
+      }
+      /*Samsung Galaxy S5*/
+      @media(max-width: 365px){
+        #floating_panel{
+          margin-left: -78px;
+        }
+        .content{
+          max-width: 285px;
+        }
+        .content__header{
+          font-size: 18px;
+        }
+        .btn_map{
+          font-size: 15px;
+        }
+      }
+      </style>
+  </head>
+  <body>
+    <div id="map"></div>
+      <div id="floating_panel">
+      <button id="drop" class="btn_map" onclick="initMap(0);">Все станции</button>
+      <button id="Constr" class="btn_map" onclick="initMap(8);">Строящиеся</button>
+      <button id="Projects" class="btn_map" onclick="initMap(9);">Проектируемые</button>
+      </div>
+    <div id="fl_panel">
+      <button id="l1" class="btn_map_line ln1" onclick="initMap(1);">1</button>
+      <button id="l2" class="btn_map_line ln2" onclick="initMap(2);">2</button>
+      <button id="l3" class="btn_map_line ln3" onclick="initMap(3);">3</button>
+      <button id="l4" class="btn_map_line ln4" onclick="initMap(4);">4</button>
+      <button id="l5" class="btn_map_line ln5" onclick="initMap(5);">5</button>
+      <button id="l6" class="btn_map_line ln6" onclick="initMap(6);">6</button>
+      <button id="l7" class="btn_map_line ln7" onclick="initMap(7);">7</button>
+    </div>
+    <!-- <script src="interactive_map.js"></script> -->
+    <script src="interactive_map.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRTPdt0Qs9GVAsnrKy-pL0rjV1p8S5D0E&callback=initMap">
+    </script>
+  </body>
+</html>
