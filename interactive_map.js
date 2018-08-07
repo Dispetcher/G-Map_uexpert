@@ -1405,7 +1405,7 @@ function addMarkerWithTimeout(title, position, text, img, timeout, infowindow, l
     google.maps.event.addListener(marker, 'click', function(){
       infowindow.close;
       if(link){
-      	infowindow.setContent('<div class="content"><h2 class="content__header"><a href="'+ link + '">' + title +'</a></h2>'+text+'</div>');
+      	infowindow.setContent('<div class="content"><h2 class="content__header"><a href="'+ link + '" target="_parent">' + title +'</a></h2>'+text+'</div>');
       }else{
       	infowindow.setContent('<div class="content"><h2 class="content__header">'+title+'</h2>'+text+'</div>');
       }
