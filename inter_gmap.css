@@ -1,4 +1,4 @@
-/*@Dispetcher last edit 07.08.18*/
+/*@Dispetcher last edit 08.08.18*/
 
 h2{
   font-size:18.5px;
@@ -121,6 +121,17 @@ p{
   left: 24%;
   margin-left: -80px;
     padding-left: 0;
+  top: 850px;
+  }
+  .fst_panel{
+  top:810px;
+  left:45%;
+  }
+  #drop{
+  height:35px;
+  }
+  #Constr, #Projects{
+  display:none;
   }
   .btn_map{
     font-size: 15px;
@@ -134,7 +145,7 @@ p{
   .station_img{
     margin: auto;
   float: none;
-  }
+  }  
 }
 /*Iphone X*/
 @media(max-width: 380px){
@@ -142,21 +153,30 @@ p{
     max-width: 300px;
   }
   .content__header{
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 /*Samsung Galaxy S5*/
 @media(max-width: 365px){
-  .fst_panel{
-    margin-left: -78px;
+  .fl_panel{
+    width: 290px;
+    margin-left: -70px;
   }
   .content{
-    max-width: 265px;
+    max-width: 230px;
   }
   .content__header{
-    font-size: 18px;
+    font-size: 17px;
+  }
+  .article_header{
+  font-size: 16px;  
   }
   .btn_map{
-    font-size: 15px;
+    font-size: 14px;
+  }
+}
+@media(max-width: 325px){
+  .fl_panel{
+      width: 255px;
   }
 }

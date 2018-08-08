@@ -1,4 +1,4 @@
-/*@Dispetcher last edit 07.08.18*/
+/*@Dispetcher last edit 08.08.18*/
 
 var a; //Для определения какую функцию вызывать внутри InitMap();
 var marker;
@@ -1257,6 +1257,7 @@ function dropLineFull(infowindow, line){
   clearMarkers();
   removeLine();
   var lineNum;
+  var lineName;
 
   if (line == 1){
   	lineNum = l1stradius;
@@ -1277,21 +1278,24 @@ function dropLineFull(infowindow, line){
   	dropmarker(infowindow, l5add);
   }else if (line == 6){
   	lineNum = l6st;
+  	lineName = 6;
   	dropmarker(infowindow, l6add);
   }else{
+  	lineName = 7;
   	lineNum = l7pr;
   }
 
-  dropline(infowindow, lineNum);
+    dropline(infowindow, lineNum, lineName);
 }
 
 /**************************************************
 /*Прорисовка всех линий*/
 /**************************************************/
-function dropline(infowindow, lineN) {
+function dropline(infowindow, lineN, lineName) {
 	var lineNum = lineN;
-	var l;
-	var lN;
+	var lineName = lineName;
+	var l, lN;
+
     for (var i = 0; i < lineNum.length; i++) {
       if (i != lineNum.length-1){
       l = lineNum[i];
@@ -1302,7 +1306,13 @@ function dropline(infowindow, lineN) {
       };
 
       l = lineNum[i];
-      addMarkerWithTimeout(l[0], l[1], l[2], l[3], i*50, infowindow, l[8]);
+      if(lineName == 6){
+      	addMarkerWithTimeout(l[0], l[1], l[2], l[3], l[8] * 75, infowindow, l[9]);
+      }else if(lineName == 7){
+      	addMarkerWithTimeout(l[0], l[1], l[2], l[3], l[8] * 100, infowindow, l[9]);
+      }else{
+      	addMarkerWithTimeout(l[0], l[1], l[2], l[3], i*50, infowindow, l[8]);
+      }
     }
 }
 
