@@ -1428,7 +1428,7 @@ function addMarkerWithTimeout(title, position, text, img, timeout, infowindow, l
       var mp = document.querySelector('#map');
       mp.addEventListener('click', function(e){
       	var target = e.target;
-      	if(target == cls || target == cls.firstElementChild){
+      	if(target == cls || target == cls.firstElementChild || target == cls.nextSibling){
       		document.querySelector(".fst_panel").style.display = "flex";
       		document.querySelector(".scnd_panel").style.display = "flex";
       	}      	
