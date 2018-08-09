@@ -1429,7 +1429,8 @@ function addMarkerWithTimeout(title, position, text, img, timeout, infowindow, l
       mp.addEventListener('click', function(e){
       	var target = e.target;
       	if(target == cls || target == cls.firstElementChild){
-      		document.querySelector(".fst_panel").style.display = "block";
+      		document.querySelector(".fst_panel").style.display = "flex";
+      		document.querySelector(".scnd_panel").style.display = "flex";
       	}      	
       });
 
