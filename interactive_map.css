@@ -1,55 +1,66 @@
+a{
+  color: #6dc4df;
+}
+h2{
+  font-size:18.5px;
+}
 h3{
-  font-size: 18px;
+  font-size:18px;
+}
+p{
+  margin: 0 0 7px 0;
+  padding: 0;
 }
 #map {
-  height: 900px;
-  width:100vw;
+  height: 1080px;
+    width:100vw;
 }
-#fl_fst_panel {
+.interactive_map_wrap{
+  height:920px;
+  width:66vw;
+}
+.fl_panel{
   position: absolute;
   display:flex;
-  justify-content: space-between;
-  top: 5px;
+  justify-content: space-between; 
   left: 30%;
   z-index: 5;
-  padding: 5px;
-  width:450px;
+  width:400px;
   text-align: center;
-  line-height: 30px;
-  padding-left: 10px;
   margin-left: -52px;
 }
-#fl_scnd_panel{
+.fst_panel{
   position: absolute;
-  display: flex;
-  justify-content: space-between;
+  top: 5px;
+  padding: 5px 5px 5px 10px;  
+  line-height: 30px;
+}
+.scnd_panel{
+  position: absolute;
   top: 60px;
-  left: 30%;
-  z-index: 5; 
-  width:450px;
-  text-align: center;
   line-height: 30px;
   padding-left: 10px;
-  margin-left: -52px;
 }
-.station_content{
-  max-width: 400px;
-} 
 .btn_map{
   height: 45px;
   border-radius: 5%;
-  font-size: 16px;
+  font-size: 15px;
   font-weight:600;
-  background-color: rgba(109, 196, 220, 0.80);
+  background-color: rgba(0, 148, 255, 0.70);
+  cursor:pointer;
 }
 .btn_map_line{
-  height: 34px;
-  width: 34px;
+  height: 32px;
+  width: 32px;
   border-radius: 50%;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   background-color: rgba(109, 196, 220, 0.80);
   color:#fff;
+  cursor:pointer;
+}
+#drop{
+  width:130px;
 }
 .ln1{
   background-color: rgba(195, 22, 22, 0.95);
@@ -70,13 +81,15 @@ h3{
   background-color: rgba(80, 34, 34, 0.95);
 }
 .content__header{
-        max-width: 400px;
+  max-width: 450px;
+  text-decoration: underline;
 }
 .content__header--transfer{
-        margin: 10px 0;
+  margin: 10px 0;
 }
 .station_content{
   display: inline-block;
+  max-width: 400px;
 }
 .station_img{
   display: inline-block;
@@ -95,19 +108,31 @@ h3{
   text-decoration: underline;
 }
 @media(max-width: 750px){
-  #fl_panel{
-    top: 90px;
+  .scnd_panel{
+    top: 100px;
   }
-  #floating_panel{
+  .fst_panel{
     top: 45px;
   }
 }
 /*Iphone 8PLUS*/
 @media(max-width: 420px){
-  #floating_panel, #fl_panel{
-    margin-left: -80px;
-    left: 23%;
+  .fl_panel{
+    width: 330px;
+  left: 24%;
+  margin-left: -80px;
     padding-left: 0;
+  top: 60px;
+  }
+  .fst_panel{
+  top:5px;
+  left:60%;
+  }
+  #drop{
+  height:35px;
+  }
+  #Constr, #Projects{
+  display:none;
   }
   .btn_map{
     font-size: 15px;
@@ -120,7 +145,8 @@ h3{
   }
   .station_img{
     margin: auto;
-  }
+  float: none;
+  }  
 }
 /*Iphone X*/
 @media(max-width: 380px){
@@ -128,21 +154,34 @@ h3{
     max-width: 300px;
   }
   .content__header{
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 /*Samsung Galaxy S5*/
 @media(max-width: 365px){
-  #floating_panel{
-    margin-left: -78px;
+  .fl_panel{
+    width: 290px;
+    margin-left: -70px;
   }
   .content{
-    max-width: 285px;
+    max-width: 230px;
   }
   .content__header{
-    font-size: 18px;
+    font-size: 17px;
+  }
+  .article_header{
+  font-size: 16px;  
   }
   .btn_map{
-    font-size: 15px;
+    font-size: 14px;
+  }
+}
+@media(max-width: 325px){
+  .fl_panel{
+      width: 255px;
+  }
+  .fst_panel{
+    width:160px;
+    left:65%;
   }
 }

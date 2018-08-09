@@ -1,4 +1,4 @@
-/*@Dispetcher last edit 08.08.18*/
+/*@Dispetcher last edit 09.08.18*/
 
 var a; //Для определения какую функцию вызывать внутри InitMap();
 var marker;
@@ -1410,9 +1410,11 @@ function addMarkerWithTimeout(title, position, text, img, timeout, infowindow, l
       icon: img,
       map: map,
       animation: google.maps.Animation.DROP,
-      zIndex: indx
+      zIndex: 777
     });
     google.maps.event.addListener(marker, 'click', function(){
+      document.querySelector(".fst_panel").style.display = "none";
+      document.querySelector(".scnd_panel").style.display = "none";
       infowindow.close;
       if(link){
       	infowindow.setContent('<div class="content"><h2 class="content__header"><a href="'+ link + '" target="_parent">' + title +'</a></h2>'+text+'</div>');
@@ -1420,6 +1422,17 @@ function addMarkerWithTimeout(title, position, text, img, timeout, infowindow, l
       	infowindow.setContent('<div class="content"><h2 class="content__header">'+title+'</h2>'+text+'</div>');
       }
       infowindow.open(map, this);
+
+      /***** Добавляем обрабоотчик для открытия закрытия панели ******/
+      var cls = document.querySelector('.gm-style-iw').nextSibling;
+      var mp = document.querySelector('#map');
+      mp.addEventListener('click', function(e){
+      	var target = e.target;
+      	if(target == cls || target == cls.firstElementChild){
+      		document.querySelector(".fst_panel").style.display = "block";
+      	}      	
+      });
+
     });
     markers.push(marker);
   }, timeout);

@@ -1,5 +1,8 @@
-/*@Dispetcher last edit 08.08.18*/
+/*@Dispetcher last edit 09.08.18*/
 
+a{
+	color: #6dc4df;
+}
 h2{
 	font-size:18.5px;
 }
@@ -11,7 +14,7 @@ p{
 	padding: 0;
 }
 #map {
-  height: 900px;
+  height: 1080px;
     width:100vw;
 }
 .interactive_map_wrap{
